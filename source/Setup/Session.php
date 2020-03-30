@@ -51,11 +51,18 @@ class Session extends Core
         $this->_startSession();
         $this->_initSessionData();
     }
+    /**
+     * @deprecated use self::startSession instead
+     */
+    protected function _startSession() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->startSession();
+    }
 
     /**
      * Start session
      */
-    protected function _startSession() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function startSession()
     {
         session_name($this->_sSessionName);
 
@@ -75,13 +82,20 @@ class Session extends Core
         $sSid = $this->_validateSession();
         $this->setSid($sSid);
     }
+    /**
+     * @deprecated use self::validateSession instead
+     */
+    protected function _validateSession() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->validateSession();
+    }
 
     /**
      * Validate if session is started by setup script, if not, generate new session.
      *
      * @return string Session ID
      */
-    protected function _validateSession() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function validateSession()
     {
         if ($this->getIsNewSession() === true) {
             $this->setSessionParam('setup_session', true);
@@ -96,13 +110,20 @@ class Session extends Core
 
         return session_id();
     }
+    /**
+     * @deprecated use self::getNewSessionID instead
+     */
+    protected function _getNewSessionID() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getNewSessionID();
+    }
 
     /**
      * Generate new unique session ID
      *
      * @return string
      */
-    protected function _getNewSessionID() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getNewSessionID()
     {
         session_regenerate_id(false);
         $this->setIsNewSession(true);
@@ -130,11 +151,18 @@ class Session extends Core
     {
         $this->_sSid = $sSid;
     }
+    /**
+     * @deprecated use self::initSessionData instead
+     */
+    protected function _initSessionData() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->initSessionData();
+    }
 
     /**
      * Initializes setup session data array
      */
-    protected function _initSessionData() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function initSessionData()
     {
         /** @var Utilities $oUtils */
         $oUtils = $this->getInstance("Utilities");
@@ -169,13 +197,20 @@ class Session extends Core
             $this->setSessionParam('eula', $iEula);
         }
     }
+    /**
+     * @deprecated use self::getSessionData instead
+     */
+    protected function &_getSessionData() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getSessionData();
+    }
 
     /**
      * Return session object reference.
      *
      * @return array
      */
-    protected function &_getSessionData() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function &getSessionData()
     {
         return $_SESSION;
     }

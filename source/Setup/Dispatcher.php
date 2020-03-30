@@ -36,13 +36,20 @@ class Dispatcher extends Core
             $view->display();
         }
     }
+    /**
+     * @deprecated use self::chooseCurrentAction instead
+     */
+    protected function _chooseCurrentAction() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->chooseCurrentAction();
+    }
 
     /**
      * Returns name of controller action script to perform
      *
      * @return string | null
      */
-    protected function _chooseCurrentAction() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function chooseCurrentAction()
     {
         /** @var Setup $oSetup */
         $oSetup = $this->getInstance("Setup");

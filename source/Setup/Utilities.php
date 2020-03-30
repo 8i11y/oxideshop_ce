@@ -114,6 +114,13 @@ class Utilities extends Core
 
         return $blDeleteSuccess;
     }
+    /**
+     * @deprecated use self::extractPath instead
+     */
+    protected function _extractPath($aPath) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->extractPath($aPath);
+    }
 
     /**
      * Extracts install path
@@ -122,7 +129,7 @@ class Utilities extends Core
      *
      * @return string
      */
-    protected function _extractPath($aPath) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function extractPath($aPath)
     {
         $sExtPath = '';
         $blBuildPath = false;
