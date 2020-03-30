@@ -65,6 +65,13 @@ class UtilsPic extends \OxidEsales\Eshop\Core\Base
 
         return $blDelete;
     }
+    /**
+     * @deprecated use self::deletePicture instead
+     */
+    protected function _deletePicture($sPicName, $sAbsDynImageDir) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->deletePicture($sPicName, $sAbsDynImageDir);
+    }
 
     /**
      * Removes picture file from disk.
@@ -74,7 +81,7 @@ class UtilsPic extends \OxidEsales\Eshop\Core\Base
      *
      * @return null
      */
-    protected function _deletePicture($sPicName, $sAbsDynImageDir) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function deletePicture($sPicName, $sAbsDynImageDir)
     {
         $blDeleted = false;
         $myConfig = $this->getConfig();
@@ -103,6 +110,13 @@ class UtilsPic extends \OxidEsales\Eshop\Core\Base
 
         return $blDeleted;
     }
+    /**
+     * @deprecated use self::isPicDeletable instead
+     */
+    protected function _isPicDeletable($sPicName, $sTable, $sField) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->isPicDeletable($sPicName, $sTable, $sField);
+    }
 
 
     /**
@@ -115,7 +129,7 @@ class UtilsPic extends \OxidEsales\Eshop\Core\Base
      *
      * @return bool
      */
-    protected function _isPicDeletable($sPicName, $sTable, $sField) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function isPicDeletable($sPicName, $sTable, $sField)
     {
         if (!$sPicName || strpos($sPicName, 'nopic.jpg') !== false || strpos($sPicName, 'nopic_ico.jpg') !== false) {
             return false;
@@ -173,6 +187,13 @@ class UtilsPic extends \OxidEsales\Eshop\Core\Base
 
         return false;
     }
+    /**
+     * @deprecated use self::resizeGif instead
+     */
+    protected function _resizeGif($sSrc, $sTarget, $iNewWidth, $iNewHeight, $iOriginalWidth, $iOriginalHeigth, $iGDVer, $blDisableTouch) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->resizeGif($sSrc, $sTarget, $iNewWidth, $iNewHeight, $iOriginalWidth, $iOriginalHeigth, $iGDVer, $blDisableTouch);
+    }
 
     /**
      * Resizes and saves GIF image. This method was separated due to GIF transparency problems.
@@ -188,9 +209,16 @@ class UtilsPic extends \OxidEsales\Eshop\Core\Base
      *
      * @return bool
      */
-    protected function _resizeGif($sSrc, $sTarget, $iNewWidth, $iNewHeight, $iOriginalWidth, $iOriginalHeigth, $iGDVer, $blDisableTouch) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function resizeGif($sSrc, $sTarget, $iNewWidth, $iNewHeight, $iOriginalWidth, $iOriginalHeigth, $iGDVer, $blDisableTouch)
     {
         return resizeGif($sSrc, $sTarget, $iNewWidth, $iNewHeight, $iOriginalWidth, $iOriginalHeigth, $iGDVer, $blDisableTouch);
+    }
+    /**
+     * @deprecated use self::resize instead
+     */
+    protected function _resize($aImageInfo, $sSrc, $hDestinationImage, $sTarget, $iNewWidth, $iNewHeight, $iGdVer, $blDisableTouch, $iDefQuality) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->resize($aImageInfo, $sSrc, $hDestinationImage, $sTarget, $iNewWidth, $iNewHeight, $iGdVer, $blDisableTouch, $iDefQuality);
     }
 
     /**
@@ -208,7 +236,7 @@ class UtilsPic extends \OxidEsales\Eshop\Core\Base
      *
      * @return bool
      */
-    protected function _resize($aImageInfo, $sSrc, $hDestinationImage, $sTarget, $iNewWidth, $iNewHeight, $iGdVer, $blDisableTouch, $iDefQuality) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function resize($aImageInfo, $sSrc, $hDestinationImage, $sTarget, $iNewWidth, $iNewHeight, $iGdVer, $blDisableTouch, $iDefQuality)
     {
         startProfile("PICTURE_RESIZE");
 
@@ -237,6 +265,13 @@ class UtilsPic extends \OxidEsales\Eshop\Core\Base
 
         return $blSuccess;
     }
+    /**
+     * @deprecated use self::copyAlteredImage instead
+     */
+    protected function _copyAlteredImage($sDestinationImage, $sSourceImage, $iNewWidth, $iNewHeight, $aImageInfo, $sTarget, $iGdVer, $blDisableTouch) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->copyAlteredImage($sDestinationImage, $sSourceImage, $iNewWidth, $iNewHeight, $aImageInfo, $sTarget, $iGdVer, $blDisableTouch);
+    }
 
     /**
      * create and copy the resized image
@@ -252,7 +287,7 @@ class UtilsPic extends \OxidEsales\Eshop\Core\Base
      *
      * @return null
      */
-    protected function _copyAlteredImage($sDestinationImage, $sSourceImage, $iNewWidth, $iNewHeight, $aImageInfo, $sTarget, $iGdVer, $blDisableTouch) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function copyAlteredImage($sDestinationImage, $sSourceImage, $iNewWidth, $iNewHeight, $aImageInfo, $sTarget, $iGdVer, $blDisableTouch)
     {
         $blSuccess = copyAlteredImage($sDestinationImage, $sSourceImage, $iNewWidth, $iNewHeight, $aImageInfo, $sTarget, $iGdVer);
         if (!$blDisableTouch && $blSuccess) {

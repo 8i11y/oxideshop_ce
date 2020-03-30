@@ -46,17 +46,32 @@ class OnlineLicenseCheckCaller extends \OxidEsales\Eshop\Core\OnlineCaller
     }
 
     /**
+     * @deprecated use self::formEmail instead
+     */
+    protected function _formEmail($oRequest) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->formEmail($oRequest);
+    }
+
+    /**
      * Removes serial keys from request and forms email body.
      *
      * @param \OxidEsales\Eshop\Core\OnlineLicenseCheckRequest $oRequest
      *
      * @return string
      */
-    protected function _formEmail($oRequest) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function formEmail($oRequest)
     {
         $oRequest->keys = null;
 
-        return parent::_formEmail($oRequest);
+        return parent::formEmail($oRequest);
+    }
+    /**
+     * @deprecated use self::formResponse instead
+     */
+    protected function _formResponse($sRawResponse) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->formResponse($sRawResponse);
     }
 
     /**
@@ -68,7 +83,7 @@ class OnlineLicenseCheckCaller extends \OxidEsales\Eshop\Core\OnlineCaller
      *
      * @return \OxidEsales\Eshop\Core\OnlineLicenseCheckResponse
      */
-    protected function _formResponse($sRawResponse) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function formResponse($sRawResponse)
     {
         /** @var \OxidEsales\Eshop\Core\UtilsXml $oUtilsXml */
         $oUtilsXml = \OxidEsales\Eshop\Core\Registry::getUtilsXml();
@@ -100,15 +115,29 @@ class OnlineLicenseCheckCaller extends \OxidEsales\Eshop\Core\OnlineCaller
 
         return $oResponse;
     }
+    /**
+     * @deprecated use self::getXMLDocumentName instead
+     */
+    protected function _getXMLDocumentName() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getXMLDocumentName();
+    }
 
     /**
      * Gets XML document name.
      *
      * @return string XML document tag name.
      */
-    protected function _getXMLDocumentName() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getXMLDocumentName()
     {
         return self::XML_DOCUMENT_NAME;
+    }
+    /**
+     * @deprecated use self::getServiceUrl instead
+     */
+    protected function _getServiceUrl() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getServiceUrl();
     }
 
     /**
@@ -116,7 +145,7 @@ class OnlineLicenseCheckCaller extends \OxidEsales\Eshop\Core\OnlineCaller
      *
      * @return string Web service url.
      */
-    protected function _getServiceUrl() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getServiceUrl()
     {
         return self::WEB_SERVICE_URL;
     }

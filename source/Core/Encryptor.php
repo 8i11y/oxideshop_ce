@@ -32,6 +32,13 @@ class Encryptor
 
         return "ox_$string";
     }
+    /**
+     * @deprecated use self::formKey instead
+     */
+    protected function _formKey($key, $string) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->formKey($key, $string);
+    }
 
     /**
      * Forms key for use in encoding.
@@ -41,7 +48,7 @@ class Encryptor
      *
      * @return string
      */
-    protected function _formKey($key, $string) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function formKey($key, $string)
     {
         $key = '_' . $key;
         $keyLength = (strlen($string) / strlen($key)) + 5;

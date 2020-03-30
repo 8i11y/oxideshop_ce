@@ -379,13 +379,20 @@ class UtilsCount extends \OxidEsales\Eshop\Core\Base
             }
         }
     }
+    /**
+     * @deprecated use self::getCatCache instead
+     */
+    protected function _getCatCache() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getCatCache();
+    }
 
     /**
      * Loads and returns category cache data array
      *
      * @return array
      */
-    protected function _getCatCache() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getCatCache()
     {
         $myConfig = $this->getConfig();
 
@@ -405,16 +412,30 @@ class UtilsCount extends \OxidEsales\Eshop\Core\Base
 
         return $aLocalCatCache;
     }
+    /**
+     * @deprecated use self::setCatCache instead
+     */
+    protected function _setCatCache($aCache) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->setCatCache($aCache);
+    }
 
     /**
      * Writes category data into cache
      *
      * @param array $aCache A cacheable data
      */
-    protected function _setCatCache($aCache) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function setCatCache($aCache)
     {
         $this->getConfig()->setGlobalParameter('aLocalCatCache', $aCache);
         \OxidEsales\Eshop\Core\Registry::getUtils()->toFileCache('aLocalCatCache', $aCache);
+    }
+    /**
+     * @deprecated use self::setVendorCache instead
+     */
+    protected function _setVendorCache($aCache) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->setVendorCache($aCache);
     }
 
     /**
@@ -422,10 +443,17 @@ class UtilsCount extends \OxidEsales\Eshop\Core\Base
      *
      * @param array $aCache A cacheable data
      */
-    protected function _setVendorCache($aCache) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function setVendorCache($aCache)
     {
         $this->getConfig()->setGlobalParameter('aLocalVendorCache', $aCache);
         \OxidEsales\Eshop\Core\Registry::getUtils()->toFileCache('aLocalVendorCache', $aCache);
+    }
+    /**
+     * @deprecated use self::setManufacturerCache instead
+     */
+    protected function _setManufacturerCache($aCache) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->setManufacturerCache($aCache);
     }
 
     /**
@@ -433,10 +461,17 @@ class UtilsCount extends \OxidEsales\Eshop\Core\Base
      *
      * @param array $aCache A cacheable data
      */
-    protected function _setManufacturerCache($aCache) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function setManufacturerCache($aCache)
     {
         $this->getConfig()->setGlobalParameter('aLocalManufacturerCache', $aCache);
         \OxidEsales\Eshop\Core\Registry::getUtils()->toFileCache('aLocalManufacturerCache', $aCache);
+    }
+    /**
+     * @deprecated use self::getVendorCache instead
+     */
+    protected function _getVendorCache() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getVendorCache();
     }
 
     /**
@@ -444,7 +479,7 @@ class UtilsCount extends \OxidEsales\Eshop\Core\Base
      *
      * @return array
      */
-    protected function _getVendorCache() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getVendorCache()
     {
         $myConfig = $this->getConfig();
 
@@ -463,13 +498,20 @@ class UtilsCount extends \OxidEsales\Eshop\Core\Base
 
         return $aLocalVendorCache;
     }
+    /**
+     * @deprecated use self::getManufacturerCache instead
+     */
+    protected function _getManufacturerCache() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getManufacturerCache();
+    }
 
     /**
      * Loads and returns category/Manufacturer cache data array
      *
      * @return array
      */
-    protected function _getManufacturerCache() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getManufacturerCache()
     {
         $myConfig = $this->getConfig();
 
@@ -488,6 +530,13 @@ class UtilsCount extends \OxidEsales\Eshop\Core\Base
 
         return $aLocalManufacturerCache;
     }
+    /**
+     * @deprecated use self::getUserViewId instead
+     */
+    protected function _getUserViewId($blReset = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getUserViewId($blReset);
+    }
 
     /**
      * Returns user view id (Shop, language, RR group index...)
@@ -496,7 +545,7 @@ class UtilsCount extends \OxidEsales\Eshop\Core\Base
      *
      * @return string
      */
-    protected function _getUserViewId($blReset = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getUserViewId($blReset = false)
     {
         if ($this->_sUserViewId != null && !$blReset) {
             return $this->_sUserViewId;

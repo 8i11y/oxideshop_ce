@@ -68,6 +68,13 @@ class OnlineRequest
         $this->version = ShopVersion::getVersion();
         $this->shopUrl = $oConfig->getShopUrl();
     }
+    /**
+     * @deprecated use self::getClusterId instead
+     */
+    private function _getClusterId() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getClusterId();
+    }
 
     /**
      * Returns cluster id.
@@ -75,7 +82,7 @@ class OnlineRequest
      *
      * @return string
      */
-    private function _getClusterId() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    private function getClusterId()
     {
         $oConfig = \OxidEsales\Eshop\Core\Registry::getConfig();
         $sBaseShop = $oConfig->getBaseShopId();

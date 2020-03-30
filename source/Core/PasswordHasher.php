@@ -22,13 +22,20 @@ class PasswordHasher
      * @var \oxHasher
      */
     private $_ohasher = null;
+    /**
+     * @deprecated use self::getHasher instead
+     */
+    protected function _getHasher() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getHasher();
+    }
 
     /**
      * Gets hasher.
      *
      * @return \OxidEsales\Eshop\Core\Hasher
      */
-    protected function _getHasher() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getHasher()
     {
         return $this->_ohasher;
     }

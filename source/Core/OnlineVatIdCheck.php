@@ -102,6 +102,13 @@ class OnlineVatIdCheck extends \OxidEsales\Eshop\Core\CompanyVatInChecker
 
         return true;
     }
+    /**
+     * @deprecated use self::isServiceAvailable instead
+     */
+    protected function _isServiceAvailable() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->isServiceAvailable();
+    }
 
     /**
      * Checks if VAT check can be performed:
@@ -111,7 +118,7 @@ class OnlineVatIdCheck extends \OxidEsales\Eshop\Core\CompanyVatInChecker
      *
      * @return bool
      */
-    protected function _isServiceAvailable() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function isServiceAvailable()
     {
         if ($this->_blServiceIsOn === null) {
             $this->_blServiceIsOn = class_exists('SoapClient') ? true : false;
@@ -139,6 +146,13 @@ class OnlineVatIdCheck extends \OxidEsales\Eshop\Core\CompanyVatInChecker
 
         return $this->_blServiceIsOn;
     }
+    /**
+     * @deprecated use self::checkOnline instead
+     */
+    protected function _checkOnline($oCheckVat) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->checkOnline($oCheckVat);
+    }
 
     /**
      * Checks online if USt.ID number is valid.
@@ -148,7 +162,7 @@ class OnlineVatIdCheck extends \OxidEsales\Eshop\Core\CompanyVatInChecker
      *
      * @return bool
      */
-    protected function _checkOnline($oCheckVat) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function checkOnline($oCheckVat)
     {
         if ($this->_isServiceAvailable()) {
             $iTryMoreCnt = self::BUSY_RETRY_CNT;

@@ -204,6 +204,13 @@ class DbMetaDataHandler extends \OxidEsales\Eshop\Core\Base
 
         return $mLTables;
     }
+    /**
+     * @deprecated use self::getCreateTableSetSql instead
+     */
+    protected function _getCreateTableSetSql($table, $lang) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getCreateTableSetSql($table, $lang);
+    }
 
     /**
      * Get sql for new multi-language table set creation
@@ -214,7 +221,7 @@ class DbMetaDataHandler extends \OxidEsales\Eshop\Core\Base
      * @return string
      *
      */
-    protected function _getCreateTableSetSql($table, $lang) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getCreateTableSetSql($table, $lang)
     {
         $tableSet = getLangTableName($table, $lang);
 

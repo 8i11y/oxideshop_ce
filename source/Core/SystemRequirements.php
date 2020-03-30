@@ -335,6 +335,13 @@ class SystemRequirements
 
         return $iModStat;
     }
+    /**
+     * @deprecated use self::getShopHostInfoFromConfig instead
+     */
+    protected function _getShopHostInfoFromConfig() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getShopHostInfoFromConfig();
+    }
 
 
     /**
@@ -343,7 +350,7 @@ class SystemRequirements
      *
      * @return array
      */
-    protected function _getShopHostInfoFromConfig() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getShopHostInfoFromConfig()
     {
         $sShopURL = $this->getConfig()->getConfigParam('sShopURL');
         if (preg_match('#^(https?://)?([^/:]+)(:([0-9]+))?(/.*)?$#i', $sShopURL, $m)) {
@@ -365,6 +372,13 @@ class SystemRequirements
 
         return false;
     }
+    /**
+     * @deprecated use self::getShopSSLHostInfoFromConfig instead
+     */
+    protected function _getShopSSLHostInfoFromConfig() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getShopSSLHostInfoFromConfig();
+    }
 
     /**
      * returns host, port, base dir, ssl information as assotiative array, false on error
@@ -372,7 +386,7 @@ class SystemRequirements
      *
      * @return array
      */
-    protected function _getShopSSLHostInfoFromConfig() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getShopSSLHostInfoFromConfig()
     {
         $sSSLShopURL = $this->getConfig()->getConfigParam('sSSLShopURL');
         if (preg_match('#^(https?://)?([^/:]+)(:([0-9]+))?(/.*)?$#i', $sSSLShopURL, $m)) {
@@ -394,6 +408,13 @@ class SystemRequirements
 
         return false;
     }
+    /**
+     * @deprecated use self::getShopHostInfoFromServerVars instead
+     */
+    protected function _getShopHostInfoFromServerVars() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getShopHostInfoFromServerVars();
+    }
 
     /**
      * returns host, port, base dir, ssl information as assotiative array, false on error
@@ -401,7 +422,7 @@ class SystemRequirements
      *
      * @return array
      */
-    protected function _getShopHostInfoFromServerVars() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getShopHostInfoFromServerVars()
     {
         // got here from setup dir
         $sScript = $_SERVER['SCRIPT_NAME'];
@@ -419,19 +440,33 @@ class SystemRequirements
             'ssl'  => $blSsl,
         ];
     }
+    /**
+     * @deprecated use self::getShopHostInfo instead
+     */
+    protected function _getShopHostInfo() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getShopHostInfo();
+    }
 
     /**
      * returns host, port, current script, ssl information as assotiative array, false on error
      *
      * @return array
      */
-    protected function _getShopHostInfo() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getShopHostInfo()
     {
         if ($this->isAdmin()) {
             return $this->_getShopHostInfoFromConfig();
         }
 
         return $this->_getShopHostInfoFromServerVars();
+    }
+    /**
+     * @deprecated use self::getShopSSLHostInfo instead
+     */
+    protected function _getShopSSLHostInfo() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getShopSSLHostInfo();
     }
 
     /**
@@ -440,7 +475,7 @@ class SystemRequirements
      *
      * @return array
      */
-    protected function _getShopSSLHostInfo() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getShopSSLHostInfo()
     {
         if ($this->isAdmin()) {
             return $this->_getShopSSLHostInfoFromConfig();
@@ -792,13 +827,20 @@ class SystemRequirements
 
         return $iModStat;
     }
+    /**
+     * @deprecated use self::getAdditionalCheck instead
+     */
+    protected function _getAdditionalCheck() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getAdditionalCheck();
+    }
 
     /**
      * Additional sql: do not check collation for \OxidEsales\Eshop\Core\SystemRequirements::$_aException columns
      *
      * @return string
      */
-    protected function _getAdditionalCheck() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getAdditionalCheck()
     {
         $sSelect = '';
         foreach ($this->_aException as $sTable => $sColumn) {
@@ -1027,6 +1069,13 @@ class SystemRequirements
 
         return $sUrl;
     }
+    /**
+     * @deprecated use self::getBytes instead
+     */
+    protected function _getBytes($sBytes) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getBytes($sBytes);
+    }
 
     /**
      * Parses and calculates given string form byte size value
@@ -1035,7 +1084,7 @@ class SystemRequirements
      *
      * @return int
      */
-    protected function _getBytes($sBytes) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getBytes($sBytes)
     {
         $sBytes = trim($sBytes);
         $sLast = strtolower($sBytes[strlen($sBytes) - 1]);
@@ -1057,6 +1106,13 @@ class SystemRequirements
 
         return $sBytes;
     }
+    /**
+     * @deprecated use self::checkTemplateBlock instead
+     */
+    protected function _checkTemplateBlock($sTemplate, $sBlockName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->checkTemplateBlock($sTemplate, $sBlockName);
+    }
 
     /**
      * check if given template contains the given block
@@ -1068,7 +1124,7 @@ class SystemRequirements
      *
      * @return bool
      */
-    protected function _checkTemplateBlock($sTemplate, $sBlockName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function checkTemplateBlock($sTemplate, $sBlockName)
     {
         /** @var TemplateLoaderInterface $templateLoader */
         $templateLoader = $this->getContainer()->get('oxid_esales.templating.template.loader');
@@ -1160,15 +1216,29 @@ class SystemRequirements
 
         return in_array($sStatus, ['on', '1']) ? 0 : 2;
     }
+    /**
+     * @deprecated use self::getMinimumMemoryLimit instead
+     */
+    protected function _getMinimumMemoryLimit() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getMinimumMemoryLimit();
+    }
 
     /**
      * Return minimum memory limit by edition.
      *
      * @return string
      */
-    protected function _getMinimumMemoryLimit() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getMinimumMemoryLimit()
     {
         return '32M';
+    }
+    /**
+     * @deprecated use self::getRecommendMemoryLimit instead
+     */
+    protected function _getRecommendMemoryLimit() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getRecommendMemoryLimit();
     }
 
     /**
@@ -1176,7 +1246,7 @@ class SystemRequirements
      *
      * @return string
      */
-    protected function _getRecommendMemoryLimit() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getRecommendMemoryLimit()
     {
         return '60M';
     }

@@ -55,13 +55,20 @@ class OnlineModuleVersionNotifier
         $oOMNCaller = $this->_getOnlineModuleNotifierCaller();
         $oOMNCaller->doRequest($this->_formRequest());
     }
+    /**
+     * @deprecated use self::prepareModulesInformation instead
+     */
+    protected function _prepareModulesInformation() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->prepareModulesInformation();
+    }
 
     /**
      * Collects only required modules information and returns as array.
      *
      * @return null
      */
-    protected function _prepareModulesInformation() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function prepareModulesInformation()
     {
         $preparedModules = [];
 
@@ -88,13 +95,20 @@ class OnlineModuleVersionNotifier
 
         return $preparedModules;
     }
+    /**
+     * @deprecated use self::formRequest instead
+     */
+    protected function _formRequest() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->formRequest();
+    }
 
     /**
      * Send request message to Online Module Version Notifier web service.
      *
      * @return oxOnlineModulesNotifierRequest
      */
-    protected function _formRequest() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function formRequest()
     {
         $oRequestParams = new \OxidEsales\Eshop\Core\OnlineModulesNotifierRequest();
 
@@ -103,15 +117,29 @@ class OnlineModuleVersionNotifier
 
         return $oRequestParams;
     }
+    /**
+     * @deprecated use self::getOnlineModuleNotifierCaller instead
+     */
+    protected function _getOnlineModuleNotifierCaller() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getOnlineModuleNotifierCaller();
+    }
 
     /**
      * Returns caller.
      *
      * @return \OxidEsales\Eshop\Core\OnlineModuleVersionNotifierCaller
      */
-    protected function _getOnlineModuleNotifierCaller() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getOnlineModuleNotifierCaller()
     {
         return $this->_oCaller;
+    }
+    /**
+     * @deprecated use self::getModules instead
+     */
+    protected function _getModules() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getModules();
     }
 
     /**
@@ -121,7 +149,7 @@ class OnlineModuleVersionNotifier
      *
      * @return array
      */
-    protected function _getModules() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getModules()
     {
         $container = ContainerFactory::getInstance()->getContainer();
         $shopConfiguration = $container->get(ShopConfigurationDaoBridgeInterface::class)->get();

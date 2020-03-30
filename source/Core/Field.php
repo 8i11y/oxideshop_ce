@@ -147,6 +147,13 @@ class Field // extends \OxidEsales\Eshop\Core\Base
     {
         $this->setValue(str_replace("\r", '', nl2br(getStr()->htmlspecialchars($this->rawValue))), self::T_RAW);
     }
+    /**
+     * @deprecated use self::initValue instead
+     */
+    protected function _initValue($value = null, $type = self::T_TEXT) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->initValue($value, $type);
+    }
 
     /**
      * Initial field value
@@ -154,7 +161,7 @@ class Field // extends \OxidEsales\Eshop\Core\Base
      * @param mixed $value Field value
      * @param int   $type  Value type
      */
-    protected function _initValue($value = null, $type = self::T_TEXT) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function initValue($value = null, $type = self::T_TEXT)
     {
         switch ($type) {
             case self::T_TEXT:

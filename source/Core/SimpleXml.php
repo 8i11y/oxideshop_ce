@@ -59,6 +59,13 @@ class SimpleXml
     {
         return simplexml_load_string($sXml);
     }
+    /**
+     * @deprecated use self::addSimpleXmlElement instead
+     */
+    protected function _addSimpleXmlElement($oXml, $oInput, $sPreferredKey = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->addSimpleXmlElement($oXml, $oInput, $sPreferredKey);
+    }
 
     /**
      * Recursively adds $oInput object data to SimpleXMLElement structure
@@ -69,7 +76,7 @@ class SimpleXml
      *
      * @return SimpleXMLElement
      */
-    protected function _addSimpleXmlElement($oXml, $oInput, $sPreferredKey = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function addSimpleXmlElement($oXml, $oInput, $sPreferredKey = null)
     {
         $aElements = is_object($oInput) ? get_object_vars($oInput) : (array) $oInput;
 
@@ -78,6 +85,13 @@ class SimpleXml
         }
 
         return $oXml;
+    }
+    /**
+     * @deprecated use self::addChildNode instead
+     */
+    protected function _addChildNode($oXml, $sKey, $mElement, $sPreferredKey = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->addChildNode($oXml, $sKey, $mElement, $sPreferredKey);
     }
 
     /**
@@ -90,7 +104,7 @@ class SimpleXml
      *
      * @return SimpleXMLElement
      */
-    protected function _addChildNode($oXml, $sKey, $mElement, $sPreferredKey = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function addChildNode($oXml, $sKey, $mElement, $sPreferredKey = null)
     {
         $aAttributes = [];
         if (is_array($mElement) && array_key_exists('attributes', $mElement) && is_array($mElement['attributes'])) {
@@ -113,6 +127,13 @@ class SimpleXml
 
         return $oXml;
     }
+    /**
+     * @deprecated use self::addNodeAttributes instead
+     */
+    protected function _addNodeAttributes($oNode, $aAttributes) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->addNodeAttributes($oNode, $aAttributes);
+    }
 
     /**
      * Adds attributes to given node.
@@ -122,7 +143,7 @@ class SimpleXml
      *
      * @return SimpleXMLElement
      */
-    protected function _addNodeAttributes($oNode, $aAttributes) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function addNodeAttributes($oNode, $aAttributes)
     {
         $aAttributes = (array) $aAttributes;
         foreach ($aAttributes as $sKey => $sValue) {

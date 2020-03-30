@@ -493,6 +493,13 @@ class UtilsUrl extends \OxidEsales\Eshop\Core\Base
     {
         return [\OxidEsales\Eshop\Core\Registry::getLang()->getName() => $languageId];
     }
+    /**
+     * @deprecated use self::addHost instead
+     */
+    protected function _addHost($sUrl, &$aHosts) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->addHost($sUrl, $aHosts);
+    }
 
     /**
      * Extracts host from given url and appends $aHosts with it
@@ -500,13 +507,20 @@ class UtilsUrl extends \OxidEsales\Eshop\Core\Base
      * @param string $sUrl   url to extract
      * @param array  $aHosts hosts array
      */
-    protected function _addHost($sUrl, &$aHosts) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function addHost($sUrl, &$aHosts)
     {
         if ($sUrl && ($sHost = @parse_url($sUrl, PHP_URL_HOST))) {
             if (!in_array($sHost, $aHosts)) {
                 $aHosts[] = $sHost;
             }
         }
+    }
+    /**
+     * @deprecated use self::addLanguageHost instead
+     */
+    protected function _addLanguageHost($aLanguageUrls, &$aHosts) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->addLanguageHost($aLanguageUrls, $aHosts);
     }
 
     /**
@@ -515,7 +529,7 @@ class UtilsUrl extends \OxidEsales\Eshop\Core\Base
      * @param array $aLanguageUrls array of language urls to extract
      * @param array $aHosts        hosts array
      */
-    protected function _addLanguageHost($aLanguageUrls, &$aHosts) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function addLanguageHost($aLanguageUrls, &$aHosts)
     {
         $iLanguageId = \OxidEsales\Eshop\Core\Registry::getLang()->getBaseLanguage();
 
@@ -523,13 +537,20 @@ class UtilsUrl extends \OxidEsales\Eshop\Core\Base
             $this->_addHost($aLanguageUrls[$iLanguageId], $aHosts);
         }
     }
+    /**
+     * @deprecated use self::getHosts instead
+     */
+    protected function _getHosts() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getHosts();
+    }
 
     /**
      * Collects and returns current shop hosts array.
      *
      * @return array
      */
-    protected function _getHosts() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getHosts()
     {
         if ($this->_aHosts === null) {
             $this->_aHosts = [];
@@ -552,13 +573,20 @@ class UtilsUrl extends \OxidEsales\Eshop\Core\Base
 
         return $this->_aHosts;
     }
+    /**
+     * @deprecated use self::addMallHosts instead
+     */
+    protected function _addMallHosts(&$aHosts) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->addMallHosts($aHosts);
+    }
 
     /**
      * Appends shop mall urls to $aHosts if needed
      *
      * @param array $aHosts hosts array
      */
-    protected function _addMallHosts(&$aHosts) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function addMallHosts(&$aHosts)
     {
     }
 

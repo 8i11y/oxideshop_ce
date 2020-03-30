@@ -49,15 +49,29 @@ class PasswordSaltGenerator
 
         return $sSalt;
     }
+    /**
+     * @deprecated use self::getOpenSSLFunctionalityChecker instead
+     */
+    protected function _getOpenSSLFunctionalityChecker() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getOpenSSLFunctionalityChecker();
+    }
 
     /**
      * Gets open SSL functionality checker.
      *
      * @return \OxidEsales\Eshop\Core\OpenSSLFunctionalityChecker
      */
-    protected function _getOpenSSLFunctionalityChecker() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getOpenSSLFunctionalityChecker()
     {
         return $this->_openSSLFunctionalityChecker;
+    }
+    /**
+     * @deprecated use self::customSaltGenerator instead
+     */
+    protected function _customSaltGenerator() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->customSaltGenerator();
     }
 
     /**
@@ -65,7 +79,7 @@ class PasswordSaltGenerator
      *
      * @return string
      */
-    protected function _customSaltGenerator() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function customSaltGenerator()
     {
         $sHash = '';
         $sSalt = '';

@@ -184,6 +184,13 @@ class PictureHandler extends \OxidEsales\Eshop\Core\Base
     {
         return basename($sMasterImageFile);
     }
+    /**
+     * @deprecated use self::getBaseMasterImageFileName instead
+     */
+    protected function _getBaseMasterImageFileName($sMasterImageFile) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getBaseMasterImageFileName($sMasterImageFile);
+    }
 
     /**
      * Gets master image file name and removes suffics (e.g. _p1) from file end.
@@ -192,7 +199,7 @@ class PictureHandler extends \OxidEsales\Eshop\Core\Base
      *
      * @return null
      */
-    protected function _getBaseMasterImageFileName($sMasterImageFile) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getBaseMasterImageFileName($sMasterImageFile)
     {
         return basename($sMasterImageFile);
     }
@@ -223,6 +230,13 @@ class PictureHandler extends \OxidEsales\Eshop\Core\Base
 
         return null;
     }
+    /**
+     * @deprecated use self::getPictureInfo instead
+     */
+    protected function _getPictureInfo($sFilePath, $sFile, $blAdmin = false, $blSSL = null, $iLang = null, $iShopId = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getPictureInfo($sFilePath, $sFile, $blAdmin, $blSSL, $iLang, $iShopId);
+    }
 
     /**
      * Returns dir/url info for given image file
@@ -236,7 +250,7 @@ class PictureHandler extends \OxidEsales\Eshop\Core\Base
      *
      * @return array
      */
-    protected function _getPictureInfo($sFilePath, $sFile, $blAdmin = false, $blSSL = null, $iLang = null, $iShopId = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getPictureInfo($sFilePath, $sFile, $blAdmin = false, $blSSL = null, $iLang = null, $iShopId = null)
     {
         // custom server as image storage?
         if ($sAltUrl = $this->getAltImageUrl($sFilePath, $sFile, $blSSL)) {

@@ -36,15 +36,29 @@ class OnlineModuleVersionNotifierCaller extends \OxidEsales\Eshop\Core\OnlineCal
     {
         $this->call($oRequest);
     }
+    /**
+     * @deprecated use self::getXMLDocumentName instead
+     */
+    protected function _getXMLDocumentName() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getXMLDocumentName();
+    }
 
     /**
      * Gets XML document name.
      *
      * @return string XML document tag name.
      */
-    protected function _getXMLDocumentName() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getXMLDocumentName()
     {
         return self::XML_DOCUMENT_NAME;
+    }
+    /**
+     * @deprecated use self::getServiceUrl instead
+     */
+    protected function _getServiceUrl() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getServiceUrl();
     }
 
     /**
@@ -52,7 +66,7 @@ class OnlineModuleVersionNotifierCaller extends \OxidEsales\Eshop\Core\OnlineCal
      *
      * @return string Web service url.
      */
-    protected function _getServiceUrl() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getServiceUrl()
     {
         return self::WEB_SERVICE_URL;
     }

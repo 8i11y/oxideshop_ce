@@ -522,6 +522,13 @@ class Utils extends \OxidEsales\Eshop\Core\Base
 
         return isset($this->_aFileCacheContents[$sKey]) ? $this->_aFileCacheContents[$sKey]['content'] : null;
     }
+    /**
+     * @deprecated use self::readFile instead
+     */
+    protected function _readFile($sFilePath) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->readFile($sFilePath);
+    }
 
     /**
      * Reads and returns cache file contents
@@ -530,11 +537,18 @@ class Utils extends \OxidEsales\Eshop\Core\Base
      *
      * @return string
      */
-    protected function _readFile($sFilePath) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function readFile($sFilePath)
     {
         $sRes = file_get_contents($sFilePath);
 
         return $sRes ? unserialize($sRes) : null;
+    }
+    /**
+     * @deprecated use self::includeFile instead
+     */
+    protected function _includeFile($sFilePath) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->includeFile($sFilePath);
     }
 
     /**
@@ -544,12 +558,19 @@ class Utils extends \OxidEsales\Eshop\Core\Base
      *
      * @return mixed
      */
-    protected function _includeFile($sFilePath) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function includeFile($sFilePath)
     {
         $_aCacheContents = null;
         include $sFilePath;
 
         return $_aCacheContents;
+    }
+    /**
+     * @deprecated use self::processCache instead
+     */
+    protected function _processCache($sKey, $mContents) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->processCache($sKey, $mContents);
     }
 
     /**
@@ -560,7 +581,7 @@ class Utils extends \OxidEsales\Eshop\Core\Base
      *
      * @return mixed
      */
-    protected function _processCache($sKey, $mContents) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function processCache($sKey, $mContents)
     {
         // looking for cache meta
         $aCacheMeta = $this->getCacheMeta($sKey);
@@ -602,6 +623,13 @@ class Utils extends \OxidEsales\Eshop\Core\Base
             $this->_aFileCacheContents = [];
         }
     }
+    /**
+     * @deprecated use self::lockFile instead
+     */
+    protected function _lockFile($sFilePath, $sIdent, $iLockMode = LOCK_EX) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->lockFile($sFilePath, $sIdent, $iLockMode);
+    }
 
     /**
      * Locks cache file and returns its handle on success or false on failure
@@ -612,7 +640,7 @@ class Utils extends \OxidEsales\Eshop\Core\Base
      *
      * @return mixed lock file resource or false on error
      */
-    protected function _lockFile($sFilePath, $sIdent, $iLockMode = LOCK_EX) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function lockFile($sFilePath, $sIdent, $iLockMode = LOCK_EX)
     {
         $rHandle = isset($this->_aLockedFileHandles[$iLockMode][$sIdent]) ? $this->_aLockedFileHandles[$iLockMode][$sIdent] : null;
         if ($rHandle === null) {
@@ -655,6 +683,13 @@ class Utils extends \OxidEsales\Eshop\Core\Base
 
         return $rHandle;
     }
+    /**
+     * @deprecated use self::releaseFile instead
+     */
+    protected function _releaseFile($sIdent, $iLockMode = LOCK_EX) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->releaseFile($sIdent, $iLockMode);
+    }
 
     /**
      * Releases file lock and returns release state
@@ -664,7 +699,7 @@ class Utils extends \OxidEsales\Eshop\Core\Base
      *
      * @return bool
      */
-    protected function _releaseFile($sIdent, $iLockMode = LOCK_EX) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function releaseFile($sIdent, $iLockMode = LOCK_EX)
     {
         $blSuccess = true;
         if (
@@ -1001,6 +1036,13 @@ class Utils extends \OxidEsales\Eshop\Core\Base
     {
         return (bool) getStr()->preg_match('/^[a-zA-Z0-9_]*$/', $sField);
     }
+    /**
+     * @deprecated use self::simpleRedirect instead
+     */
+    protected function _simpleRedirect($sUrl, $sHeaderCode) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->simpleRedirect($sUrl, $sHeaderCode);
+    }
 
     /**
      * redirects browser to given url, nothing else done just header send
@@ -1009,7 +1051,7 @@ class Utils extends \OxidEsales\Eshop\Core\Base
      * @param string $sUrl        the URL to redirect to
      * @param string $sHeaderCode code to add to the header(e.g. "HTTP/1.1 301 Moved Permanently", or "HTTP/1.1 500 Internal Server Error"
      */
-    protected function _simpleRedirect($sUrl, $sHeaderCode) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function simpleRedirect($sUrl, $sHeaderCode)
     {
         $oHeader = oxNew(\OxidEsales\Eshop\Core\Header::class);
         $oHeader->setHeader($sHeaderCode);
@@ -1127,6 +1169,13 @@ class Utils extends \OxidEsales\Eshop\Core\Base
     {
         header($sHeader);
     }
+    /**
+     * @deprecated use self::addUrlParameters instead
+     */
+    protected function _addUrlParameters($sUrl, $aParams) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->addUrlParameters($sUrl, $aParams);
+    }
 
     /**
      * adds the given parameters at the end of the given url
@@ -1136,7 +1185,7 @@ class Utils extends \OxidEsales\Eshop\Core\Base
      *
      * @return string
      */
-    protected function _addUrlParameters($sUrl, $aParams) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function addUrlParameters($sUrl, $aParams)
     {
         $sDelimiter = ((getStr()->strpos($sUrl, '?') !== false)) ? '&' : '?';
         foreach ($aParams as $sName => $sVal) {
@@ -1145,6 +1194,13 @@ class Utils extends \OxidEsales\Eshop\Core\Base
         }
 
         return $sUrl;
+    }
+    /**
+     * @deprecated use self::fillExplodeArray instead
+     */
+    protected function _fillExplodeArray($aName, $dVat = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->fillExplodeArray($aName, $dVat);
     }
 
     /**
@@ -1158,7 +1214,7 @@ class Utils extends \OxidEsales\Eshop\Core\Base
      * @todo rename function more closely to actual purpose
      * @todo finish refactoring
      */
-    protected function _fillExplodeArray($aName, $dVat = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function fillExplodeArray($aName, $dVat = null)
     {
         $myConfig = $this->getConfig();
         $oObject = new stdClass();
@@ -1212,6 +1268,13 @@ class Utils extends \OxidEsales\Eshop\Core\Base
 
         return $oObject;
     }
+    /**
+     * @deprecated use self::preparePrice instead
+     */
+    protected function _preparePrice($dPrice, $dVat) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->preparePrice($dPrice, $dVat);
+    }
 
     /**
      * Prepares price depending what options are used(show as net, brutto, etc.) for displaying
@@ -1221,7 +1284,7 @@ class Utils extends \OxidEsales\Eshop\Core\Base
      *
      * @return float
      */
-    protected function _preparePrice($dPrice, $dVat) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function preparePrice($dPrice, $dVat)
     {
         $blCalculationModeNetto = $this->_isPriceViewModeNetto();
 
@@ -1236,13 +1299,20 @@ class Utils extends \OxidEsales\Eshop\Core\Base
 
         return $dPrice;
     }
+    /**
+     * @deprecated use self::isPriceViewModeNetto instead
+     */
+    protected function _isPriceViewModeNetto() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->isPriceViewModeNetto();
+    }
 
     /**
      * Checks and return true if price view mode is netto.
      *
      * @return bool
      */
-    protected function _isPriceViewModeNetto() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function isPriceViewModeNetto()
     {
         $blResult = (bool) $this->getConfig()->getConfigParam('blShowNetPrice');
         $oUser = $this->_getArticleUser();
@@ -1252,13 +1322,20 @@ class Utils extends \OxidEsales\Eshop\Core\Base
 
         return $blResult;
     }
+    /**
+     * @deprecated use self::getArticleUser instead
+     */
+    protected function _getArticleUser() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getArticleUser();
+    }
 
     /**
      * Return article user.
      *
      * @return oxUser
      */
-    protected function _getArticleUser() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getArticleUser()
     {
         if ($this->_oUser) {
             return $this->_oUser;

@@ -83,15 +83,29 @@ class UniversallyUniqueIdGenerator
 
         return $sUUID;
     }
+    /**
+     * @deprecated use self::getOpenSSLChecker instead
+     */
+    protected function _getOpenSSLChecker() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getOpenSSLChecker();
+    }
 
     /**
      * gets open SSL checker.
      *
      * @return \OxidEsales\Eshop\Core\OpenSSLFunctionalityChecker
      */
-    protected function _getOpenSSLChecker() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getOpenSSLChecker()
     {
         return $this->_openSSLChecker;
+    }
+    /**
+     * @deprecated use self::generateBasedOnOpenSSL instead
+     */
+    protected function _generateBasedOnOpenSSL() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->generateBasedOnOpenSSL();
     }
 
     /**
@@ -99,7 +113,7 @@ class UniversallyUniqueIdGenerator
      *
      * @return string
      */
-    protected function _generateBasedOnOpenSSL() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function generateBasedOnOpenSSL()
     {
         $sRandomData = openssl_random_pseudo_bytes(16);
         $sRandomData[6] = chr(ord($sRandomData[6]) & 0x0f | 0x40); // set version to 0100
@@ -107,13 +121,20 @@ class UniversallyUniqueIdGenerator
 
         return vsprintf('%s%s-%s-%s-%s-%s%s%s', str_split(bin2hex($sRandomData), 4));
     }
+    /**
+     * @deprecated use self::generateBasedOnMtRand instead
+     */
+    protected function _generateBasedOnMtRand() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->generateBasedOnMtRand();
+    }
 
     /**
      * Generates UUID based on mt_rand.
      *
      * @return string
      */
-    protected function _generateBasedOnMtRand() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function generateBasedOnMtRand()
     {
         return sprintf(
             '%04x%04x-%04x-%04x-%04x-%04x%04x%04x',

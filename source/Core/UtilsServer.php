@@ -74,13 +74,20 @@ class UtilsServer extends \OxidEsales\Eshop\Core\Base
     }
 
     protected $_blSaveToSession = null;
+    /**
+     * @deprecated use self::mustSaveToSession instead
+     */
+    protected function _mustSaveToSession() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->mustSaveToSession();
+    }
 
     /**
      * Checks if cookie must be saved to session in order to transfer it to different domain
      *
      * @return bool
      */
-    protected function _mustSaveToSession() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function mustSaveToSession()
     {
         if ($this->_blSaveToSession === null) {
             $this->_blSaveToSession = false;
@@ -102,6 +109,13 @@ class UtilsServer extends \OxidEsales\Eshop\Core\Base
 
         return $this->_blSaveToSession;
     }
+    /**
+     * @deprecated use self::getSessionCookieKey instead
+     */
+    protected function _getSessionCookieKey($blGet) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getSessionCookieKey($blGet);
+    }
 
     /**
      * Returns session cookie key
@@ -110,7 +124,7 @@ class UtilsServer extends \OxidEsales\Eshop\Core\Base
      *
      * @return string
      */
-    protected function _getSessionCookieKey($blGet) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getSessionCookieKey($blGet)
     {
         $blSsl = $this->getConfig()->isSsl();
         $sKey = $blSsl ? 'nossl' : 'ssl';
@@ -120,6 +134,13 @@ class UtilsServer extends \OxidEsales\Eshop\Core\Base
         }
 
         return $sKey;
+    }
+    /**
+     * @deprecated use self::saveSessionCookie instead
+     */
+    protected function _saveSessionCookie($sName, $sValue, $iExpire, $sPath, $sDomain) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->saveSessionCookie($sName, $sValue, $iExpire, $sPath, $sDomain);
     }
 
     /**
@@ -131,7 +152,7 @@ class UtilsServer extends \OxidEsales\Eshop\Core\Base
      * @param string $sPath   cookie path
      * @param string $sDomain cookie domain
      */
-    protected function _saveSessionCookie($sName, $sValue, $iExpire, $sPath, $sDomain) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function saveSessionCookie($sName, $sValue, $iExpire, $sPath, $sDomain)
     {
         if ($this->_mustSaveToSession()) {
             $aCookieData = ['value' => $sValue, 'expire' => $iExpire, 'path' => $sPath, 'domain' => $sDomain];
@@ -163,6 +184,13 @@ class UtilsServer extends \OxidEsales\Eshop\Core\Base
             }
         }
     }
+    /**
+     * @deprecated use self::getCookiePath instead
+     */
+    protected function _getCookiePath($sPath) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getCookiePath($sPath);
+    }
 
     /**
      * Returns cookie path. If user did not set path, or set it to null, according to php
@@ -174,7 +202,7 @@ class UtilsServer extends \OxidEsales\Eshop\Core\Base
      *
      * @return string
      */
-    protected function _getCookiePath($sPath) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getCookiePath($sPath)
     {
         if ($aCookiePaths = $this->getConfig()->getConfigParam('aCookiePaths')) {
             // in case user wants to have shop specific setup
@@ -184,6 +212,13 @@ class UtilsServer extends \OxidEsales\Eshop\Core\Base
 
         // from php doc: .. You may also replace an argument with an empty string ("") in order to skip that argument..
         return $sPath ? $sPath : "";
+    }
+    /**
+     * @deprecated use self::getCookieDomain instead
+     */
+    protected function _getCookieDomain($sDomain) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getCookieDomain($sDomain);
     }
 
     /**
@@ -196,7 +231,7 @@ class UtilsServer extends \OxidEsales\Eshop\Core\Base
      *
      * @return string
      */
-    protected function _getCookieDomain($sDomain) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getCookieDomain($sDomain)
     {
         $sDomain = $sDomain ? $sDomain : "";
 

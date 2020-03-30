@@ -30,6 +30,13 @@ class CreditCardValidator
         "swi" => '/^[456].{15}$|^[456].{17,18}$/', // Switch               16, 18, 19    4-6
         "vis" => '/^4.{15}$|^4.{12}$/', // Visa                 13, 16        4
     ];
+    /**
+     * @deprecated use self::isValidType instead
+     */
+    protected function _isValidType($type, $number) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->isValidType($type, $number);
+    }
 
     /**
      * Checks credit card type. Returns TRUE if card is valid
@@ -39,7 +46,7 @@ class CreditCardValidator
      *
      * @return bool
      */
-    protected function _isValidType($type, $number) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function isValidType($type, $number)
     {
         // testing if card type is known and matches pattern
         if (isset($this->_aCardsInfo[$type])) {
@@ -47,6 +54,13 @@ class CreditCardValidator
         }
 
         return true;
+    }
+    /**
+     * @deprecated use self::isExpired instead
+     */
+    protected function _isExpired($date) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->isExpired($date);
     }
 
     /**
@@ -56,7 +70,7 @@ class CreditCardValidator
      *
      * @return bool
      */
-    protected function _isExpired($date) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function isExpired($date)
     {
         if ($date) {
             $years = substr($date, 2, 2);
@@ -71,6 +85,13 @@ class CreditCardValidator
 
         return false;
     }
+    /**
+     * @deprecated use self::isValidNumer instead
+     */
+    protected function _isValidNumer($number) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->isValidNumer($number);
+    }
 
     /**
      * checks credit card number. Returns TRUE if card number is valid
@@ -79,7 +100,7 @@ class CreditCardValidator
      *
      * @return bool
      */
-    protected function _isValidNumer($number) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function isValidNumer($number)
     {
         $valid = false;
         if (($length = strlen($number))) {

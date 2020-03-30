@@ -41,13 +41,20 @@ class ShopIdCalculator
     {
         return static::BASE_SHOP_ID;
     }
+    /**
+     * @deprecated use self::getConfKey instead
+     */
+    protected function _getConfKey() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getConfKey();
+    }
 
     /**
      * Returns configuration key. This method is independent from oxConfig functionality.
      *
      * @return string
      */
-    protected function _getConfKey() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getConfKey()
     {
         if (Registry::instanceExists(\OxidEsales\Eshop\Core\ConfigFile::class)) {
             $config = Registry::get(\OxidEsales\Eshop\Core\ConfigFile::class);
@@ -57,13 +64,20 @@ class ShopIdCalculator
         }
         return $config->getVar('sConfigKey') ?: Config::DEFAULT_CONFIG_KEY;
     }
+    /**
+     * @deprecated use self::getShopUrlMap instead
+     */
+    protected function _getShopUrlMap() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getShopUrlMap();
+    }
 
     /**
      * Returns shop url to id map from config.
      *
      * @return array
      */
-    protected function _getShopUrlMap() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getShopUrlMap()
     {
         //get from static cache
         if (isset(self::$urlMap)) {

@@ -67,11 +67,18 @@ class WidgetControl extends \OxidEsales\Eshop\Core\ShopControl
         //perform tasks that should be done at the end of widget processing
         $this->_runLast();
     }
+    /**
+     * @deprecated use self::runLast instead
+     */
+    protected function _runLast() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->runLast();
+    }
 
     /**
      * Runs actions that should be performed at the controller finish.
      */
-    protected function _runLast() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function runLast()
     {
         $oConfig = $this->getConfig();
 
@@ -88,6 +95,13 @@ class WidgetControl extends \OxidEsales\Eshop\Core\ShopControl
             $engine->addGlobal('oView', $oConfig->getActiveView());
         }
     }
+    /**
+     * @deprecated use self::initializeViewObject instead
+     */
+    protected function _initializeViewObject($class, $function, $parameters = null, $viewsChain = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->initializeViewObject($class, $function, $parameters, $viewsChain);
+    }
 
     /**
      * Initialize and return widget view object.
@@ -101,7 +115,7 @@ class WidgetControl extends \OxidEsales\Eshop\Core\ShopControl
      *
      * @return \OxidEsales\Eshop\Core\Controller\BaseController Current active view
      */
-    protected function _initializeViewObject($class, $function, $parameters = null, $viewsChain = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function initializeViewObject($class, $function, $parameters = null, $viewsChain = null)
     {
         $config = $this->getConfig();
         $activeViewsIds = $config->getActiveViewsIds();
@@ -126,7 +140,7 @@ class WidgetControl extends \OxidEsales\Eshop\Core\ShopControl
             }
         }
 
-        $widgetViewObject = parent::_initializeViewObject($class, $function, $parameters, null);
+        $widgetViewObject = parent::initializeViewObject($class, $function, $parameters, null);
 
         if (!is_a($widgetViewObject, WidgetController::class)) {
             /** @var ObjectException $exception */

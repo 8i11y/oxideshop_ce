@@ -284,6 +284,13 @@ class InputValidator extends \OxidEsales\Eshop\Core\Base
             $this->_addValidationError($sField, $exception);
         }
     }
+    /**
+     * @deprecated use self::setFields instead
+     */
+    private function _setFields($object, $fields) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->setFields($object, $fields);
+    }
 
     /**
      * Creates oxAddress object from given array.
@@ -293,7 +300,7 @@ class InputValidator extends \OxidEsales\Eshop\Core\Base
      *
      * @return User|Address
      */
-    private function _setFields($object, $fields) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    private function setFields($object, $fields)
     {
         $fields = is_array($fields) ? $fields : [];
         foreach ($fields as $sKey => $sValue) {
@@ -378,6 +385,13 @@ class InputValidator extends \OxidEsales\Eshop\Core\Base
             return $this->_addValidationError("oxuser__oxcompany", $exception);
         }
     }
+    /**
+     * @deprecated use self::getCountry instead
+     */
+    protected function _getCountry($countryId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getCountry($countryId);
+    }
 
 
     /**
@@ -387,7 +401,7 @@ class InputValidator extends \OxidEsales\Eshop\Core\Base
      *
      * @return \OxidEsales\Eshop\Application\Model\Country
      */
-    protected function _getCountry($countryId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getCountry($countryId)
     {
         $country = oxNew(\OxidEsales\Eshop\Application\Model\Country::class);
         $country->load($countryId);
@@ -491,6 +505,13 @@ class InputValidator extends \OxidEsales\Eshop\Core\Base
     {
         return $this->_aInputValidationErrors[$fieldName][] = $error;
     }
+    /**
+     * @deprecated use self::validateDebitNote instead
+     */
+    protected function _validateDebitNote($debitInformation) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->validateDebitNote($debitInformation);
+    }
 
     /**
      * Validates debit note.
@@ -499,7 +520,7 @@ class InputValidator extends \OxidEsales\Eshop\Core\Base
      *
      * @return bool|int
      */
-    protected function _validateDebitNote($debitInformation) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function validateDebitNote($debitInformation)
     {
         $debitInformation = $this->_cleanDebitInformation($debitInformation);
         $bankCode = $debitInformation['lsblz'];
@@ -520,6 +541,13 @@ class InputValidator extends \OxidEsales\Eshop\Core\Base
 
         return $validateResult;
     }
+    /**
+     * @deprecated use self::validateOldDebitInfo instead
+     */
+    protected function _validateOldDebitInfo($debitInfo) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->validateOldDebitInfo($debitInfo);
+    }
 
     /**
      * Validates old debit info.
@@ -528,7 +556,7 @@ class InputValidator extends \OxidEsales\Eshop\Core\Base
      *
      * @return bool|int
      */
-    protected function _validateOldDebitInfo($debitInfo) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function validateOldDebitInfo($debitInfo)
     {
         $stringHelper = getStr();
         $debitInfo = $this->_fixAccountNumber($debitInfo);
@@ -548,6 +576,13 @@ class InputValidator extends \OxidEsales\Eshop\Core\Base
 
         return $validationResult;
     }
+    /**
+     * @deprecated use self::fixAccountNumber instead
+     */
+    protected function _fixAccountNumber($debitInfo) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->fixAccountNumber($debitInfo);
+    }
 
     /**
      * If account number is shorter than 10, add zeros in front of number.
@@ -556,7 +591,7 @@ class InputValidator extends \OxidEsales\Eshop\Core\Base
      *
      * @return array
      */
-    protected function _fixAccountNumber($debitInfo) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function fixAccountNumber($debitInfo)
     {
         $oStr = getStr();
 
@@ -570,6 +605,13 @@ class InputValidator extends \OxidEsales\Eshop\Core\Base
 
         return $debitInfo;
     }
+    /**
+     * @deprecated use self::isAllBankInformationSet instead
+     */
+    protected function _isAllBankInformationSet($requiredFields, $bankInformation) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->isAllBankInformationSet($requiredFields, $bankInformation);
+    }
 
     /**
      * Checks if all bank information is set.
@@ -579,7 +621,7 @@ class InputValidator extends \OxidEsales\Eshop\Core\Base
      *
      * @return bool
      */
-    protected function _isAllBankInformationSet($requiredFields, $bankInformation) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function isAllBankInformationSet($requiredFields, $bankInformation)
     {
         $isSet = true;
         foreach ($requiredFields as $fieldName) {
@@ -591,6 +633,13 @@ class InputValidator extends \OxidEsales\Eshop\Core\Base
 
         return $isSet;
     }
+    /**
+     * @deprecated use self::cleanDebitInformation instead
+     */
+    protected function _cleanDebitInformation($debitInformation) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->cleanDebitInformation($debitInformation);
+    }
 
     /**
      * Clean up spaces.
@@ -599,12 +648,19 @@ class InputValidator extends \OxidEsales\Eshop\Core\Base
      *
      * @return mixed
      */
-    protected function _cleanDebitInformation($debitInformation) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function cleanDebitInformation($debitInformation)
     {
         $debitInformation['lsblz'] = str_replace(' ', '', $debitInformation['lsblz']);
         $debitInformation['lsktonr'] = str_replace(' ', '', $debitInformation['lsktonr']);
 
         return $debitInformation;
+    }
+    /**
+     * @deprecated use self::hasRequiredParametersForVatInCheck instead
+     */
+    protected function _hasRequiredParametersForVatInCheck($invAddress) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->hasRequiredParametersForVatInCheck($invAddress);
     }
 
     /**
@@ -614,7 +670,7 @@ class InputValidator extends \OxidEsales\Eshop\Core\Base
      *
      * @return bool
      */
-    protected function _hasRequiredParametersForVatInCheck($invAddress) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function hasRequiredParametersForVatInCheck($invAddress)
     {
         return $invAddress['oxuser__oxustid'] && $invAddress['oxuser__oxcountryid'] && $invAddress['oxuser__oxcompany'];
     }

@@ -184,13 +184,20 @@ class ViewConfig extends \OxidEsales\Eshop\Core\Base
                . ($sContentLoadId ? "&amp;oxloadid=" . $sContentLoadId : '')
                . "&amp;redirect=1";
     }
+    /**
+     * @deprecated use self::getHelpContentIdents instead
+     */
+    protected function _getHelpContentIdents() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getHelpContentIdents();
+    }
 
     /**
      * Returns help content link idents
      *
      * @return array
      */
-    protected function _getHelpContentIdents() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getHelpContentIdents()
     {
         $sClass = $this->getActiveClassName();
 
@@ -1391,6 +1398,13 @@ class ViewConfig extends \OxidEsales\Eshop\Core\Base
 
         return $sessionChallengeToken;
     }
+    /**
+     * @deprecated use self::moduleExists instead
+     */
+    private function _moduleExists($sModuleId, $aModuleVersions) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->moduleExists($sModuleId, $aModuleVersions);
+    }
 
     /**
      * Checks if module exists.
@@ -1400,7 +1414,7 @@ class ViewConfig extends \OxidEsales\Eshop\Core\Base
      *
      * @return bool
      */
-    private function _moduleExists($sModuleId, $aModuleVersions) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    private function moduleExists($sModuleId, $aModuleVersions)
     {
         return (in_array($sModuleId, array_keys($aModuleVersions)));
     }
@@ -1423,6 +1437,13 @@ class ViewConfig extends \OxidEsales\Eshop\Core\Base
             Registry::getConfig()->getShopId()
         );
     }
+    /**
+     * @deprecated use self::isModuleVersionCorrect instead
+     */
+    private function _isModuleVersionCorrect($sModuleId, $sVersionFrom, $sVersionTo) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->isModuleVersionCorrect($sModuleId, $sVersionFrom, $sVersionTo);
+    }
 
     /**
      * Checks whether module version is between given range.
@@ -1433,7 +1454,7 @@ class ViewConfig extends \OxidEsales\Eshop\Core\Base
      *
      * @return bool
      */
-    private function _isModuleVersionCorrect($sModuleId, $sVersionFrom, $sVersionTo) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    private function isModuleVersionCorrect($sModuleId, $sVersionFrom, $sVersionTo)
     {
         $blModuleIsActive = true;
 

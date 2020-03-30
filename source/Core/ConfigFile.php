@@ -79,6 +79,13 @@ class ConfigFile
         }
     }
     /**
+     * @deprecated use self::loadVars instead
+     */
+    private function _loadVars($fileName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->loadVars($fileName);
+    }
+    /**
      * Performs variable loading from configuration file by including the php file.
      * It works with current configuration file format well,
      * however in case the variable storage format is not satisfactory
@@ -86,7 +93,7 @@ class ConfigFile
      *
      * @param string $fileName Configuration file name
      */
-    private function _loadVars($fileName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    private function loadVars($fileName)
     {
         include $fileName;
     }

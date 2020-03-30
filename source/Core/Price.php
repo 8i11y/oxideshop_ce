@@ -417,11 +417,18 @@ class Price
     {
         return $this->_aDiscounts;
     }
+    /**
+     * @deprecated use self::flushDiscounts instead
+     */
+    protected function _flushDiscounts() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->flushDiscounts();
+    }
 
     /**
      * Flush assigned discounts
      */
-    protected function _flushDiscounts() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function flushDiscounts()
     {
         $this->_aDiscounts = null;
     }

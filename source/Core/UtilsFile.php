@@ -134,13 +134,20 @@ class UtilsFile extends \OxidEsales\Eshop\Core\Base
     {
         return $this->_iNewFilesCounter;
     }
+    /**
+     * @deprecated use self::setNewFilesCounter instead
+     */
+    protected function _setNewFilesCounter($iNewFilesCounter) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->setNewFilesCounter($iNewFilesCounter);
+    }
 
     /**
      * Setter for param _iNewFilesCounter which counts how many new files added.
      *
      * @param integer $iNewFilesCounter New files count.
      */
-    protected function _setNewFilesCounter($iNewFilesCounter) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function setNewFilesCounter($iNewFilesCounter)
     {
         $this->_iNewFilesCounter = (int) $iNewFilesCounter;
     }
@@ -249,6 +256,13 @@ class UtilsFile extends \OxidEsales\Eshop\Core\Base
 
         return $sRet;
     }
+    /**
+     * @deprecated use self::prepareImageName instead
+     */
+    protected function _prepareImageName($sValue, $sType, $blDemo, $sImagePath, $blUnique = true) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->prepareImageName($sValue, $sType, $blDemo, $sImagePath, $blUnique);
+    }
 
     /**
      * Prepares image file name
@@ -261,7 +275,7 @@ class UtilsFile extends \OxidEsales\Eshop\Core\Base
      *
      * @return string
      */
-    protected function _prepareImageName($sValue, $sType, $blDemo, $sImagePath, $blUnique = true) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function prepareImageName($sValue, $sType, $blDemo, $sImagePath, $blUnique = true)
     {
         if ($sValue) {
             // add type to name
@@ -293,6 +307,13 @@ class UtilsFile extends \OxidEsales\Eshop\Core\Base
 
         return $sValue;
     }
+    /**
+     * @deprecated use self::getImagePath instead
+     */
+    protected function _getImagePath($sType) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getImagePath($sType);
+    }
 
     /**
      * Returns image storage path
@@ -301,11 +322,18 @@ class UtilsFile extends \OxidEsales\Eshop\Core\Base
      *
      * @return string
      */
-    protected function _getImagePath($sType) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getImagePath($sType)
     {
         $sFolder = array_key_exists($sType, $this->_aTypeToPath) ? $this->_aTypeToPath[$sType] : '0';
 
         return $this->normalizeDir($this->getConfig()->getPictureDir(false)) . "{$sFolder}/";
+    }
+    /**
+     * @deprecated use self::getImageSize instead
+     */
+    protected function _getImageSize($sImgType, $iImgNum, $sImgConf) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getImageSize($sImgType, $iImgNum, $sImgConf);
     }
 
     /**
@@ -318,7 +346,7 @@ class UtilsFile extends \OxidEsales\Eshop\Core\Base
      *
      * @return array | null
      */
-    protected function _getImageSize($sImgType, $iImgNum, $sImgConf) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getImageSize($sImgType, $iImgNum, $sImgConf)
     {
         $myConfig = $this->getConfig();
 
@@ -338,6 +366,13 @@ class UtilsFile extends \OxidEsales\Eshop\Core\Base
             return explode('*', $sSize);
         }
     }
+    /**
+     * @deprecated use self::copyFile instead
+     */
+    protected function _copyFile($sSource, $sTarget) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->copyFile($sSource, $sTarget);
+    }
 
     /**
      * Copy file from source to target location
@@ -347,7 +382,7 @@ class UtilsFile extends \OxidEsales\Eshop\Core\Base
      *
      * @return bool
      */
-    protected function _copyFile($sSource, $sTarget) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function copyFile($sSource, $sTarget)
     {
         if (!is_dir(dirname($sTarget))) {
             mkdir(dirname($sTarget), 0744, true);
@@ -364,6 +399,13 @@ class UtilsFile extends \OxidEsales\Eshop\Core\Base
 
         return $blDone;
     }
+    /**
+     * @deprecated use self::moveImage instead
+     */
+    protected function _moveImage($sSource, $sTarget) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->moveImage($sSource, $sTarget);
+    }
 
     /**
      * Moves image from source to target location
@@ -373,7 +415,7 @@ class UtilsFile extends \OxidEsales\Eshop\Core\Base
      *
      * @return bool
      */
-    protected function _moveImage($sSource, $sTarget) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function moveImage($sSource, $sTarget)
     {
         if (!is_dir(dirname($sTarget))) {
             mkdir(dirname($sTarget), 0744, true);
@@ -580,6 +622,13 @@ class UtilsFile extends \OxidEsales\Eshop\Core\Base
 
         return false;
     }
+    /**
+     * @deprecated use self::getUniqueFileName instead
+     */
+    protected function _getUniqueFileName($sFilePath, $sFileName, $sFileExt, $sSufix = "", $blUnique = true) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getUniqueFileName($sFilePath, $sFileName, $sFileExt, $sSufix, $blUnique);
+    }
 
     /**
      * Checks if file with same name does not exist, if exists - addes number prefix
@@ -593,7 +642,7 @@ class UtilsFile extends \OxidEsales\Eshop\Core\Base
      *
      * @return string
      */
-    protected function _getUniqueFileName($sFilePath, $sFileName, $sFileExt, $sSufix = "", $blUnique = true) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getUniqueFileName($sFilePath, $sFileName, $sFileExt, $sSufix = "", $blUnique = true)
     {
         $sFilePath = $this->normalizeDir($sFilePath);
         $iFileCounter = 0;

@@ -46,6 +46,13 @@ class Str
 
         return self::$_oHandler;
     }
+    /**
+     * @deprecated use self::getStrHandler instead
+     */
+    protected function _getStrHandler() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getStrHandler();
+    }
 
     /**
      * Non static getter returning str handler. The sense of getStr() and _getStrHandler() is
@@ -54,7 +61,7 @@ class Str
      *
      * @return oxStrRegular|oxStrMb
      */
-    protected function _getStrHandler() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getStrHandler()
     {
         if (function_exists('mb_strlen')) {
             return oxNew(\OxidEsales\Eshop\Core\StrMb::class);

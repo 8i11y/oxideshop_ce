@@ -333,15 +333,29 @@ class Curl
     {
         return $this->_sStatusCode;
     }
+    /**
+     * @deprecated use self::setResource instead
+     */
+    protected function _setResource($rCurl) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->setResource($rCurl);
+    }
 
     /**
      * Sets resource
      *
      * @param resource $rCurl curl.
      */
-    protected function _setResource($rCurl) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function setResource($rCurl)
     {
         $this->_rCurl = $rCurl;
+    }
+    /**
+     * @deprecated use self::getResource instead
+     */
+    protected function _getResource() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getResource();
     }
 
     /**
@@ -349,7 +363,7 @@ class Curl
      *
      * @return resource
      */
-    protected function _getResource() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getResource()
     {
         if (is_null($this->_rCurl)) {
             $this->_setResource(curl_init());
@@ -357,11 +371,18 @@ class Curl
 
         return $this->_rCurl;
     }
+    /**
+     * @deprecated use self::setOptions instead
+     */
+    protected function _setOptions() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->setOptions();
+    }
 
     /**
      * Set Curl Options
      */
-    protected function _setOptions() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function setOptions()
     {
         if (!is_null($this->getHeader())) {
             $this->_setOpt(CURLOPT_HTTPHEADER, $this->getHeader());
@@ -390,14 +411,28 @@ class Curl
     {
         return curl_exec($this->_getResource());
     }
+    /**
+     * @deprecated use self::close instead
+     */
+    protected function _close() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->close();
+    }
 
     /**
      * Wrapper function to be mocked for testing.
      */
-    protected function _close() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function close()
     {
         curl_close($this->_getResource());
         $this->_setResource(null);
+    }
+    /**
+     * @deprecated use self::setOpt instead
+     */
+    protected function _setOpt($name, $value) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->setOpt($name, $value);
     }
 
     /**
@@ -406,9 +441,16 @@ class Curl
      * @param string $name  curl option name to set value to.
      * @param string $value curl option value to set.
      */
-    protected function _setOpt($name, $value) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function setOpt($name, $value)
     {
         curl_setopt($this->_getResource(), $name, $value);
+    }
+    /**
+     * @deprecated use self::getErrorNumber instead
+     */
+    protected function _getErrorNumber() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getErrorNumber();
     }
 
     /**
@@ -416,17 +458,31 @@ class Curl
      *
      * @return int
      */
-    protected function _getErrorNumber() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getErrorNumber()
     {
         return curl_errno($this->_getResource());
+    }
+    /**
+     * @deprecated use self::saveStatusCode instead
+     */
+    protected function _saveStatusCode() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->saveStatusCode();
     }
 
     /**
      * Sets current request HTTP status code.
      */
-    protected function _saveStatusCode() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function saveStatusCode()
     {
         $this->_sStatusCode = curl_getinfo($this->_getResource(), CURLINFO_HTTP_CODE);
+    }
+    /**
+     * @deprecated use self::prepareQueryParameters instead
+     */
+    protected function _prepareQueryParameters($params) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->prepareQueryParameters($params);
     }
 
     /**
@@ -436,9 +492,16 @@ class Curl
      *
      * @return array
      */
-    protected function _prepareQueryParameters($params) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function prepareQueryParameters($params)
     {
         return array_map([$this, '_htmlDecode'], array_filter($params));
+    }
+    /**
+     * @deprecated use self::htmlDecode instead
+     */
+    protected function _htmlDecode($mParam) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->htmlDecode($mParam);
     }
 
     /**
@@ -448,7 +511,7 @@ class Curl
      *
      * @return string
      */
-    protected function _htmlDecode($mParam) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function htmlDecode($mParam)
     {
         if (is_array($mParam)) {
             $mParam = $this->_prepareQueryParameters($mParam);
