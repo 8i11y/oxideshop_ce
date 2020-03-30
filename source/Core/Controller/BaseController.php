@@ -552,6 +552,14 @@ class BaseController extends \OxidEsales\Eshop\Core\Base
     }
 
     /**
+     * @deprecated use self::executeNewAction instead
+     */
+    protected function _executeNewAction($sNewAction) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->executeNewAction($sNewAction);
+    }
+
+    /**
      * Formats header for new controller action
      *
      * Input example: "view_name?param1=val1&param2=val2" => "cl=view_name&param1=val1&param2=val2"
@@ -560,7 +568,7 @@ class BaseController extends \OxidEsales\Eshop\Core\Base
      *
      * @throws \OxidEsales\Eshop\Core\Exception\SystemComponentException system component exception
      */
-    protected function _executeNewAction($sNewAction) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function executeNewAction($sNewAction)
     {
         if ($sNewAction) {
             $myConfig = $this->getConfig();
