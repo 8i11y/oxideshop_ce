@@ -44,11 +44,13 @@ class _oxBase extends oxBase
      *
      * @return null
      */
+    /*
     public function init($sTableName = null, $blForceAllFields = false)
     {
         //$this->_sCacheKey = null;
         return parent::init($sTableName, $blForceAllFields);
     }
+     */
 
     /**
      * Get any field value.
@@ -88,19 +90,6 @@ class _oxBase extends oxBase
     }
 
     /**
-     * Set field data value.
-     *
-     * @param string $sName  Field name
-     * @param string $sValue Field value
-     *
-     * @return mixed
-     */
-    public function setFieldData($sName, $sValue)
-    {
-        return parent::_setFieldData($sName, $sValue);
-    }
-
-    /**
      * Force isDerived property.
      *
      * @param bool $blIsDerived is derived
@@ -123,51 +112,6 @@ class _oxBase extends oxBase
     }
 
     /**
-     * Force update.
-     *
-     * @return mixed
-     */
-    public function update()
-    {
-        return parent::_update();
-    }
-
-    /**
-     * Force insert.
-     *
-     * @return mixed
-     */
-    public function insert()
-    {
-        return parent::_insert();
-    }
-
-
-    /**
-     * Force getObjectViewName.
-     *
-     * @param string $sTable table name
-     *
-     * @return string
-     */
-    public function getObjectViewName($sTable)
-    {
-        return parent::_getObjectViewName($sTable);
-    }
-
-    /**
-     * Force initDataStructure.
-     *
-     * @param bool $blForceFullStructure full structure
-     *
-     * @return string
-     */
-    public function initDataStructure($blForceFullStructure = false)
-    {
-        return parent::_initDataStructure($blForceFullStructure);
-    }
-
-    /**
      * Force _blUseAccessProp to true thus enabling access property usage.
      *
      * @return null
@@ -175,19 +119,6 @@ class _oxBase extends oxBase
     public function enableAccessPropUsage()
     {
         $this->_blUseAccessProp = true;
-    }
-
-    /**
-     * Force getUpdateFieldValue.
-     *
-     * @param string $sFieldName fiels name
-     * @param object $oField     field object
-     *
-     * @return mixed
-     */
-    public function getUpdateFieldValue($sFieldName, $oField)
-    {
-        return parent::_getUpdateFieldValue($sFieldName, $oField);
     }
 }
 
@@ -674,7 +605,7 @@ class BaseTest extends \OxidTestCase
         $oBase->modifyCacheKey(null, true);
         $oBase->setClassVar("_sCoreTable", "oxarticles");
         $oBase->setClassVar("_blUseLazyLoading", "true");
-        $oBase->initDataStructure();
+        $oBase->UNITinitDataStructure();
 
         $this->assertFalse($oBase->isPropertyLoaded('oxactions__oxtitle'));
 
@@ -693,7 +624,7 @@ class BaseTest extends \OxidTestCase
         $oBase = new _oxBase();
         $oBase->setClassVar("_sCoreTable", "oxarticles");
         $oBase->setClassVar("_blUseLazyLoading", "true");
-        $oBase->initDataStructure(true);
+        $oBase->UNITinitDataStructure(true);
         $this->assertTrue(isset($oBase->oxarticles__oxtitle));
         $aFieldNames = $oBase->getClassVar("_aFieldNames");
         $this->assertTrue(isset($aFieldNames['oxtitle']));
@@ -986,7 +917,7 @@ class BaseTest extends \OxidTestCase
         $oBase->init("oxactions");
         $rs = array("oxid" => "oxstart", "oxtitle" => "Startseite unten");
         foreach ($rs as $name => $value) {
-            $oBase->setFieldData($name, $value);
+            $oBase->UNITsetFieldData($name, $value);
         }
         $this->assertEquals($oBase->oxactions__oxid->value, "oxstart");
         $this->assertEquals($oBase->oxactions__oxtitle->value, "Startseite unten");
@@ -1003,7 +934,7 @@ class BaseTest extends \OxidTestCase
         $oBase->init("oxactions");
         $rs = array("oxid" => "oxstart", "oxactions__oxtitle" => "Startseite unten");
         foreach ($rs as $name => $value) {
-            $oBase->setFieldData($name, $value);
+            $oBase->UNITsetFieldData($name, $value);
         }
         $this->assertEquals($oBase->oxactions__oxid->value, "oxstart");
         $this->assertEquals($oBase->oxactions__oxtitle->value, "Startseite unten");
@@ -1021,7 +952,7 @@ class BaseTest extends \OxidTestCase
         $oBase->init("oxactions");
         $rs = array("oxid" => "oxstart", "oxactions__oxtestval" => "Startseite unten", "oxtestval2" => "TestVal2");
         foreach ($rs as $name => $value) {
-            $oBase->setFieldData($name, $value);
+            $oBase->UNITsetFieldData($name, $value);
         }
         //standard field
         $this->assertEquals($oBase->oxactions__oxid->value, "oxstart");
@@ -1464,9 +1395,9 @@ class BaseTest extends \OxidTestCase
     public function testSaveIfExists()
     {
         $oBase = new _oxBase();
-        $oBase = $this->getMock(\OxidEsales\Eshop\Core\Model\BaseModel::class, array('update'));
+        $oBase = $this->getMock(\OxidEsales\Eshop\Core\Model\BaseModel::class, array('_update'));
         $oBase->expects($this->any())
-            ->method('update')
+            ->method('_update')
             ->will($this->returnValue(true));
         $oBase->init('oxactions');
         $oBase->setId('oxstart');
@@ -1529,9 +1460,9 @@ class BaseTest extends \OxidTestCase
      */
     public function testSaveIsDerived()
     {
-        $oBase = $this->getMock(\OxidEsales\EshopCommunity\Tests\Unit\Core\_oxBase::class, array('update'));
+        $oBase = $this->getMock(\OxidEsales\EshopCommunity\Tests\Unit\Core\_oxBase::class, array('_update'));
         $oBase->expects($this->any())
-            ->method('update')
+            ->method('_update')
             ->will($this->returnValue(true));
         $oBase->init("oxactions");
         $oBase->setId("oxstart");
@@ -1615,7 +1546,7 @@ class BaseTest extends \OxidTestCase
         $oBase = new _oxBase();
         $oBase->init("oxarticles");
         try {
-            $oBase->update();
+            $oBase->UNITupdate();
         } catch (Exception $e) {
         }
 
@@ -1638,7 +1569,7 @@ class BaseTest extends \OxidTestCase
         $oBase->init("oxarticles");
         $oBase->setId("_test");
         $oBase->oxarticles__oxtitle = new oxField('changed title', oxField::T_RAW);
-        $sResult = $oBase->update();
+        $sResult = $oBase->UNITupdate();
         $this->assertNotNull($sResult);
         $myDB = oxDb::getDb(oxDB::FETCH_MODE_ASSOC);
         $res = $myDB->select("select oxtitle from oxarticles where oxid='_test'");
@@ -1660,7 +1591,7 @@ class BaseTest extends \OxidTestCase
         $oBase->init("oxarticles");
         $oBase->setId("_test");
         $oBase->setIsDerived(true);
-        $sResult = $oBase->update();
+        $sResult = $oBase->UNITupdate();
         $this->assertFalse($sResult);
     }
 
@@ -1682,7 +1613,7 @@ class BaseTest extends \OxidTestCase
         $oBase->setId("_test");
 
         try {
-            $oBase->update();
+            $oBase->UNITupdate();
         } catch (Exception $e) {
             return;
         }
@@ -1722,7 +1653,7 @@ class BaseTest extends \OxidTestCase
         $oBase = new _oxBase();
         $oBase->init('oxactions');
         $oBase->setId("_test");
-        $sResult = $oBase->insert();
+        $sResult = $oBase->UNITinsert();
         $this->assertEquals(1, (int) $myDB->getOne('select count(*) from oxactions where oxid = "_test"'));
         $this->assertNotNull($sResult);
         $this->assertEquals($oBase->getId(), $oBase->oxactions__oxid->value);
@@ -1739,7 +1670,7 @@ class BaseTest extends \OxidTestCase
         $oBase = new _oxBase();
         $oBase->init('oxactions');
         $oBase->oxactions__oxtitle = new oxField('test1', oxField::T_RAW);
-        $sResult = $oBase->insert();
+        $sResult = $oBase->UNITinsert();
 
         $this->assertEquals(1, (int) $myDB->getOne('select count(*) from oxactions where oxtitle = "test1"'));
         $this->assertNotNull($sResult);
@@ -1905,12 +1836,12 @@ class BaseTest extends \OxidTestCase
         $oBase = new _oxBase();
         $oBase->init("oxarticles");
         $oBase->setId('test');
-        $this->assertSame("'aaa'", $oBase->getUpdateFieldValue('oxid', new oxField('aaa')));
-        $this->assertSame("'aaa\\\"'", $oBase->getUpdateFieldValue('oxid', new oxField('aaa"')));
-        $this->assertSame("'aaa\''", $oBase->getUpdateFieldValue('oxid', new oxField('aaa\'')));
+        $this->assertSame("'aaa'", $oBase->UNITgetUpdateFieldValue('oxid', new oxField('aaa')));
+        $this->assertSame("'aaa\\\"'", $oBase->UNITgetUpdateFieldValue('oxid', new oxField('aaa"')));
+        $this->assertSame("'aaa\''", $oBase->UNITgetUpdateFieldValue('oxid', new oxField('aaa\'')));
 
-        $this->assertSame("''", $oBase->getUpdateFieldValue('oxid', new oxField(null)));
-        $this->assertSame('null', $oBase->getUpdateFieldValue('oxvat', new oxField(null)));
+        $this->assertSame("''", $oBase->UNITgetUpdateFieldValue('oxid', new oxField(null)));
+        $this->assertSame('null', $oBase->UNITgetUpdateFieldValue('oxvat', new oxField(null)));
     }
 
     /**
@@ -1923,9 +1854,9 @@ class BaseTest extends \OxidTestCase
         $oBase = new _oxBase();
         $oBase->init("oxactions");
         $aFlds = $oBase->getProperty('_aFieldNames');
-        $oBase->setFieldData('oxid', 'aaa');
+        $oBase->UNITsetFieldData('oxid', 'aaa');
         $this->assertEquals($aFlds, $oBase->getProperty('_aFieldNames'));
-        $oBase->setFieldData('lalala', 'aaa');
+        $oBase->UNITsetFieldData('lalala', 'aaa');
         $this->assertEquals($aFlds, $oBase->getProperty('_aFieldNames'));
     }
 

@@ -82,7 +82,7 @@ class UserBasket extends \OxidEsales\Eshop\Core\Model\BaseModel
         $iTime = \OxidEsales\Eshop\Core\Registry::getUtilsDate()->getTime();
         $this->oxuserbaskets__oxupdate = new \OxidEsales\Eshop\Core\Field($iTime);
 
-        return parent::_insert();
+        return parent::insert();
     }
 
     /**

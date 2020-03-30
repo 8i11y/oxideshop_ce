@@ -254,7 +254,7 @@ class OrderArticle extends \OxidEsales\Eshop\Core\Model\BaseModel implements Art
                 break;
         }
 
-        return parent::_setFieldData($sFieldName, $sValue, $iDataType);
+        return parent::setFieldData($sFieldName, $sValue, $iDataType);
     }
 
     /**
@@ -796,7 +796,7 @@ class OrderArticle extends \OxidEsales\Eshop\Core\Model\BaseModel implements Art
     /**
      * Sets article creation date
      * (\OxidEsales\Eshop\Application\Model\OrderArticle::oxorderarticles__oxtimestamp). Then executes parent method
-     * parent::_insert() and returns insertion status.
+     * parent::insert() and returns insertion status.
      *
      * @return bool
      */
@@ -806,7 +806,7 @@ class OrderArticle extends \OxidEsales\Eshop\Core\Model\BaseModel implements Art
         $now = date('Y-m-d H:i:s', $iInsertTime);
         $this->oxorderarticles__oxtimestamp = new \OxidEsales\Eshop\Core\Field($now);
 
-        return parent::_insert();
+        return parent::insert();
     }
 
 

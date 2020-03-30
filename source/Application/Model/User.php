@@ -1851,7 +1851,7 @@ class User extends \OxidEsales\Eshop\Core\Model\BaseModel
             $this->oxuser__oxboni = new \OxidEsales\Eshop\Core\Field($this->getBoni(), \OxidEsales\Eshop\Core\Field::T_RAW);
         }
 
-        return parent::_insert();
+        return parent::insert();
     }
     /**
      * @deprecated use self::update instead
@@ -1881,7 +1881,7 @@ class User extends \OxidEsales\Eshop\Core\Model\BaseModel
         }
 
         // updating subscription information
-        if (($blUpdate = parent::_update())) {
+        if (($blUpdate = parent::update())) {
             $this->getNewsSubscription()->updateSubscription($this);
         }
 

@@ -475,6 +475,13 @@ class ListModel extends \OxidEsales\Eshop\Core\Base implements \ArrayAccess, \It
 
         return $this;
     }
+    /**
+     * @deprecated use self::assignElement instead
+     */
+    protected function _assignElement($oListObject, $aDbFields) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->assignElement($oListObject, $aDbFields);
+    }
 
     /**
      * Executes assign() method on list object. This method is called in loop in oxList::selectString().
@@ -483,9 +490,16 @@ class ListModel extends \OxidEsales\Eshop\Core\Base implements \ArrayAccess, \It
      * @param BaseModel $oListObject List object (the one derived from BaseModel)
      * @param array     $aDbFields   An array holding db field values (normally the result of \OxidEsales\Eshop\Core\DatabaseProvider::Execute())
      */
-    protected function _assignElement($oListObject, $aDbFields) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function assignElement($oListObject, $aDbFields)
     {
         $oListObject->assign($aDbFields);
+    }
+    /**
+     * @deprecated use self::getFieldLongName instead
+     */
+    protected function _getFieldLongName($sFieldName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getFieldLongName($sFieldName);
     }
 
     /**
@@ -495,7 +509,7 @@ class ListModel extends \OxidEsales\Eshop\Core\Base implements \ArrayAccess, \It
      *
      * @return string
      */
-    protected function _getFieldLongName($sFieldName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getFieldLongName($sFieldName)
     {
         if ($this->_sCoreTable) {
             return $this->_sCoreTable . '__' . $sFieldName;

@@ -51,6 +51,6 @@ class SimpleVariantList extends \OxidEsales\Eshop\Core\Model\ListModel
     protected function assignElement($oListObject, $aDbFields)
     {
         $oListObject->setParent($this->_oParent);
-        parent::_assignElement($oListObject, $aDbFields);
+        parent::assignElement($oListObject, $aDbFields);
     }
 }

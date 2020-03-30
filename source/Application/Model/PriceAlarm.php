@@ -100,7 +100,7 @@ class PriceAlarm extends \OxidEsales\Eshop\Core\Model\BaseModel
         // set oxinsert value
         $this->oxpricealarm__oxinsert = new \OxidEsales\Eshop\Core\Field(date('Y-m-d', \OxidEsales\Eshop\Core\Registry::getUtilsDate()->getTime()));
 
-        return parent::_insert();
+        return parent::insert();
     }
 
     /**

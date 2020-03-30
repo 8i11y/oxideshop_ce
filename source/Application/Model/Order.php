@@ -1369,7 +1369,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
             )
         );
 
-        $blInsert = parent::_insert();
+        $blInsert = parent::insert();
 
         return $blInsert;
     }
@@ -1441,7 +1441,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
         $this->_aSkipSaveFields = ['oxtimestamp', 'oxorderdate'];
         $this->oxorder__oxsenddate = new \OxidEsales\Eshop\Core\Field(\OxidEsales\Eshop\Core\Registry::getUtilsDate()->formatDBDate($this->oxorder__oxsenddate->value, true));
 
-        return parent::_update();
+        return parent::update();
     }
 
     /**

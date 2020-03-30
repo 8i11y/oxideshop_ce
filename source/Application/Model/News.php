@@ -143,7 +143,7 @@ class News extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel
     {
         $this->oxnews__oxdate->setValue(\OxidEsales\Eshop\Core\Registry::getUtilsDate()->formatDBDate($this->oxnews__oxdate->value, true));
 
-        parent::_update();
+        parent::update();
     }
     /**
      * @deprecated use self::insert instead
@@ -167,7 +167,7 @@ class News extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel
             $this->oxnews__oxdate = new \OxidEsales\Eshop\Core\Field(\OxidEsales\Eshop\Core\Registry::getUtilsDate()->formatDBDate($this->oxnews__oxdate->value, true));
         }
 
-        return parent::_insert();
+        return parent::insert();
     }
     /**
      * @deprecated use self::setFieldData instead
@@ -194,7 +194,7 @@ class News extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel
                 $iDataType = \OxidEsales\Eshop\Core\Field::T_RAW;
                 break;
         }
-        return parent::_setFieldData($sFieldName, $sValue, $iDataType);
+        return parent::setFieldData($sFieldName, $sValue, $iDataType);
     }
 
     /**

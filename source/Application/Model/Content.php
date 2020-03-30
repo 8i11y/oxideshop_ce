@@ -373,7 +373,7 @@ class Content extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
             $iDataType = \OxidEsales\Eshop\Core\Field::T_RAW;
         }
 
-        return parent::_setFieldData($sFieldName, $sValue, $iDataType);
+        return parent::setFieldData($sFieldName, $sValue, $iDataType);
     }
 
     /**

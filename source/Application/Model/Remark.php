@@ -75,6 +75,6 @@ class Remark extends \OxidEsales\Eshop\Core\Model\BaseModel
         $this->oxremark__oxcreate = new \OxidEsales\Eshop\Core\Field($sNow, \OxidEsales\Eshop\Core\Field::T_RAW);
         $this->oxremark__oxheader = new \OxidEsales\Eshop\Core\Field($sNow, \OxidEsales\Eshop\Core\Field::T_RAW);
 
-        return parent::_insert();
+        return parent::insert();
     }
 }

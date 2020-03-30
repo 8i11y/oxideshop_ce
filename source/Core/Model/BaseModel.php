@@ -416,6 +416,13 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
     {
         $this->_blUpdateSeo = $updateSeo;
     }
+    /**
+     * @deprecated use self::setUpdateSeoOnFieldChange instead
+     */
+    protected function _setUpdateSeoOnFieldChange($fieldName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->setUpdateSeoOnFieldChange($fieldName);
+    }
 
     /**
      * Checks whether certain field has changed, and sets update seo flag if needed.
@@ -424,7 +431,7 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
      *
      * @param string $fieldName Field name that will be checked
      */
-    protected function _setUpdateSeoOnFieldChange($fieldName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function setUpdateSeoOnFieldChange($fieldName)
     {
         if ($this->getId() && in_array($fieldName, $this->getFieldNames())) {
             $database = \OxidEsales\Eshop\Core\DatabaseProvider::getDb();
@@ -812,13 +819,20 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
 
         return $blDelete;
     }
+    /**
+     * @deprecated use self::removeElement2ShopRelations instead
+     */
+    protected function _removeElement2ShopRelations($oxid) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->removeElement2ShopRelations($oxid);
+    }
 
     /**
      * Removes relevant mapping data for selected object if it is a multishop inheritable table
      *
      * @param string $oxid Object ID
      */
-    protected function _removeElement2ShopRelations($oxid) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function removeElement2ShopRelations($oxid)
     {
     }
 
@@ -993,6 +1007,14 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
     }
 
     /**
+     * @deprecated use self::getObjectViewName instead
+     */
+    protected function _getObjectViewName($table, $shopID = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getObjectViewName($table, $shopID);
+    }
+
+    /**
      * Returns actual object view or table name
      *
      * @param string $table  Original table name
@@ -1000,9 +1022,16 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
      *
      * @return string
      */
-    protected function _getObjectViewName($table, $shopID = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getObjectViewName($table, $shopID = null)
     {
         return getViewName($table, -1, $shopID);
+    }
+    /**
+     * @deprecated use self::getTableFields instead
+     */
+    protected function _getTableFields($table, $returnSimpleArray = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getTableFields($table, $returnSimpleArray);
     }
 
     /**
@@ -1015,7 +1044,7 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
      *
      * @return array
      */
-    protected function _getTableFields($table, $returnSimpleArray = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getTableFields($table, $returnSimpleArray = false)
     {
         $myUtils = \OxidEsales\Eshop\Core\Registry::getUtils();
 
@@ -1046,6 +1075,13 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
 
         return $result;
     }
+    /**
+     * @deprecated use self::getAllFields instead
+     */
+    protected function _getAllFields($returnSimple = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getAllFields($returnSimple);
+    }
 
     /**
      * Returns meta field or simple array of all object fields.
@@ -1058,13 +1094,20 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
      *
      * @return array
      */
-    protected function _getAllFields($returnSimple = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getAllFields($returnSimple = false)
     {
         if (!$this->getCoreTableName()) {
             return [];
         }
 
         return $this->_getTableFields($this->getCoreTableName(), $returnSimple);
+    }
+    /**
+     * @deprecated use self::initDataStructure instead
+     */
+    protected function _initDataStructure($forceFullStructure = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->initDataStructure($forceFullStructure);
     }
 
     /**
@@ -1073,7 +1116,7 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
      *
      * @param bool $forceFullStructure Set to true if you want to load full structure in any case.
      */
-    protected function _initDataStructure($forceFullStructure = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function initDataStructure($forceFullStructure = false)
     {
         $myUtils = \OxidEsales\Eshop\Core\Registry::getUtils();
 
@@ -1097,6 +1140,13 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
             }
         }
     }
+    /**
+     * @deprecated use self::getNonCachedFieldNames instead
+     */
+    protected function _getNonCachedFieldNames($forceFullStructure = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getNonCachedFieldNames($forceFullStructure);
+    }
 
     /**
      * Returns the list of fields. This function is slower and its result is normally cached.
@@ -1109,7 +1159,7 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
      *
      * @return array|bool
      */
-    protected function _getNonCachedFieldNames($forceFullStructure = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getNonCachedFieldNames($forceFullStructure = false)
     {
         //T2008-02-22
         //so if this method is executed on cached version we see it when profiling
@@ -1151,6 +1201,13 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
 
         return ['oxid' => 0];
     }
+    /**
+     * @deprecated use self::getFieldStatus instead
+     */
+    protected function _getFieldStatus($fieldName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getFieldStatus($fieldName);
+    }
 
     /**
      * Returns _aFieldName[] value. 0 means - non multi language, 1 - multi language field. But this is defined only in derived oxi18n class.
@@ -1160,9 +1217,16 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
      *
      * @return int
      */
-    protected function _getFieldStatus($fieldName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getFieldStatus($fieldName)
     {
         return 0;
+    }
+    /**
+     * @deprecated use self::addField instead
+     */
+    protected function _addField($fieldName, $fieldStatus, $type = null, $length = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->addField($fieldName, $fieldStatus, $type, $length);
     }
 
     /**
@@ -1175,7 +1239,7 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
      *
      * @return null
      */
-    protected function _addField($fieldName, $fieldStatus, $type = null, $length = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function addField($fieldName, $fieldStatus, $type = null, $length = null)
     {
         //preparation
         $fieldName = strtolower($fieldName);
@@ -1210,6 +1274,13 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
 
         $this->$fieldLongName = $field;
     }
+    /**
+     * @deprecated use self::getFieldLongName instead
+     */
+    protected function _getFieldLongName($fieldName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getFieldLongName($fieldName);
+    }
 
     /**
      * Returns long field name in "<table>__<field_name>" format.
@@ -1218,7 +1289,7 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
      *
      * @return string
      */
-    protected function _getFieldLongName($fieldName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getFieldLongName($fieldName)
     {
         //trying to avoid strpos call as often as possible
         $coreTableName = $this->getCoreTableName();
@@ -1228,6 +1299,13 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
 
         return $coreTableName . '__' . strtolower($fieldName);
     }
+    /**
+     * @deprecated use self::setFieldData instead
+     */
+    protected function _setFieldData($fieldName, $fieldValue, $dataType = Field::T_TEXT) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->setFieldData($fieldName, $fieldValue, $dataType);
+    }
 
     /**
      * Sets data field value
@@ -1236,7 +1314,7 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
      * @param string $fieldValue Value of data field
      * @param int    $dataType   Field type
      */
-    protected function _setFieldData($fieldName, $fieldValue, $dataType = Field::T_TEXT) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function setFieldData($fieldName, $fieldValue, $dataType = Field::T_TEXT)
     {
         $longFieldName = $this->_getFieldLongName($fieldName);
         //$sLongFieldName = $this->_sCoreTable . "__" . strtolower($sFieldName);
@@ -1277,6 +1355,13 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
             $this->$longFieldName = new Field($fieldValue, $dataType);
         }
     }
+    /**
+     * @deprecated use self::canFieldBeNull instead
+     */
+    protected function _canFieldBeNull($fieldName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->canFieldBeNull($fieldName);
+    }
 
     /**
      * check if db field can be null
@@ -1285,7 +1370,7 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
      *
      * @return bool
      */
-    protected function _canFieldBeNull($fieldName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function canFieldBeNull($fieldName)
     {
         $metaData = $this->_getAllFields();
         foreach ($metaData as $metaInfo) {
@@ -1296,6 +1381,13 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
 
         return false;
     }
+    /**
+     * @deprecated use self::getFieldDefaultValue instead
+     */
+    protected function _getFieldDefaultValue($fieldName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getFieldDefaultValue($fieldName);
+    }
 
     /**
      * returns default field value
@@ -1304,7 +1396,7 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
      *
      * @return mixed
      */
-    protected function _getFieldDefaultValue($fieldName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getFieldDefaultValue($fieldName)
     {
         $metaData = $this->_getAllFields();
         foreach ($metaData as $metaInfo) {
@@ -1315,6 +1407,13 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
 
         return false;
     }
+    /**
+     * @deprecated use self::getUpdateFieldValue instead
+     */
+    protected function _getUpdateFieldValue($fieldName, $field) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getUpdateFieldValue($fieldName, $field);
+    }
 
     /**
      * returns quoted field value for using in update statement
@@ -1324,7 +1423,7 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
      *
      * @return string
      */
-    protected function _getUpdateFieldValue($fieldName, $field) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getUpdateFieldValue($fieldName, $field)
     {
         $fieldValue = null;
         if ($field instanceof Field) {
@@ -1345,6 +1444,13 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
 
         return $database->quote($fieldValue);
     }
+    /**
+     * @deprecated use self::getUpdateFields instead
+     */
+    protected function _getUpdateFields($useSkipSaveFields = true) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getUpdateFields($useSkipSaveFields);
+    }
 
     /**
      * Get object fields sql part used for updates or inserts:
@@ -1354,7 +1460,7 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
      *
      * @return string
      */
-    protected function _getUpdateFields($useSkipSaveFields = true) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function getUpdateFields($useSkipSaveFields = true)
     {
         $query = '';
         $useSeparator = false;
@@ -1387,6 +1493,13 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
     {
         return true;
     }
+    /**
+     * @deprecated use self::update instead
+     */
+    protected function _update() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->update();
+    }
 
     /**
      * Update this Object into the database, this function only works on
@@ -1398,7 +1511,7 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
      *
      * @return bool Will always return true. On failure an exception is thrown.
      */
-    protected function _update() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function update()
     {
         //do not allow derived item update
         if (!$this->allowDerivedUpdate()) {
@@ -1440,6 +1553,13 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
 
         return $database->execute($query, $params);
     }
+    /**
+     * @deprecated use self::insert instead
+     */
+    protected function _insert() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->insert();
+    }
 
     /**
      * Insert this Object into the database, this function only works
@@ -1448,7 +1568,7 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
      *
      * @return bool
      */
-    protected function _insert() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function insert()
     {
         $myConfig = $this->getConfig();
         $myUtils = \OxidEsales\Eshop\Core\Registry::getUtils();
@@ -1478,6 +1598,13 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
 
         return $result = (bool) $this->executeDatabaseQuery($insertSql);
     }
+    /**
+     * @deprecated use self::isDisabledFieldCache instead
+     */
+    protected function _isDisabledFieldCache() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->isDisabledFieldCache();
+    }
 
     /**
      * Checks if current class disables field caching.
@@ -1485,7 +1612,7 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
      *
      * @return bool
      */
-    protected function _isDisabledFieldCache() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function isDisabledFieldCache()
     {
         $class = get_class($this);
         if (isset(self::$_blDisableFieldCaching[$class]) && self::$_blDisableFieldCaching[$class]) {
@@ -1494,18 +1621,32 @@ class BaseModel extends \OxidEsales\Eshop\Core\Base
 
         return false;
     }
+    /**
+     * @deprecated use self::addSkippedSaveFieldsForMapping instead
+     */
+    protected function _addSkippedSaveFieldsForMapping() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->addSkippedSaveFieldsForMapping();
+    }
 
     /**
      * Add additional fields to skipped save fields
      */
-    protected function _addSkippedSaveFieldsForMapping() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function addSkippedSaveFieldsForMapping()
     {
+    }
+    /**
+     * @deprecated use self::disableLazyLoadingForCaching instead
+     */
+    protected function _disableLazyLoadingForCaching() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->disableLazyLoadingForCaching();
     }
 
     /**
      * Disable lazy loading if cache is enabled
      */
-    protected function _disableLazyLoadingForCaching() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function disableLazyLoadingForCaching()
     {
     }
 

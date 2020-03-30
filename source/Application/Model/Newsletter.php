@@ -303,6 +303,6 @@ class Newsletter extends \OxidEsales\Eshop\Core\Model\BaseModel
             $iDataType = \OxidEsales\Eshop\Core\Field::T_RAW;
         }
 
-        return parent::_setFieldData($sFieldName, $sValue, $iDataType);
+        return parent::setFieldData($sFieldName, $sValue, $iDataType);
     }
 }

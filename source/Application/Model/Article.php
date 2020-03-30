@@ -4851,7 +4851,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
     /**
      * Sets article creation date
      * (\OxidEsales\Eshop\Application\Model\Article::oxarticles__oxinsert). Then executes parent method
-     * parent::_insert() and returns insertion status.
+     * parent::insert() and returns insertion status.
      *
      * @return bool
      */
@@ -4864,7 +4864,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
             $this->oxarticles__oxsubclass = new \OxidEsales\Eshop\Core\Field('oxarticle');
         }
 
-        return parent::_insert();
+        return parent::insert();
     }
     /**
      * @deprecated use self::update instead
@@ -4886,7 +4886,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
 
         $this->_skipSaveFields();
 
-        return parent::_update();
+        return parent::update();
     }
     /**
      * @deprecated use self::deleteRecords instead

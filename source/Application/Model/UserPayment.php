@@ -163,7 +163,7 @@ class UserPayment extends \OxidEsales\Eshop\Core\Model\BaseModel
             $this->oxuserpayments__oxvalue->setValue($sEncodedValue);
         }
 
-        $blRet = parent::_insert();
+        $blRet = parent::insert();
 
         //restore, as encoding was needed only for saving
         if ($sEncodedValue) {
@@ -198,7 +198,7 @@ class UserPayment extends \OxidEsales\Eshop\Core\Model\BaseModel
             $this->oxuserpayments__oxvalue->setValue($sEncodedValue);
         }
 
-        $blRet = parent::_update();
+        $blRet = parent::update();
 
         //restore, as encoding was needed only for saving
         if ($sEncodedValue) {

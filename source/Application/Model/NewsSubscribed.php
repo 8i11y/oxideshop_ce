@@ -140,7 +140,7 @@ class NewsSubscribed extends \OxidEsales\Eshop\Core\Model\BaseModel
         // set subscription date
         $this->oxnewssubscribed__oxsubscribed = new \OxidEsales\Eshop\Core\Field(date('Y-m-d H:i:s'), \OxidEsales\Eshop\Core\Field::T_RAW);
 
-        return parent::_insert();
+        return parent::insert();
     }
     /**
      * @deprecated use self::update instead
@@ -172,7 +172,7 @@ class NewsSubscribed extends \OxidEsales\Eshop\Core\Model\BaseModel
             $this->_aSkipSaveFields[] = 'oxunsubscribed';
         }
 
-        return parent::_update();
+        return parent::update();
     }
 
     /**

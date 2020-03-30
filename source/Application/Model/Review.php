@@ -100,7 +100,7 @@ class Review extends \OxidEsales\Eshop\Core\Model\BaseModel
         // set oxcreate
         $this->oxreviews__oxcreate = new \OxidEsales\Eshop\Core\Field(date('Y-m-d H:i:s', \OxidEsales\Eshop\Core\Registry::getUtilsDate()->getTime()));
 
-        return parent::_insert();
+        return parent::insert();
     }
 
     /**
