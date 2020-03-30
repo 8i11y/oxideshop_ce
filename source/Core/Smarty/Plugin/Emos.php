@@ -439,6 +439,13 @@ class Emos
     {
         $this->_setEmosBillingArray($sBillingId, $sCustomerNumber, $iTotal, $sCountry, $sCip, $sCity);
     }
+    /**
+     * @deprecated use self::setEmosBillingArray instead
+     */
+    protected function _setEmosBillingArray($sBillingId = "", $sCustomerNumber = "", $iTotal = 0, $sCountry = "", $sCip = "", $sCity = "") // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->setEmosBillingArray($sBillingId, $sCustomerNumber, $iTotal, $sCountry, $sCip, $sCity);
+    }
 
     /**
      * set a emosBillingArray
@@ -450,7 +457,7 @@ class Emos
      * @param string $sCip            customer ip
      * @param string $sCity           customer city title
      */
-    protected function _setEmosBillingArray($sBillingId = "", $sCustomerNumber = "", $iTotal = 0, $sCountry = "", $sCip = "", $sCity = "") // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function setEmosBillingArray($sBillingId = "", $sCustomerNumber = "", $iTotal = 0, $sCountry = "", $sCip = "", $sCity = "")
     {
         /******************* prepare data *************************************/
         /* md5 the customer id to fullfill requirements of german datenschutzgeesetz */
@@ -480,6 +487,13 @@ class Emos
 
         $this->_billing = [$sBillingId, $sCustomerNumber, $ort, $iTotal];
     }
+    /**
+     * @deprecated use self::setEmosECPageArray instead
+     */
+    protected function _setEmosECPageArray($oItem, $sEvent) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->setEmosECPageArray($oItem, $sEvent);
+    }
 
     /**
      * constructs a emosECPageArray of given $sEvent type
@@ -487,7 +501,7 @@ class Emos
      * @param \OxidEsales\Eshop\Core\Smarty\Plugin\EmosItem $oItem      an instance of class EMOS_Item
      * @param string    $sEvent     Type of this event ("view","c_rmv","c_add")
      */
-    protected function _setEmosECPageArray($oItem, $sEvent) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function setEmosECPageArray($oItem, $sEvent)
     {
         $oItem = $this->_emos_ItemFormat($oItem);
 
@@ -495,6 +509,13 @@ class Emos
                  $oItem->price, $oItem->productGroup,
                  $oItem->quantity, $oItem->variant1,
                  $oItem->variant2, $oItem->variant3]];
+    }
+    /**
+     * @deprecated use self::emos_ItemFormat instead
+     */
+    protected function _emos_ItemFormat($oItem) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore,PSR1.Methods.CamelCapsMethodName.NotCamelCaps
+    {
+        return $this->emos_ItemFormat($oItem);
     }
 
     /**
@@ -504,7 +525,7 @@ class Emos
      *
      * @return null
      */
-    protected function _emos_ItemFormat($oItem) // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps,PSR2.Methods.MethodDeclaration.Underscore
+    protected function emos_ItemFormat($oItem) // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     {
         $oItem->productId = $this->_emos_DataFormat($oItem->productId);
         $oItem->productName = $this->_emos_DataFormat($oItem->productName);
@@ -515,6 +536,13 @@ class Emos
 
         return $oItem;
     }
+    /**
+     * @deprecated use self::emos_DataFormat instead
+     */
+    protected function _emos_DataFormat($sStr) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore,PSR1.Methods.CamelCapsMethodName.NotCamelCaps
+    {
+        return $this->emos_DataFormat($sStr);
+    }
 
     /**
      * formats data/values/params by eliminating named entities and xml-entities
@@ -523,7 +551,7 @@ class Emos
      *
      * @return null
      */
-    protected function _emos_DataFormat($sStr) //phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps,PSR2.Methods.MethodDeclaration.Underscore
+    protected function emos_DataFormat($sStr) //phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     {
         //null check
         if (is_null($sStr)) {
@@ -561,11 +589,18 @@ class Emos
         //$sStr = rawurlencode( $sStr );
         return $sStr;
     }
+    /**
+     * @deprecated use self::prepareScript instead
+     */
+    public function _prepareScript() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->prepareScript();
+    }
 
     /**
      * formats up the connector script in a Econda ver 2 JS format
      */
-    public function _prepareScript() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    public function prepareScript()
     {
         $this->_sPrescript =  '<script type="text/javascript">window.emosTrackVersion = 2;</script>' . $this->_br;
 
@@ -595,6 +630,13 @@ class Emos
         $this->_sPostscript .= $this->_tab . 'window.emosPropertiesEvent(emospro);' . $this->_br;
         $this->_sPostscript .= '//-->' . $this->_br . '</script>' . $this->_br;
     }
+    /**
+     * @deprecated use self::addJsFormat instead
+     */
+    protected function _addJsFormat($sVarName, $mContents) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->addJsFormat($sVarName, $mContents);
+    }
 
     /**
      * Formats a line in JS format
@@ -604,7 +646,7 @@ class Emos
      *
      * @return string
      */
-    protected function _addJsFormat($sVarName, $mContents) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function addJsFormat($sVarName, $mContents)
     {
         //get the first non array $mContents element
         $mVal = $mContents;
@@ -620,6 +662,13 @@ class Emos
 
         return $this->_tab . 'emospro.' . $sVarName . ' = ' . $sEncoded . ';' . $this->_br;
     }
+    /**
+     * @deprecated use self::jsEncode instead
+     */
+    protected function _jsEncode($mContents) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->jsEncode($mContents);
+    }
 
     /**
      * Encode contents $mContents to string for JS export
@@ -628,7 +677,7 @@ class Emos
      *
      * @return string
      */
-    protected function _jsEncode($mContents) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function jsEncode($mContents)
     {
         return json_encode($mContents);
     }
