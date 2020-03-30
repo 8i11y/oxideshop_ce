@@ -509,6 +509,13 @@ class ModuleList extends \OxidEsales\Eshop\Core\Base
 
         return $this->_aModuleExtensions[$sModuleId] ?? [];
     }
+    /**
+     * @deprecated use self::sortModules instead
+     */
+    protected function _sortModules($oModule1, $oModule2) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->sortModules($oModule1, $oModule2);
+    }
 
     /**
      * Callback function for sorting module objects by name.
@@ -518,9 +525,16 @@ class ModuleList extends \OxidEsales\Eshop\Core\Base
      *
      * @return bool
      */
-    protected function _sortModules($oModule1, $oModule2) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function sortModules($oModule1, $oModule2)
     {
         return strcasecmp($oModule1->getTitle(), $oModule2->getTitle());
+    }
+    /**
+     * @deprecated use self::isVendorDir instead
+     */
+    protected function _isVendorDir($sModuleDir) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->isVendorDir($sModuleDir);
     }
 
     /**
@@ -530,7 +544,7 @@ class ModuleList extends \OxidEsales\Eshop\Core\Base
      *
      * @return bool
      */
-    protected function _isVendorDir($sModuleDir) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function isVendorDir($sModuleDir)
     {
         if (!is_dir($sModuleDir)) {
             return false;
@@ -546,6 +560,13 @@ class ModuleList extends \OxidEsales\Eshop\Core\Base
 
         return false;
     }
+    /**
+     * @deprecated use self::getInvalidExtensions instead
+     */
+    private function _getInvalidExtensions($moduleId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->getInvalidExtensions($moduleId);
+    }
 
     /**
      * Returns shop classes and associated invalid module classes for a given module id
@@ -554,7 +575,7 @@ class ModuleList extends \OxidEsales\Eshop\Core\Base
      *
      * @return array
      */
-    private function _getInvalidExtensions($moduleId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    private function getInvalidExtensions($moduleId)
     {
         $extendedShopClasses = $this->getModuleExtensions($moduleId);
         $invalidModuleClasses = [];

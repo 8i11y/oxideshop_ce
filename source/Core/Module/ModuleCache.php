@@ -68,11 +68,18 @@ class ModuleCache extends \OxidEsales\Eshop\Core\Base
 
         $this->_clearApcCache();
     }
+    /**
+     * @deprecated use self::clearApcCache instead
+     */
+    protected function _clearApcCache() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return $this->clearApcCache();
+    }
 
     /**
      * Cleans PHP APC cache
      */
-    protected function _clearApcCache() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    protected function clearApcCache()
     {
         if (extension_loaded('apc') && ini_get('apc.enabled')) {
             apc_clear_cache();
