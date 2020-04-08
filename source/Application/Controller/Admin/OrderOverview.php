@@ -71,7 +71,7 @@ class OrderOverview extends \OxidEsales\Eshop\Application\Controller\Admin\Admin
      */
     protected function _getPaymentType($oOrder) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getPaymentType($oOrder);
+        return self::getPaymentType($oOrder);
     }
 
     /**

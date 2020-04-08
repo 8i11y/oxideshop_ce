@@ -400,7 +400,7 @@ class BasketController extends \OxidEsales\Eshop\Application\Controller\Frontend
      */
     protected function _setWrappingInfo($oBasket, $aWrapping) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setWrappingInfo($oBasket, $aWrapping);
+        return self::setWrappingInfo($oBasket, $aWrapping);
     }
 
     /**

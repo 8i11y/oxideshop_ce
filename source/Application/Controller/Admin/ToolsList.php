@@ -122,7 +122,7 @@ class ToolsList extends \OxidEsales\Eshop\Application\Controller\Admin\AdminList
      */
     protected function _processFiles() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->processFiles();
+        return self::processFiles();
     }
 
     /**
@@ -170,7 +170,7 @@ class ToolsList extends \OxidEsales\Eshop\Application\Controller\Admin\AdminList
      */
     protected function _prepareSQL($sSQL, $iSQLlen) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->prepareSQL($sSQL, $iSQLlen);
+        return self::prepareSQL($sSQL, $iSQLlen);
     }
 
     /**

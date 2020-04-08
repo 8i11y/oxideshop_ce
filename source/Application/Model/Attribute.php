@@ -134,7 +134,7 @@ class Attribute extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel
      */
     protected function _getAttrId($sSelTitle) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getAttrId($sSelTitle);
+        return self::getAttrId($sSelTitle);
     }
 
     /**
@@ -158,7 +158,7 @@ class Attribute extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel
      */
     protected function _createAttribute($aSelTitle) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->createAttribute($aSelTitle);
+        return self::createAttribute($aSelTitle);
     }
 
     /**

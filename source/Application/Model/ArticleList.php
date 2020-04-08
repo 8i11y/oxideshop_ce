@@ -149,7 +149,7 @@ class ArticleList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _sortByOrderMapCallback($key1, $key2) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->sortByOrderMapCallback($key1, $key2);
+        return self::sortByOrderMapCallback($key1, $key2);
     }
 
     /**
@@ -481,7 +481,7 @@ class ArticleList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _getArticleSelect($sRecommId, $sArticlesFilter = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getArticleSelect($sRecommId, $sArticlesFilter);
+        return self::getArticleSelect($sRecommId, $sArticlesFilter);
     }
 
     /**
@@ -846,7 +846,7 @@ class ArticleList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _createIdListFromSql($sSql) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->createIdListFromSql($sSql);
+        return self::createIdListFromSql($sSql);
     }
 
     /**
@@ -870,7 +870,7 @@ class ArticleList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _getFilterIdsSql($sCatId, $aFilter) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getFilterIdsSql($sCatId, $aFilter);
+        return self::getFilterIdsSql($sCatId, $aFilter);
     }
 
     /**
@@ -917,7 +917,7 @@ class ArticleList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _getFilterSql($sCatId, $aFilter) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getFilterSql($sCatId, $aFilter);
+        return self::getFilterSql($sCatId, $aFilter);
     }
 
     /**
@@ -957,7 +957,7 @@ class ArticleList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _getCategorySelect($sFields, $sCatId, $aSessionFilter) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCategorySelect($sFields, $sCatId, $aSessionFilter);
+        return self::getCategorySelect($sFields, $sCatId, $aSessionFilter);
     }
 
     /**
@@ -1003,7 +1003,7 @@ class ArticleList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _getCategoryCountSelect($sCatId, $aSessionFilter) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCategoryCountSelect($sCatId, $aSessionFilter);
+        return self::getCategoryCountSelect($sCatId, $aSessionFilter);
     }
 
     /**
@@ -1042,7 +1042,7 @@ class ArticleList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _getSearchSelect($sSearchString) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSearchSelect($sSearchString);
+        return self::getSearchSelect($sSearchString);
     }
 
     /**
@@ -1115,7 +1115,7 @@ class ArticleList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _getPriceSelect($dPriceFrom, $dPriceTo) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getPriceSelect($dPriceFrom, $dPriceTo);
+        return self::getPriceSelect($dPriceFrom, $dPriceTo);
     }
 
     /**
@@ -1151,7 +1151,7 @@ class ArticleList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _getVendorSelect($sVendorId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getVendorSelect($sVendorId);
+        return self::getVendorSelect($sVendorId);
     }
 
     /**
@@ -1181,7 +1181,7 @@ class ArticleList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _getManufacturerSelect($sManufacturerId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getManufacturerSelect($sManufacturerId);
+        return self::getManufacturerSelect($sManufacturerId);
     }
 
     /**
@@ -1211,7 +1211,7 @@ class ArticleList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _canUpdatePrices() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->canUpdatePrices();
+        return self::canUpdatePrices();
     }
 
     /**

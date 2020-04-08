@@ -262,7 +262,7 @@ class BasketComponent extends \OxidEsales\Eshop\Core\Controller\BaseController
      */
     protected function _getRedirectUrl() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getRedirectUrl();
+        return self::getRedirectUrl();
     }
 
     /**
@@ -326,7 +326,7 @@ class BasketComponent extends \OxidEsales\Eshop\Core\Controller\BaseController
      */
     protected function _getItems($sProductId = null, $dAmount = null, $aSel = null, $aPersParam = null, $blOverride = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getItems($sProductId, $dAmount, $aSel, $aPersParam, $blOverride);
+        return self::getItems($sProductId, $dAmount, $aSel, $aPersParam, $blOverride);
     }
 
     /**
@@ -397,7 +397,7 @@ class BasketComponent extends \OxidEsales\Eshop\Core\Controller\BaseController
      */
     protected function _addItems($products) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addItems($products);
+        return self::addItems($products);
     }
 
     /**
@@ -466,7 +466,7 @@ class BasketComponent extends \OxidEsales\Eshop\Core\Controller\BaseController
      */
     protected function _setLastCall($sCallName, $aProductInfo, $aBasketInfo) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setLastCall($sCallName, $aProductInfo, $aBasketInfo);
+        return self::setLastCall($sCallName, $aProductInfo, $aBasketInfo);
     }
 
     /**
@@ -485,7 +485,7 @@ class BasketComponent extends \OxidEsales\Eshop\Core\Controller\BaseController
      */
     protected function _setLastCallFnc($sCallName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setLastCallFnc($sCallName);
+        return self::setLastCallFnc($sCallName);
     }
 
     /**
@@ -502,7 +502,7 @@ class BasketComponent extends \OxidEsales\Eshop\Core\Controller\BaseController
      */
     protected function _getLastCallFnc() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getLastCallFnc();
+        return self::getLastCallFnc();
     }
 
     /**

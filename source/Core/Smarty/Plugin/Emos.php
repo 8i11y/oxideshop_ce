@@ -444,7 +444,7 @@ class Emos
      */
     protected function _setEmosBillingArray($sBillingId = "", $sCustomerNumber = "", $iTotal = 0, $sCountry = "", $sCip = "", $sCity = "") // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setEmosBillingArray($sBillingId, $sCustomerNumber, $iTotal, $sCountry, $sCip, $sCity);
+        return self::setEmosBillingArray($sBillingId, $sCustomerNumber, $iTotal, $sCountry, $sCip, $sCity);
     }
 
     /**
@@ -492,7 +492,7 @@ class Emos
      */
     protected function _setEmosECPageArray($oItem, $sEvent) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setEmosECPageArray($oItem, $sEvent);
+        return self::setEmosECPageArray($oItem, $sEvent);
     }
 
     /**
@@ -594,7 +594,7 @@ class Emos
      */
     public function _prepareScript() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->prepareScript();
+        return self::prepareScript();
     }
 
     /**
@@ -635,7 +635,7 @@ class Emos
      */
     protected function _addJsFormat($sVarName, $mContents) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addJsFormat($sVarName, $mContents);
+        return self::addJsFormat($sVarName, $mContents);
     }
 
     /**
@@ -667,7 +667,7 @@ class Emos
      */
     protected function _jsEncode($mContents) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->jsEncode($mContents);
+        return self::jsEncode($mContents);
     }
 
     /**

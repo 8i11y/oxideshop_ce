@@ -191,7 +191,7 @@ class UserBasketItem extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _setFieldData($sFieldName, $sValue, $iDataType = \OxidEsales\Eshop\Core\Field::T_TEXT) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setFieldData($sFieldName, $sValue, $iDataType);
+        return self::setFieldData($sFieldName, $sValue, $iDataType);
     }
 
     /**
@@ -212,6 +212,6 @@ class UserBasketItem extends \OxidEsales\Eshop\Core\Model\BaseModel
             $iDataType = \OxidEsales\Eshop\Core\Field::T_RAW;
         }
 
-        return parent::setFieldData($sFieldName, $sValue, $iDataType);
+        return parent::_setFieldData($sFieldName, $sValue, $iDataType);
     }
 }

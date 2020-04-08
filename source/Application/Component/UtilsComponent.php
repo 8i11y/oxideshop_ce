@@ -130,7 +130,7 @@ class UtilsComponent extends \OxidEsales\Eshop\Core\Controller\BaseController
      */
     protected function _toList($sListType, $sProductId, $dAmount, $aSel) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->toList($sListType, $sProductId, $dAmount, $aSel);
+        return self::toList($sListType, $sProductId, $dAmount, $aSel);
     }
 
     /**

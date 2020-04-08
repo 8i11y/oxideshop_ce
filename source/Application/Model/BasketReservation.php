@@ -39,7 +39,7 @@ class BasketReservation extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getReservationsId() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getReservationsId();
+        return self::getReservationsId();
     }
 
     /**
@@ -63,7 +63,7 @@ class BasketReservation extends \OxidEsales\Eshop\Core\Base
      */
     protected function _loadReservations($sBasketId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadReservations($sBasketId);
+        return self::loadReservations($sBasketId);
     }
 
     /**
@@ -113,7 +113,7 @@ class BasketReservation extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getReservedItems() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getReservedItems();
+        return self::getReservedItems();
     }
 
     /**
@@ -164,7 +164,7 @@ class BasketReservation extends \OxidEsales\Eshop\Core\Base
      */
     protected function _basketDifference(\OxidEsales\Eshop\Application\Model\Basket $oBasket) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->basketDifference($oBasket);
+        return self::basketDifference($oBasket);
     }
 
     /**
@@ -194,7 +194,7 @@ class BasketReservation extends \OxidEsales\Eshop\Core\Base
      */
     protected function _reserveArticles($aBasketDiff) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->reserveArticles($aBasketDiff);
+        return self::reserveArticles($aBasketDiff);
     }
 
     /**

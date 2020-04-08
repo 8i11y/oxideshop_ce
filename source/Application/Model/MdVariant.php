@@ -361,7 +361,7 @@ class MdVariant extends \OxidEsales\Eshop\Core\Base
      */
     protected function _addMdSubvariant($oSubvariant) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addMdSubvariant($oSubvariant);
+        return self::addMdSubvariant($oSubvariant);
     }
 
     /**
@@ -378,7 +378,7 @@ class MdVariant extends \OxidEsales\Eshop\Core\Base
      */
     protected function _isFixedPrice() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isFixedPrice();
+        return self::isFixedPrice();
     }
 
     /**

@@ -87,7 +87,7 @@ class Review extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _insert() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->insert();
+        return self::insert();
     }
 
     /**
@@ -100,7 +100,7 @@ class Review extends \OxidEsales\Eshop\Core\Model\BaseModel
         // set oxcreate
         $this->oxreviews__oxcreate = new \OxidEsales\Eshop\Core\Field(date('Y-m-d H:i:s', \OxidEsales\Eshop\Core\Registry::getUtilsDate()->getTime()));
 
-        return parent::insert();
+        return parent::_insert();
     }
 
     /**

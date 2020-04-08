@@ -105,7 +105,7 @@ class CategoriesComponent extends \OxidEsales\Eshop\Core\Controller\BaseControll
      */
     protected function _getActCat() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getActCat();
+        return self::getActCat();
     }
 
     /**
@@ -148,7 +148,7 @@ class CategoriesComponent extends \OxidEsales\Eshop\Core\Controller\BaseControll
      */
     protected function _loadCategoryTree($sActCat) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadCategoryTree($sActCat);
+        return self::loadCategoryTree($sActCat);
     }
 
     /**
@@ -176,7 +176,7 @@ class CategoriesComponent extends \OxidEsales\Eshop\Core\Controller\BaseControll
      */
     protected function _loadManufacturerTree($sActManufacturer) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadManufacturerTree($sActManufacturer);
+        return self::loadManufacturerTree($sActManufacturer);
     }
 
     /**
@@ -233,7 +233,7 @@ class CategoriesComponent extends \OxidEsales\Eshop\Core\Controller\BaseControll
      */
     protected function _addAdditionalParams($oProduct, $sActCat, $sActManufacturer, $sActVendor) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addAdditionalParams($oProduct, $sActCat, $sActManufacturer, $sActVendor);
+        return self::addAdditionalParams($oProduct, $sActCat, $sActManufacturer, $sActVendor);
     }
 
     /**
@@ -287,7 +287,7 @@ class CategoriesComponent extends \OxidEsales\Eshop\Core\Controller\BaseControll
      */
     protected function _getDefaultParams($oProduct) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getDefaultParams($oProduct);
+        return self::getDefaultParams($oProduct);
     }
 
     /**

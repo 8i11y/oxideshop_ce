@@ -152,7 +152,7 @@ class Field // extends \OxidEsales\Eshop\Core\Base
      */
     protected function _initValue($value = null, $type = self::T_TEXT) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->initValue($value, $type);
+        return self::initValue($value, $type);
     }
 
     /**

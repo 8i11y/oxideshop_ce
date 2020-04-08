@@ -189,7 +189,7 @@ class Shop extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel
      */
     protected function _getViewSelect($sTable, $iLang) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getViewSelect($sTable, $iLang);
+        return self::getViewSelect($sTable, $iLang);
     }
 
     /**
@@ -217,7 +217,7 @@ class Shop extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel
      */
     protected function _getViewSelectMultilang($sTable) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getViewSelectMultilang($sTable);
+        return self::getViewSelectMultilang($sTable);
     }
 
     /**
@@ -249,7 +249,7 @@ class Shop extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel
      */
     protected function _getViewJoinAll($sTable) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getViewJoinAll($sTable);
+        return self::getViewJoinAll($sTable);
     }
 
     /**
@@ -277,7 +277,7 @@ class Shop extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel
      */
     protected function _getViewJoinLang($sTable, $iLang) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getViewJoinLang($sTable, $iLang);
+        return self::getViewJoinLang($sTable, $iLang);
     }
 
     /**
@@ -303,7 +303,7 @@ class Shop extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel
      */
     protected function _cleanInvalidViews() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->cleanInvalidViews();
+        return self::cleanInvalidViews();
     }
 
     /**
@@ -340,7 +340,7 @@ class Shop extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel
      */
     protected function _prepareViewsQueries() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->prepareViewsQueries();
+        return self::prepareViewsQueries();
     }
 
     /**
@@ -391,7 +391,7 @@ class Shop extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel
      */
     protected function _runQueries() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->runQueries();
+        return self::runQueries();
     }
 
     /**

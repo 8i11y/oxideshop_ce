@@ -514,7 +514,7 @@ class ModuleList extends \OxidEsales\Eshop\Core\Base
      */
     protected function _sortModules($oModule1, $oModule2) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->sortModules($oModule1, $oModule2);
+        return self::sortModules($oModule1, $oModule2);
     }
 
     /**
@@ -534,7 +534,7 @@ class ModuleList extends \OxidEsales\Eshop\Core\Base
      */
     protected function _isVendorDir($sModuleDir) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isVendorDir($sModuleDir);
+        return self::isVendorDir($sModuleDir);
     }
 
     /**
@@ -565,7 +565,7 @@ class ModuleList extends \OxidEsales\Eshop\Core\Base
      */
     private function _getInvalidExtensions($moduleId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getInvalidExtensions($moduleId);
+        return self::getInvalidExtensions($moduleId);
     }
 
     /**

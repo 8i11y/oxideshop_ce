@@ -169,7 +169,7 @@ class ShopControl extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getStartController() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getStartController();
+        return self::getStartController();
     }
 
 
@@ -189,7 +189,7 @@ class ShopControl extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getFrontendStartController() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getFrontendStartController();
+        return self::getFrontendStartController();
     }
 
     /**
@@ -265,7 +265,7 @@ class ShopControl extends \OxidEsales\Eshop\Core\Base
      */
     protected function _process($class, $function, $parameters = null, $viewsChain = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->process($class, $function, $parameters, $viewsChain);
+        return self::process($class, $function, $parameters, $viewsChain);
     }
 
     /**
@@ -336,7 +336,7 @@ class ShopControl extends \OxidEsales\Eshop\Core\Base
      */
     protected function _executeMaintenanceTasks() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->executeMaintenanceTasks();
+        return self::executeMaintenanceTasks();
     }
 
     /**
@@ -398,7 +398,7 @@ class ShopControl extends \OxidEsales\Eshop\Core\Base
      */
     protected function _initializeViewObject($class, $function, $parameters = null, $viewsChain = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->initializeViewObject($class, $function, $parameters, $viewsChain);
+        return self::initializeViewObject($class, $function, $parameters, $viewsChain);
     }
 
     /**
@@ -445,7 +445,7 @@ class ShopControl extends \OxidEsales\Eshop\Core\Base
      */
     protected function _canExecuteFunction($view, $function) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->canExecuteFunction($view, $function);
+        return self::canExecuteFunction($view, $function);
     }
 
     /**
@@ -473,7 +473,7 @@ class ShopControl extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getFormattedErrors($controllerName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getFormattedErrors($controllerName);
+        return self::getFormattedErrors($controllerName);
     }
 
     /**
@@ -503,7 +503,7 @@ class ShopControl extends \OxidEsales\Eshop\Core\Base
      */
     protected function _render($view) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->render($view);
+        return self::render($view);
     }
 
     /**
@@ -580,7 +580,7 @@ class ShopControl extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getOutputManager() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getOutputManager();
+        return self::getOutputManager();
     }
 
     /**
@@ -601,7 +601,7 @@ class ShopControl extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getErrors($currentControllerName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getErrors($currentControllerName);
+        return self::getErrors($currentControllerName);
     }
 
     /**
@@ -642,7 +642,7 @@ class ShopControl extends \OxidEsales\Eshop\Core\Base
      */
     protected function _runOnce() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->runOnce();
+        return self::runOnce();
     }
 
     /**
@@ -682,7 +682,7 @@ class ShopControl extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getErrorReportingLevel() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getErrorReportingLevel();
+        return self::getErrorReportingLevel();
     }
 
     /**
@@ -711,7 +711,7 @@ class ShopControl extends \OxidEsales\Eshop\Core\Base
      */
     protected function _isDebugMode() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isDebugMode();
+        return self::isDebugMode();
     }
 
     /**
@@ -728,7 +728,7 @@ class ShopControl extends \OxidEsales\Eshop\Core\Base
      */
     protected function _startMonitor() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->startMonitor();
+        return self::startMonitor();
     }
 
     /**
@@ -745,7 +745,7 @@ class ShopControl extends \OxidEsales\Eshop\Core\Base
      */
     protected function _stopMonitor($isCallForCache = false, $isCached = false, $viewId = null, $viewData = [], $view = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->stopMonitor($isCallForCache, $isCached, $viewId, $viewData, $view);
+        return self::stopMonitor($isCallForCache, $isCached, $viewId, $viewData, $view);
     }
 
     /**
@@ -839,7 +839,7 @@ class ShopControl extends \OxidEsales\Eshop\Core\Base
      */
     protected function _handleSystemException($exception) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->handleSystemException($exception);
+        return self::handleSystemException($exception);
     }
 
     /**
@@ -877,7 +877,7 @@ class ShopControl extends \OxidEsales\Eshop\Core\Base
      */
     protected function _handleCookieException($exception) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->handleCookieException($exception);
+        return self::handleCookieException($exception);
     }
 
     /**
@@ -933,7 +933,7 @@ class ShopControl extends \OxidEsales\Eshop\Core\Base
      */
     protected function _handleBaseException($exception) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->handleBaseException($exception);
+        return self::handleBaseException($exception);
     }
 
     /**

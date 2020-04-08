@@ -84,7 +84,7 @@ class AccountDownloadsController extends \OxidEsales\Eshop\Application\Controlle
      */
     protected function _prepareForTemplate($oOrderFileList) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->prepareForTemplate($oOrderFileList);
+        return self::prepareForTemplate($oOrderFileList);
     }
 
     /**

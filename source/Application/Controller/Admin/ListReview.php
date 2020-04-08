@@ -35,7 +35,7 @@ class ListReview extends \OxidEsales\Eshop\Application\Controller\Admin\ArticleL
      */
     protected function _getViewListSize() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->_getUserDefListSize();
+        return self::_getUserDefListSize();
     }
 
     /**
@@ -58,7 +58,7 @@ class ListReview extends \OxidEsales\Eshop\Application\Controller\Admin\ArticleL
      */
     protected function _buildSelectString($oObject = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->buildSelectString($oObject);
+        return self::buildSelectString($oObject);
     }
 
     /**
@@ -90,7 +90,7 @@ class ListReview extends \OxidEsales\Eshop\Application\Controller\Admin\ArticleL
      */
     protected function _prepareWhereQuery($aWhere, $sSql) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->prepareWhereQuery($aWhere, $sSql);
+        return self::prepareWhereQuery($aWhere, $sSql);
     }
 
     /**
@@ -103,7 +103,7 @@ class ListReview extends \OxidEsales\Eshop\Application\Controller\Admin\ArticleL
      */
     protected function prepareWhereQuery($aWhere, $sSql)
     {
-        $sSql = parent::prepareWhereQuery($aWhere, $sSql);
+        $sSql = parent::_prepareWhereQuery($aWhere, $sSql);
 
         $sArtTable = getViewName('oxarticles', $this->_iEditLang);
         $sArtTitleField = "{$sArtTable}.oxtitle";

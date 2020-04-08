@@ -97,7 +97,7 @@ class RequiredAddressFields
      */
     private function _filterFields($aFields, $sPrefix) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->filterFields($aFields, $sPrefix);
+        return self::filterFields($aFields, $sPrefix);
     }
 
     /**

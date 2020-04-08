@@ -480,7 +480,7 @@ class ListModel extends \OxidEsales\Eshop\Core\Base implements \ArrayAccess, \It
      */
     protected function _assignElement($oListObject, $aDbFields) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->assignElement($oListObject, $aDbFields);
+        return self::assignElement($oListObject, $aDbFields);
     }
 
     /**
@@ -499,7 +499,7 @@ class ListModel extends \OxidEsales\Eshop\Core\Base implements \ArrayAccess, \It
      */
     protected function _getFieldLongName($sFieldName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getFieldLongName($sFieldName);
+        return self::getFieldLongName($sFieldName);
     }
 
     /**

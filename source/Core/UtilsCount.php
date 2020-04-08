@@ -384,7 +384,7 @@ class UtilsCount extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getCatCache() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCatCache();
+        return self::getCatCache();
     }
 
     /**
@@ -417,7 +417,7 @@ class UtilsCount extends \OxidEsales\Eshop\Core\Base
      */
     protected function _setCatCache($aCache) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setCatCache($aCache);
+        return self::setCatCache($aCache);
     }
 
     /**
@@ -435,7 +435,7 @@ class UtilsCount extends \OxidEsales\Eshop\Core\Base
      */
     protected function _setVendorCache($aCache) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setVendorCache($aCache);
+        return self::setVendorCache($aCache);
     }
 
     /**
@@ -453,7 +453,7 @@ class UtilsCount extends \OxidEsales\Eshop\Core\Base
      */
     protected function _setManufacturerCache($aCache) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setManufacturerCache($aCache);
+        return self::setManufacturerCache($aCache);
     }
 
     /**
@@ -471,7 +471,7 @@ class UtilsCount extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getVendorCache() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getVendorCache();
+        return self::getVendorCache();
     }
 
     /**
@@ -503,7 +503,7 @@ class UtilsCount extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getManufacturerCache() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getManufacturerCache();
+        return self::getManufacturerCache();
     }
 
     /**
@@ -530,12 +530,13 @@ class UtilsCount extends \OxidEsales\Eshop\Core\Base
 
         return $aLocalManufacturerCache;
     }
+
     /**
      * @deprecated use self::getUserViewId instead
      */
     protected function _getUserViewId($blReset = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getUserViewId($blReset);
+        return self::getUserViewId($blReset);
     }
 
     /**

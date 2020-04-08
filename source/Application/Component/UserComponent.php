@@ -122,7 +122,7 @@ class UserComponent extends \OxidEsales\Eshop\Core\Controller\BaseController
      */
     protected function _checkPsState() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->checkPsState();
+        return self::checkPsState();
     }
 
     /**
@@ -156,7 +156,7 @@ class UserComponent extends \OxidEsales\Eshop\Core\Controller\BaseController
      */
     protected function _loadSessionUser() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadSessionUser();
+        return self::loadSessionUser();
     }
 
     /**
@@ -235,7 +235,7 @@ class UserComponent extends \OxidEsales\Eshop\Core\Controller\BaseController
      */
     protected function _afterLogin($oUser) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->afterLogin($oUser);
+        return self::afterLogin($oUser);
     }
 
     /**
@@ -307,7 +307,7 @@ class UserComponent extends \OxidEsales\Eshop\Core\Controller\BaseController
      */
     protected function _afterLogout() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->afterLogout();
+        return self::afterLogout();
     }
 
     /**
@@ -636,7 +636,7 @@ class UserComponent extends \OxidEsales\Eshop\Core\Controller\BaseController
      */
     protected function _saveInvitor() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->saveInvitor();
+        return self::saveInvitor();
     }
 
     /**
@@ -654,7 +654,7 @@ class UserComponent extends \OxidEsales\Eshop\Core\Controller\BaseController
      */
     protected function _saveDeliveryAddressState() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->saveDeliveryAddressState();
+        return self::saveDeliveryAddressState();
     }
 
     /**
@@ -676,7 +676,7 @@ class UserComponent extends \OxidEsales\Eshop\Core\Controller\BaseController
      */
     protected function _changeUser_noRedirect() // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps,PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->changeUser_noRedirect();
+        return self::changeUser_noRedirect();
     }
 
     /**
@@ -799,7 +799,7 @@ class UserComponent extends \OxidEsales\Eshop\Core\Controller\BaseController
      */
     protected function _getDelAddressData() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getDelAddressData();
+        return self::getDelAddressData();
     }
 
     /**
@@ -833,7 +833,7 @@ class UserComponent extends \OxidEsales\Eshop\Core\Controller\BaseController
 
     protected function _getLogoutLink() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getLogoutLink();
+        return self::getLogoutLink();
     }
 
     /**

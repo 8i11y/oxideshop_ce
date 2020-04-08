@@ -55,7 +55,7 @@ class AttributeList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _createAttributeListFromSql($sSelect) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->createAttributeListFromSql($sSelect);
+        return self::createAttributeListFromSql($sSelect);
     }
 
     /**
@@ -222,7 +222,7 @@ class AttributeList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _mergeAttributes($aAttributes, $aParentAttributes) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->mergeAttributes($aAttributes, $aParentAttributes);
+        return self::mergeAttributes($aAttributes, $aParentAttributes);
     }
 
     /**

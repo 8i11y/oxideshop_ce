@@ -48,7 +48,7 @@ class OrderAddress extends \OxidEsales\Eshop\Application\Controller\Admin\AdminD
      */
     protected function _processAddress($aData, $sTypeToProcess, $aIgnore) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->processAddress($aData, $sTypeToProcess, $aIgnore);
+        return self::processAddress($aData, $sTypeToProcess, $aIgnore);
     }
 
     /**

@@ -153,7 +153,7 @@ class Wrapping extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel
      */
     protected function _isPriceViewModeNetto() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isPriceViewModeNetto();
+        return self::isPriceViewModeNetto();
     }
 
     /**

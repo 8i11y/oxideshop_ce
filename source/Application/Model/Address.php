@@ -35,7 +35,7 @@ class Address extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _getStateObject() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getStateObject();
+        return self::getStateObject();
     }
 
     /**
@@ -155,7 +155,7 @@ class Address extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _getMergedAddressFields() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getMergedAddressFields();
+        return self::getMergedAddressFields();
     }
 
     /**

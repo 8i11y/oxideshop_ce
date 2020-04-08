@@ -133,7 +133,7 @@ class ArticlePictures extends \OxidEsales\Eshop\Application\Controller\Admin\Adm
      */
     protected function _resetMasterPicture($oArticle, $iIndex, $blDeleteMaster = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->resetMasterPicture($oArticle, $iIndex, $blDeleteMaster);
+        return self::resetMasterPicture($oArticle, $iIndex, $blDeleteMaster);
     }
 
     /**
@@ -172,7 +172,7 @@ class ArticlePictures extends \OxidEsales\Eshop\Application\Controller\Admin\Adm
      */
     protected function _deleteMainIcon($oArticle) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->deleteMainIcon($oArticle);
+        return self::deleteMainIcon($oArticle);
     }
 
     /**
@@ -197,7 +197,7 @@ class ArticlePictures extends \OxidEsales\Eshop\Application\Controller\Admin\Adm
      */
     protected function _deleteThumbnail($oArticle) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->deleteThumbnail($oArticle);
+        return self::deleteThumbnail($oArticle);
     }
 
     /**
@@ -222,7 +222,7 @@ class ArticlePictures extends \OxidEsales\Eshop\Application\Controller\Admin\Adm
      */
     protected function _cleanupCustomFields($oArticle) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->cleanupCustomFields($oArticle);
+        return self::cleanupCustomFields($oArticle);
     }
 
     /**

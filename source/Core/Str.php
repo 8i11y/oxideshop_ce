@@ -51,7 +51,7 @@ class Str
      */
     protected function _getStrHandler() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getStrHandler();
+        return self::getStrHandler();
     }
 
     /**

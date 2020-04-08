@@ -498,7 +498,7 @@ class UtilsUrl extends \OxidEsales\Eshop\Core\Base
      */
     protected function _addHost($sUrl, &$aHosts) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addHost($sUrl, $aHosts);
+        return self::addHost($sUrl, $aHosts);
     }
 
     /**
@@ -520,7 +520,7 @@ class UtilsUrl extends \OxidEsales\Eshop\Core\Base
      */
     protected function _addLanguageHost($aLanguageUrls, &$aHosts) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addLanguageHost($aLanguageUrls, $aHosts);
+        return self::addLanguageHost($aLanguageUrls, $aHosts);
     }
 
     /**
@@ -542,7 +542,7 @@ class UtilsUrl extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getHosts() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getHosts();
+        return self::getHosts();
     }
 
     /**
@@ -578,7 +578,7 @@ class UtilsUrl extends \OxidEsales\Eshop\Core\Base
      */
     protected function _addMallHosts(&$aHosts) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addMallHosts($aHosts);
+        return self::addMallHosts($aHosts);
     }
 
     /**

@@ -109,7 +109,7 @@ class ActionList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _getUserGroupFilter($oUser = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getUserGroupFilter($oUser);
+        return self::getUserGroupFilter($oUser);
     }
 
     /**

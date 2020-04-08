@@ -105,7 +105,7 @@ class SimpleVariant extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel impl
      */
     protected function _getGroupPrice() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getGroupPrice();
+        return self::getGroupPrice();
     }
 
     /**
@@ -180,7 +180,7 @@ class SimpleVariant extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel impl
      */
     protected function _applyCurrency(\OxidEsales\Eshop\Core\Price $oPrice, $oCur = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->applyCurrency($oPrice, $oCur);
+        return self::applyCurrency($oPrice, $oCur);
     }
 
     /**
@@ -202,7 +202,7 @@ class SimpleVariant extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel impl
      */
     protected function _applyParentDiscounts($oPrice) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->applyParentDiscounts($oPrice);
+        return self::applyParentDiscounts($oPrice);
     }
 
     /**
@@ -221,7 +221,7 @@ class SimpleVariant extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel impl
      */
     protected function _applyParentVat($oPrice) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->applyParentVat($oPrice);
+        return self::applyParentVat($oPrice);
     }
 
     /**

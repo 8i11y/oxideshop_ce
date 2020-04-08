@@ -194,7 +194,7 @@ class ContentMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminDe
      */
     protected function _prepareIdent($sIdent) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->prepareIdent($sIdent);
+        return self::prepareIdent($sIdent);
     }
 
     /**
@@ -215,7 +215,7 @@ class ContentMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminDe
      */
     protected function _checkIdent($sIdent, $sOxId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->checkIdent($sIdent, $sOxId);
+        return self::checkIdent($sIdent, $sOxId);
     }
 
     /**

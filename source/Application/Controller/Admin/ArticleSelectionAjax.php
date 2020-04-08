@@ -40,7 +40,7 @@ class ArticleSelectionAjax extends \OxidEsales\Eshop\Application\Controller\Admi
      */
     protected function _getQuery() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getQuery();
+        return self::getQuery();
     }
 
     /**

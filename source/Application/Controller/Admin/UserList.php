@@ -84,7 +84,7 @@ class UserList extends \OxidEsales\Eshop\Application\Controller\Admin\AdminListC
      */
     public function _prepareWhereQuery($whereQuery, $fullQuery) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->prepareWhereQuery($whereQuery, $fullQuery);
+        return self::prepareWhereQuery($whereQuery, $fullQuery);
     }
 
     /**
@@ -108,7 +108,7 @@ class UserList extends \OxidEsales\Eshop\Application\Controller\Admin\AdminListC
 
             unset($whereQuery['oxuser.oxlname']);
         }
-        $query = parent::prepareWhereQuery($whereQuery, $fullQuery);
+        $query = parent::_prepareWhereQuery($whereQuery, $fullQuery);
 
         if ($nameWhere) {
             $values = explode(' ', $name);

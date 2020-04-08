@@ -108,7 +108,7 @@ class ArticleMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminDe
      */
     protected function _getEditValue($oObject, $sField) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getEditValue($oObject, $sField);
+        return self::getEditValue($oObject, $sField);
     }
 
     /**
@@ -219,7 +219,7 @@ class ArticleMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminDe
      */
     protected function _processLongDesc($sValue) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->processLongDesc($sValue);
+        return self::processLongDesc($sValue);
     }
 
     /**
@@ -247,7 +247,7 @@ class ArticleMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminDe
      */
     protected function _resetCategoriesCounter($sArticleId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->resetCategoriesCounter($sArticleId);
+        return self::resetCategoriesCounter($sArticleId);
     }
 
     /**
@@ -396,7 +396,7 @@ class ArticleMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminDe
      */
     protected function _copyCategories($sOldId, $newArticleId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->copyCategories($sOldId, $newArticleId);
+        return self::copyCategories($sOldId, $newArticleId);
     }
 
     /**
@@ -431,7 +431,7 @@ class ArticleMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminDe
      */
     protected function _copyAttributes($sOldId, $sNewId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->copyAttributes($sOldId, $sNewId);
+        return self::copyAttributes($sOldId, $sNewId);
     }
 
     /**
@@ -467,7 +467,7 @@ class ArticleMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminDe
      */
     protected function _copyFiles($sOldId, $sNewId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->copyFiles($sOldId, $sNewId);
+        return self::copyFiles($sOldId, $sNewId);
     }
 
     /**
@@ -504,7 +504,7 @@ class ArticleMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminDe
      */
     protected function _copySelectlists($sOldId, $sNewId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->copySelectlists($sOldId, $sNewId);
+        return self::copySelectlists($sOldId, $sNewId);
     }
 
     /**
@@ -542,7 +542,7 @@ class ArticleMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminDe
      */
     protected function _copyCrossseling($sOldId, $sNewId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->copyCrossseling($sOldId, $sNewId);
+        return self::copyCrossseling($sOldId, $sNewId);
     }
 
     /**
@@ -580,7 +580,7 @@ class ArticleMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminDe
      */
     protected function _copyAccessoires($sOldId, $sNewId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->copyAccessoires($sOldId, $sNewId);
+        return self::copyAccessoires($sOldId, $sNewId);
     }
 
     /**
@@ -618,7 +618,7 @@ class ArticleMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminDe
      */
     protected function _copyStaffelpreis($sOldId, $sNewId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->copyStaffelpreis($sOldId, $sNewId);
+        return self::copyStaffelpreis($sOldId, $sNewId);
     }
 
     /**
@@ -651,7 +651,7 @@ class ArticleMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminDe
      */
     protected function _copyArtExtends($sOldId, $sNewId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->copyArtExtends($sOldId, $sNewId);
+        return self::copyArtExtends($sOldId, $sNewId);
     }
 
     /**
@@ -694,7 +694,7 @@ class ArticleMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminDe
      */
     protected function _formJumpList($oArticle, $oParentArticle) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->formJumpList($oArticle, $oParentArticle);
+        return self::formJumpList($oArticle, $oParentArticle);
     }
 
     /**
@@ -744,7 +744,7 @@ class ArticleMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminDe
      */
     protected function _getTitle($oObj) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getTitle($oObj);
+        return self::getTitle($oObj);
     }
 
     /**

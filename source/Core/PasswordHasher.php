@@ -27,7 +27,7 @@ class PasswordHasher
      */
     protected function _getHasher() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getHasher();
+        return self::getHasher();
     }
 
     /**

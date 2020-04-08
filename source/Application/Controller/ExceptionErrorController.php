@@ -46,7 +46,7 @@ class ExceptionErrorController extends \OxidEsales\Eshop\Application\Controller\
      */
     protected function _getErrors() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getErrors();
+        return self::getErrors();
     }
 
     /**

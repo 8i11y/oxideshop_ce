@@ -119,7 +119,7 @@ class VendorListController extends \OxidEsales\Eshop\Application\Controller\Arti
      */
     protected function _getProductLinkType() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getProductLinkType();
+        return self::getProductLinkType();
     }
 
     /**
@@ -136,7 +136,7 @@ class VendorListController extends \OxidEsales\Eshop\Application\Controller\Arti
      */
     protected function _loadArticles($oVendor) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadArticles($oVendor);
+        return self::loadArticles($oVendor);
     }
 
     /**
@@ -171,7 +171,7 @@ class VendorListController extends \OxidEsales\Eshop\Application\Controller\Arti
      */
     protected function _getSeoObjectId() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSeoObjectId();
+        return self::getSeoObjectId();
     }
 
     /**
@@ -190,7 +190,7 @@ class VendorListController extends \OxidEsales\Eshop\Application\Controller\Arti
      */
     protected function _addPageNrParam($sUrl, $iPage, $iLang = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addPageNrParam($sUrl, $iPage, $iLang);
+        return self::addPageNrParam($sUrl, $iPage, $iLang);
     }
 
     /**
@@ -381,7 +381,7 @@ class VendorListController extends \OxidEsales\Eshop\Application\Controller\Arti
      */
     protected function _prepareMetaKeyword($sKeywords, $blRemoveDuplicatedWords = true) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->prepareMetaKeyword($sKeywords, $blRemoveDuplicatedWords);
+        return self::prepareMetaKeyword($sKeywords, $blRemoveDuplicatedWords);
     }
 
     /**
@@ -395,14 +395,14 @@ class VendorListController extends \OxidEsales\Eshop\Application\Controller\Arti
      */
     protected function prepareMetaKeyword($sKeywords, $blRemoveDuplicatedWords = true)
     {
-        return parent::collectMetaKeyword($sKeywords);
+        return parent::_collectMetaKeyword($sKeywords);
     }
     /**
      * @deprecated use self::prepareMetaDescription instead
      */
     protected function _prepareMetaDescription($sMeta, $iLength = 1024, $blDescTag = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->prepareMetaDescription($sMeta, $iLength, $blDescTag);
+        return self::prepareMetaDescription($sMeta, $iLength, $blDescTag);
     }
 
     /**
@@ -417,14 +417,14 @@ class VendorListController extends \OxidEsales\Eshop\Application\Controller\Arti
      */
     protected function prepareMetaDescription($sMeta, $iLength = 1024, $blDescTag = false)
     {
-        return parent::collectMetaDescription($sMeta, $iLength, $blDescTag);
+        return parent::_collectMetaDescription($sMeta, $iLength, $blDescTag);
     }
     /**
      * @deprecated use self::getSubject instead
      */
     protected function _getSubject($iLang) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSubject($iLang);
+        return self::getSubject($iLang);
     }
 
     /**

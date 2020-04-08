@@ -42,7 +42,7 @@ class ArticleExtendAjax extends \OxidEsales\Eshop\Application\Controller\Admin\L
      */
     protected function _getQuery() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getQuery();
+        return self::getQuery();
     }
 
     /**
@@ -79,7 +79,7 @@ class ArticleExtendAjax extends \OxidEsales\Eshop\Application\Controller\Admin\L
      */
     protected function _getDataFields($sQ) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getDataFields($sQ);
+        return self::getDataFields($sQ);
     }
 
     /**
@@ -91,7 +91,7 @@ class ArticleExtendAjax extends \OxidEsales\Eshop\Application\Controller\Admin\L
      */
     protected function getDataFields($sQ)
     {
-        $dataFields = parent::getDataFields($sQ);
+        $dataFields = parent::_getDataFields($sQ);
         if (\OxidEsales\Eshop\Core\Registry::getConfig()->getRequestParameter('oxid') && is_array($dataFields) && count($dataFields)) {
             // looking for smallest time value to mark record as main category ..
             $minimalPosition = null;
@@ -210,7 +210,7 @@ class ArticleExtendAjax extends \OxidEsales\Eshop\Application\Controller\Admin\L
      */
     protected function _updateOxTime($oxId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->updateOxTime($oxId);
+        return self::updateOxTime($oxId);
     }
 
     /**

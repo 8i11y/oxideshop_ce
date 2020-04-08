@@ -44,7 +44,7 @@ class DiscountCategoriesAjax extends \OxidEsales\Eshop\Application\Controller\Ad
      */
     protected function _getQuery() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getQuery();
+        return self::getQuery();
     }
 
     /**

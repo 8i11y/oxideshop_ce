@@ -161,7 +161,7 @@ class ArticleVariant extends \OxidEsales\Eshop\Application\Controller\Admin\Admi
      */
     protected function _isAnythingChanged($oProduct, $aData) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isAnythingChanged($oProduct, $aData);
+        return self::isAnythingChanged($oProduct, $aData);
     }
 
     /**
@@ -190,7 +190,7 @@ class ArticleVariant extends \OxidEsales\Eshop\Application\Controller\Admin\Admi
      */
     protected function _getProductParent($sParentId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getProductParent($sParentId);
+        return self::getProductParent($sParentId);
     }
 
     /**

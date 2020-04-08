@@ -296,7 +296,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _getCountryTitle($sCountryId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCountryTitle($sCountryId);
+        return self::getCountryTitle($sCountryId);
     }
 
     /**
@@ -322,7 +322,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _getArticles($blExcludeCanceled = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getArticles($blExcludeCanceled);
+        return self::getArticles($blExcludeCanceled);
     }
 
     /**
@@ -596,7 +596,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _setOrderStatus($sStatus) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setOrderStatus($sStatus);
+        return self::setOrderStatus($sStatus);
     }
 
 
@@ -622,7 +622,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _convertVat($sVat) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->convertVat($sVat);
+        return self::convertVat($sVat);
     }
 
     /**
@@ -647,7 +647,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _resetVats() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->resetVats();
+        return self::resetVats();
     }
 
     /**
@@ -665,7 +665,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _loadFromBasket(\OxidEsales\Eshop\Application\Model\Basket $oBasket) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadFromBasket($oBasket);
+        return self::loadFromBasket($oBasket);
     }
 
     /**
@@ -826,7 +826,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _setWrapping(\OxidEsales\Eshop\Application\Model\Basket $oBasket) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setWrapping($oBasket);
+        return self::setWrapping($oBasket);
     }
 
     /**
@@ -859,7 +859,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _setOrderArticles($aArticleList) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setOrderArticles($aArticleList);
+        return self::setOrderArticles($aArticleList);
     }
 
     /**
@@ -964,7 +964,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _executePayment(\OxidEsales\Eshop\Application\Model\Basket $oBasket, $oUserpayment) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->executePayment($oBasket, $oUserpayment);
+        return self::executePayment($oBasket, $oUserpayment);
     }
 
     /**
@@ -1010,7 +1010,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _getGateway() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getGateway();
+        return self::getGateway();
     }
 
     /**
@@ -1028,7 +1028,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _setPayment($sPaymentid) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setPayment($sPaymentid);
+        return self::setPayment($sPaymentid);
     }
 
     /**
@@ -1089,7 +1089,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _setFolder() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setFolder();
+        return self::setFolder();
     }
 
     /**
@@ -1105,7 +1105,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _updateWishlist($aArticleList, $oUser) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->updateWishlist($aArticleList, $oUser);
+        return self::updateWishlist($aArticleList, $oUser);
     }
 
     /**
@@ -1148,7 +1148,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _updateNoticeList($aArticleList, $oUser) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->updateNoticeList($aArticleList, $oUser);
+        return self::updateNoticeList($aArticleList, $oUser);
     }
 
     /**
@@ -1195,7 +1195,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _updateOrderDate() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->updateOrderDate();
+        return self::updateOrderDate();
     }
 
     /**
@@ -1217,7 +1217,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _markVouchers($oBasket, $oUser) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->markVouchers($oBasket, $oUser);
+        return self::markVouchers($oBasket, $oUser);
     }
 
     /**
@@ -1336,7 +1336,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _insert() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->insert();
+        return self::insert();
     }
 
     /**
@@ -1369,7 +1369,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
             )
         );
 
-        $blInsert = parent::insert();
+        $blInsert = parent::_insert();
 
         return $blInsert;
     }
@@ -1378,7 +1378,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _getCounterIdent() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCounterIdent();
+        return self::getCounterIdent();
     }
 
     /**
@@ -1397,7 +1397,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _setNumber() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setNumber();
+        return self::setNumber();
     }
 
 
@@ -1428,7 +1428,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _update() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->update();
+        return self::update();
     }
 
     /**
@@ -1441,7 +1441,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
         $this->_aSkipSaveFields = ['oxtimestamp', 'oxorderdate'];
         $this->oxorder__oxsenddate = new \OxidEsales\Eshop\Core\Field(\OxidEsales\Eshop\Core\Registry::getUtilsDate()->formatDBDate($this->oxorder__oxsenddate->value, true));
 
-        return parent::update();
+        return parent::_update();
     }
 
     /**
@@ -1526,7 +1526,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _getOrderBasket($blStockCheck = true) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getOrderBasket($blStockCheck);
+        return self::getOrderBasket($blStockCheck);
     }
 
     /**
@@ -1831,7 +1831,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _checkOrderExist($sOxId = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->checkOrderExist($sOxId);
+        return self::checkOrderExist($sOxId);
     }
 
 
@@ -1864,7 +1864,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _sendOrderByEmail($oUser = null, $oBasket = null, $oPayment = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->sendOrderByEmail($oUser, $oBasket, $oPayment);
+        return self::sendOrderByEmail($oUser, $oBasket, $oPayment);
     }
 
     /**
@@ -2016,7 +2016,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _addOrderArticlesToBasket($oBasket, $aOrderArticles) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addOrderArticlesToBasket($oBasket, $aOrderArticles);
+        return self::addOrderArticlesToBasket($oBasket, $aOrderArticles);
     }
 
     /**
@@ -2040,7 +2040,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _addArticlesToBasket($oBasket, $aArticles) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addArticlesToBasket($oBasket, $aArticles);
+        return self::addArticlesToBasket($oBasket, $aArticles);
     }
 
     /**

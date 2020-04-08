@@ -72,7 +72,7 @@ class WidgetControl extends \OxidEsales\Eshop\Core\ShopControl
      */
     protected function _runLast() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->runLast();
+        return self::runLast();
     }
 
     /**
@@ -100,7 +100,7 @@ class WidgetControl extends \OxidEsales\Eshop\Core\ShopControl
      */
     protected function _initializeViewObject($class, $function, $parameters = null, $viewsChain = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->initializeViewObject($class, $function, $parameters, $viewsChain);
+        return self::initializeViewObject($class, $function, $parameters, $viewsChain);
     }
 
     /**
@@ -140,7 +140,7 @@ class WidgetControl extends \OxidEsales\Eshop\Core\ShopControl
             }
         }
 
-        $widgetViewObject = parent::initializeViewObject($class, $function, $parameters, null);
+        $widgetViewObject = parent::_initializeViewObject($class, $function, $parameters, null);
 
         if (!is_a($widgetViewObject, WidgetController::class)) {
             /** @var ObjectException $exception */

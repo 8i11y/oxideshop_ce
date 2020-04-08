@@ -103,7 +103,7 @@ class DiscountList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _getFilterSelect($oUser) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getFilterSelect($oUser);
+        return self::getFilterSelect($oUser);
     }
 
     /**

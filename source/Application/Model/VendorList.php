@@ -147,7 +147,7 @@ class VendorList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _addCategoryFields($oVendor) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addCategoryFields($oVendor);
+        return self::addCategoryFields($oVendor);
     }
 
     /**
@@ -190,7 +190,7 @@ class VendorList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _seoSetVendorData() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->seoSetVendorData();
+        return self::seoSetVendorData();
     }
 
     /**

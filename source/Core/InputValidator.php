@@ -289,7 +289,7 @@ class InputValidator extends \OxidEsales\Eshop\Core\Base
      */
     private function _setFields($object, $fields) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setFields($object, $fields);
+        return self::setFields($object, $fields);
     }
 
     /**
@@ -390,7 +390,7 @@ class InputValidator extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getCountry($countryId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCountry($countryId);
+        return self::getCountry($countryId);
     }
 
 
@@ -489,7 +489,7 @@ class InputValidator extends \OxidEsales\Eshop\Core\Base
      */
     protected function _addValidationError($fieldName, $error) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addValidationError($fieldName, $error);
+        return self::addValidationError($fieldName, $error);
     }
 
     /**
@@ -510,7 +510,7 @@ class InputValidator extends \OxidEsales\Eshop\Core\Base
      */
     protected function _validateDebitNote($debitInformation) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->validateDebitNote($debitInformation);
+        return self::validateDebitNote($debitInformation);
     }
 
     /**
@@ -546,7 +546,7 @@ class InputValidator extends \OxidEsales\Eshop\Core\Base
      */
     protected function _validateOldDebitInfo($debitInfo) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->validateOldDebitInfo($debitInfo);
+        return self::validateOldDebitInfo($debitInfo);
     }
 
     /**
@@ -581,7 +581,7 @@ class InputValidator extends \OxidEsales\Eshop\Core\Base
      */
     protected function _fixAccountNumber($debitInfo) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->fixAccountNumber($debitInfo);
+        return self::fixAccountNumber($debitInfo);
     }
 
     /**
@@ -610,7 +610,7 @@ class InputValidator extends \OxidEsales\Eshop\Core\Base
      */
     protected function _isAllBankInformationSet($requiredFields, $bankInformation) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isAllBankInformationSet($requiredFields, $bankInformation);
+        return self::isAllBankInformationSet($requiredFields, $bankInformation);
     }
 
     /**
@@ -638,7 +638,7 @@ class InputValidator extends \OxidEsales\Eshop\Core\Base
      */
     protected function _cleanDebitInformation($debitInformation) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->cleanDebitInformation($debitInformation);
+        return self::cleanDebitInformation($debitInformation);
     }
 
     /**
@@ -660,7 +660,7 @@ class InputValidator extends \OxidEsales\Eshop\Core\Base
      */
     protected function _hasRequiredParametersForVatInCheck($invAddress) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->hasRequiredParametersForVatInCheck($invAddress);
+        return self::hasRequiredParametersForVatInCheck($invAddress);
     }
 
     /**

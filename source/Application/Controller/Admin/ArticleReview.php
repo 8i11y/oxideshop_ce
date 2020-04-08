@@ -74,7 +74,7 @@ class ArticleReview extends \OxidEsales\Eshop\Application\Controller\Admin\Admin
      */
     protected function _getReviewList($article) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getReviewList($article);
+        return self::getReviewList($article);
     }
 
     /**

@@ -131,7 +131,7 @@ class AdminController extends \OxidEsales\Eshop\Core\Controller\BaseController
      */
     protected function _getEditShop($sShopId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getEditShop($sShopId);
+        return self::getEditShop($sShopId);
     }
 
     /**
@@ -223,7 +223,7 @@ class AdminController extends \OxidEsales\Eshop\Core\Controller\BaseController
      */
     protected function _getServiceProtocol() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getServiceProtocol();
+        return self::getServiceProtocol();
     }
 
     /**
@@ -274,7 +274,7 @@ class AdminController extends \OxidEsales\Eshop\Core\Controller\BaseController
      */
     protected function _getShopVersionNr() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getShopVersionNr();
+        return self::getShopVersionNr();
     }
 
     /**
@@ -293,7 +293,7 @@ class AdminController extends \OxidEsales\Eshop\Core\Controller\BaseController
      */
     protected function _setupNavigation($sNode) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setupNavigation($sNode);
+        return self::setupNavigation($sNode);
     }
 
     /**
@@ -328,7 +328,7 @@ class AdminController extends \OxidEsales\Eshop\Core\Controller\BaseController
      */
     protected function _addNavigationHistory($sNode) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addNavigationHistory($sNode);
+        return self::addNavigationHistory($sNode);
     }
 
     /**
@@ -405,7 +405,7 @@ class AdminController extends \OxidEsales\Eshop\Core\Controller\BaseController
      */
     protected function _getMaxUploadFileInfo($iMaxFileSize, $blFormatted = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getMaxUploadFileInfo($iMaxFileSize, $blFormatted);
+        return self::getMaxUploadFileInfo($iMaxFileSize, $blFormatted);
     }
 
     /**
@@ -511,7 +511,7 @@ class AdminController extends \OxidEsales\Eshop\Core\Controller\BaseController
      */
     protected function _allowAdminEdit($sUserId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->allowAdminEdit($sUserId);
+        return self::allowAdminEdit($sUserId);
     }
 
     /**
@@ -531,7 +531,7 @@ class AdminController extends \OxidEsales\Eshop\Core\Controller\BaseController
      */
     protected function _getCountryByCode($sCountryCode) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCountryByCode($sCountryCode);
+        return self::getCountryByCode($sCountryCode);
     }
 
     /**
@@ -577,7 +577,7 @@ class AdminController extends \OxidEsales\Eshop\Core\Controller\BaseController
      */
     protected function _authorize() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->authorize();
+        return self::authorize();
     }
 
     /**

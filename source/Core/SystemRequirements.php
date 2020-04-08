@@ -340,7 +340,7 @@ class SystemRequirements
      */
     protected function _getShopHostInfoFromConfig() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getShopHostInfoFromConfig();
+        return self::getShopHostInfoFromConfig();
     }
 
 
@@ -377,7 +377,7 @@ class SystemRequirements
      */
     protected function _getShopSSLHostInfoFromConfig() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getShopSSLHostInfoFromConfig();
+        return self::getShopSSLHostInfoFromConfig();
     }
 
     /**
@@ -413,7 +413,7 @@ class SystemRequirements
      */
     protected function _getShopHostInfoFromServerVars() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getShopHostInfoFromServerVars();
+        return self::getShopHostInfoFromServerVars();
     }
 
     /**
@@ -445,7 +445,7 @@ class SystemRequirements
      */
     protected function _getShopHostInfo() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getShopHostInfo();
+        return self::getShopHostInfo();
     }
 
     /**
@@ -466,7 +466,7 @@ class SystemRequirements
      */
     protected function _getShopSSLHostInfo() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getShopSSLHostInfo();
+        return self::getShopSSLHostInfo();
     }
 
     /**
@@ -832,7 +832,7 @@ class SystemRequirements
      */
     protected function _getAdditionalCheck() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getAdditionalCheck();
+        return self::getAdditionalCheck();
     }
 
     /**
@@ -1074,7 +1074,7 @@ class SystemRequirements
      */
     protected function _getBytes($sBytes) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getBytes($sBytes);
+        return self::getBytes($sBytes);
     }
 
     /**
@@ -1111,7 +1111,7 @@ class SystemRequirements
      */
     protected function _checkTemplateBlock($sTemplate, $sBlockName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->checkTemplateBlock($sTemplate, $sBlockName);
+        return self::checkTemplateBlock($sTemplate, $sBlockName);
     }
 
     /**
@@ -1221,7 +1221,7 @@ class SystemRequirements
      */
     protected function _getMinimumMemoryLimit() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getMinimumMemoryLimit();
+        return self::getMinimumMemoryLimit();
     }
 
     /**
@@ -1238,7 +1238,7 @@ class SystemRequirements
      */
     protected function _getRecommendMemoryLimit() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getRecommendMemoryLimit();
+        return self::getRecommendMemoryLimit();
     }
 
     /**

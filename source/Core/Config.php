@@ -364,7 +364,7 @@ class Config extends \OxidEsales\Eshop\Core\Base
      */
     protected function _processSeoCall() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->processSeoCall();
+        return self::processSeoCall();
     }
 
     /**
@@ -482,7 +482,7 @@ class Config extends \OxidEsales\Eshop\Core\Base
      */
     protected function _loadVarsFromFile() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadVarsFromFile();
+        return self::loadVarsFromFile();
     }
 
     /**
@@ -508,7 +508,7 @@ class Config extends \OxidEsales\Eshop\Core\Base
      */
     protected function _setDefaults() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setDefaults();
+        return self::setDefaults();
     }
 
     /**
@@ -558,7 +558,7 @@ class Config extends \OxidEsales\Eshop\Core\Base
      */
     protected function _loadCustomConfig() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadCustomConfig();
+        return self::loadCustomConfig();
     }
 
     /**
@@ -576,7 +576,7 @@ class Config extends \OxidEsales\Eshop\Core\Base
      */
     protected function _loadVarsFromDb($shopID, $onlyVars = null, $module = '') // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadVarsFromDb($shopID, $onlyVars, $module);
+        return self::loadVarsFromDb($shopID, $onlyVars, $module);
     }
 
     /**
@@ -631,7 +631,7 @@ class Config extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getConfigParamsSelectSnippet($vars) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getConfigParamsSelectSnippet($vars);
+        return self::getConfigParamsSelectSnippet($vars);
     }
 
     /**
@@ -658,7 +658,7 @@ class Config extends \OxidEsales\Eshop\Core\Base
      */
     protected function _setConfVarFromDb($varName, $varType, $varVal) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setConfVarFromDb($varName, $varType, $varVal);
+        return self::setConfVarFromDb($varName, $varType, $varVal);
     }
 
     /**
@@ -879,7 +879,7 @@ class Config extends \OxidEsales\Eshop\Core\Base
      */
     protected function _checkSsl() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->checkSsl();
+        return self::checkSsl();
     }
 
     /**
@@ -2310,7 +2310,7 @@ class Config extends \OxidEsales\Eshop\Core\Base
      */
     protected function _handleDbConnectionException(\OxidEsales\Eshop\Core\Exception\DatabaseException $exception) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->handleDbConnectionException($exception);
+        return self::handleDbConnectionException($exception);
     }
 
     /**
@@ -2330,7 +2330,7 @@ class Config extends \OxidEsales\Eshop\Core\Base
      */
     protected function _handleCookieException($ex) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->handleCookieException($ex);
+        return self::handleCookieException($ex);
     }
 
     /**
@@ -2378,7 +2378,7 @@ class Config extends \OxidEsales\Eshop\Core\Base
      */
     protected function _isValidShopId($shopId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isValidShopId($shopId);
+        return self::isValidShopId($shopId);
     }
 
     /**

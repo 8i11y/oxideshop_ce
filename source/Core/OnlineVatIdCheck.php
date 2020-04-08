@@ -107,7 +107,7 @@ class OnlineVatIdCheck extends \OxidEsales\Eshop\Core\CompanyVatInChecker
      */
     protected function _isServiceAvailable() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isServiceAvailable();
+        return self::isServiceAvailable();
     }
 
     /**
@@ -151,7 +151,7 @@ class OnlineVatIdCheck extends \OxidEsales\Eshop\Core\CompanyVatInChecker
      */
     protected function _checkOnline($oCheckVat) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->checkOnline($oCheckVat);
+        return self::checkOnline($oCheckVat);
     }
 
     /**

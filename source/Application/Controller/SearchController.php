@@ -237,7 +237,7 @@ class SearchController extends \OxidEsales\Eshop\Application\Controller\Frontend
      */
     protected function _processListArticles() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->processListArticles();
+        return self::processListArticles();
     }
 
     /**
@@ -294,7 +294,7 @@ class SearchController extends \OxidEsales\Eshop\Application\Controller\Frontend
      */
     protected function _isSearchClass() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isSearchClass();
+        return self::isSearchClass();
     }
 
     /**
@@ -501,7 +501,7 @@ class SearchController extends \OxidEsales\Eshop\Application\Controller\Frontend
      */
     protected function _canRedirect() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->canRedirect();
+        return self::canRedirect();
     }
 
     /**

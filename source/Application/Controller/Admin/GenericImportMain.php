@@ -167,7 +167,7 @@ class GenericImportMain extends \OxidEsales\Eshop\Application\Controller\Admin\A
      */
     protected function _deleteCsvFile() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->deleteCsvFile();
+        return self::deleteCsvFile();
     }
 
     /**
@@ -185,7 +185,7 @@ class GenericImportMain extends \OxidEsales\Eshop\Application\Controller\Admin\A
      */
     protected function _getCsvFieldsNames() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCsvFieldsNames();
+        return self::getCsvFieldsNames();
     }
 
     /**
@@ -222,7 +222,7 @@ class GenericImportMain extends \OxidEsales\Eshop\Application\Controller\Admin\A
      */
     protected function _getCsvFirstRow() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCsvFirstRow();
+        return self::getCsvFirstRow();
     }
 
     /**
@@ -248,7 +248,7 @@ class GenericImportMain extends \OxidEsales\Eshop\Application\Controller\Admin\A
      */
     protected function _resetUploadedCsvData() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->resetUploadedCsvData();
+        return self::resetUploadedCsvData();
     }
 
     /**
@@ -265,7 +265,7 @@ class GenericImportMain extends \OxidEsales\Eshop\Application\Controller\Admin\A
      */
     protected function _checkErrors($iNavStep) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->checkErrors($iNavStep);
+        return self::checkErrors($iNavStep);
     }
 
     /**
@@ -314,7 +314,7 @@ class GenericImportMain extends \OxidEsales\Eshop\Application\Controller\Admin\A
      */
     protected function _getUploadedCsvFilePath() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getUploadedCsvFilePath();
+        return self::getUploadedCsvFilePath();
     }
 
     /**
@@ -347,7 +347,7 @@ class GenericImportMain extends \OxidEsales\Eshop\Application\Controller\Admin\A
      */
     protected function _checkImportErrors($oErpImport) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->checkImportErrors($oErpImport);
+        return self::checkImportErrors($oErpImport);
     }
 
     /**
@@ -370,7 +370,7 @@ class GenericImportMain extends \OxidEsales\Eshop\Application\Controller\Admin\A
      */
     protected function _getCsvFieldsTerminator() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCsvFieldsTerminator();
+        return self::getCsvFieldsTerminator();
     }
 
     /**
@@ -394,7 +394,7 @@ class GenericImportMain extends \OxidEsales\Eshop\Application\Controller\Admin\A
      */
     protected function _getCsvFieldsEncolser() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCsvFieldsEncolser();
+        return self::getCsvFieldsEncolser();
     }
 
     /**

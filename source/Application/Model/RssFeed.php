@@ -95,7 +95,7 @@ class RssFeed extends \OxidEsales\Eshop\Core\Base
      */
     protected function _loadBaseChannel() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadBaseChannel();
+        return self::loadBaseChannel();
     }
 
     /**
@@ -135,7 +135,7 @@ class RssFeed extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getCacheId($name) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCacheId($name);
+        return self::getCacheId($name);
     }
 
     /**
@@ -157,7 +157,7 @@ class RssFeed extends \OxidEsales\Eshop\Core\Base
      */
     protected function _loadFromCache($name) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadFromCache($name);
+        return self::loadFromCache($name);
     }
 
     /**
@@ -183,7 +183,7 @@ class RssFeed extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getLastBuildDate($name, $aData) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getLastBuildDate($name, $aData);
+        return self::getLastBuildDate($name, $aData);
     }
 
 
@@ -215,7 +215,7 @@ class RssFeed extends \OxidEsales\Eshop\Core\Base
      */
     protected function _saveToCache($name, $aContent) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->saveToCache($name, $aContent);
+        return self::saveToCache($name, $aContent);
     }
 
     /**
@@ -241,7 +241,7 @@ class RssFeed extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getArticleItems(\OxidEsales\Eshop\Application\Model\ArticleList $oList) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getArticleItems($oList);
+        return self::getArticleItems($oList);
     }
 
 
@@ -317,7 +317,7 @@ class RssFeed extends \OxidEsales\Eshop\Core\Base
      */
     protected function _prepareUrl($sUri, $sTitle) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->prepareUrl($sUri, $sTitle);
+        return self::prepareUrl($sUri, $sTitle);
     }
 
     /**
@@ -348,7 +348,7 @@ class RssFeed extends \OxidEsales\Eshop\Core\Base
      */
     protected function _prepareFeedName($sTitle) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->prepareFeedName($sTitle);
+        return self::prepareFeedName($sTitle);
     }
 
     /**
@@ -371,7 +371,7 @@ class RssFeed extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getShopUrl() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getShopUrl();
+        return self::getShopUrl();
     }
 
     /**
@@ -399,7 +399,7 @@ class RssFeed extends \OxidEsales\Eshop\Core\Base
      */
     protected function _loadData($sTag, $sTitle, $sDesc, $aItems, $sRssUrl, $sTargetUrl = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadData($sTag, $sTitle, $sDesc, $aItems, $sRssUrl, $sTargetUrl);
+        return self::loadData($sTag, $sTitle, $sDesc, $aItems, $sRssUrl, $sTargetUrl);
     }
 
     /**
@@ -566,7 +566,7 @@ class RssFeed extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getCatPath($oCat) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCatPath($oCat);
+        return self::getCatPath($oCat);
     }
 
     /**
@@ -663,7 +663,7 @@ class RssFeed extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getSearchParamsUrl($sSearch, $sCatId, $sVendorId, $sManufacturerId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSearchParamsUrl($sSearch, $sCatId, $sVendorId, $sManufacturerId);
+        return self::getSearchParamsUrl($sSearch, $sCatId, $sVendorId, $sManufacturerId);
     }
 
     /**
@@ -700,7 +700,7 @@ class RssFeed extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getObjectField($sId, $sObject, $sField) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getObjectField($sId, $sObject, $sField);
+        return self::getObjectField($sId, $sObject, $sField);
     }
 
     /**
@@ -730,7 +730,7 @@ class RssFeed extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getSearchParamsTranslation($sSearch, $sId, $sCatId, $sVendorId, $sManufacturerId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSearchParamsTranslation($sSearch, $sId, $sCatId, $sVendorId, $sManufacturerId);
+        return self::getSearchParamsTranslation($sSearch, $sId, $sCatId, $sVendorId, $sManufacturerId);
     }
 
     /**
@@ -871,7 +871,7 @@ class RssFeed extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getRecommListItems($oList) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getRecommListItems($oList);
+        return self::getRecommListItems($oList);
     }
 
     /**
@@ -1067,7 +1067,7 @@ class RssFeed extends \OxidEsales\Eshop\Core\Base
      */
     protected function _deleteFile($sFilePath) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->deleteFile($sFilePath);
+        return self::deleteFile($sFilePath);
     }
 
     /**

@@ -74,7 +74,7 @@ class ModuleConfiguration extends \OxidEsales\Eshop\Application\Controller\Admin
      */
     protected function _getModuleForConfigVars() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getModuleForConfigVars();
+        return self::getModuleForConfigVars();
     }
 
     /**
@@ -93,7 +93,7 @@ class ModuleConfiguration extends \OxidEsales\Eshop\Application\Controller\Admin
      */
     public function _loadMetadataConfVars($aModuleSettings) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadMetadataConfVars($aModuleSettings);
+        return self::loadMetadataConfVars($aModuleSettings);
     }
 
     /**
@@ -343,7 +343,7 @@ class ModuleConfiguration extends \OxidEsales\Eshop\Application\Controller\Admin
      */
     private function _getDbConfigTypeName($type) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getDbConfigTypeName($type);
+        return self::getDbConfigTypeName($type);
     }
 
     /**

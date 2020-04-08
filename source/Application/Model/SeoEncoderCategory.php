@@ -21,7 +21,7 @@ class SeoEncoderCategory extends \OxidEsales\Eshop\Core\SeoEncoder
      */
     protected function _getUrlExtension() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getUrlExtension();
+        return self::getUrlExtension();
     }
 
     /**
@@ -38,7 +38,7 @@ class SeoEncoderCategory extends \OxidEsales\Eshop\Core\SeoEncoder
      */
     protected function _categoryUrlLoader($oCat, $iLang) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->categoryUrlLoader($oCat, $iLang);
+        return self::categoryUrlLoader($oCat, $iLang);
     }
 
     /**
@@ -69,7 +69,7 @@ class SeoEncoderCategory extends \OxidEsales\Eshop\Core\SeoEncoder
      */
     private function _getCategoryCacheId($oCat, $iLang) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCategoryCacheId($oCat, $iLang);
+        return self::getCategoryCacheId($oCat, $iLang);
     }
 
     /**
@@ -272,7 +272,7 @@ class SeoEncoderCategory extends \OxidEsales\Eshop\Core\SeoEncoder
      */
     protected function _getAltUri($sObjectId, $iLang) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getAltUri($sObjectId, $iLang);
+        return self::getAltUri($sObjectId, $iLang);
     }
 
     /**

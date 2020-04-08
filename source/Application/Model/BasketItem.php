@@ -705,7 +705,7 @@ class BasketItem extends \OxidEsales\Eshop\Core\Base
      */
     protected function _setArticle($sProductId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setArticle($sProductId);
+        return self::setArticle($sProductId);
     }
 
     /**
@@ -756,7 +756,7 @@ class BasketItem extends \OxidEsales\Eshop\Core\Base
      */
     protected function _setFromOrderArticle($oOrderArticle) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setFromOrderArticle($oOrderArticle);
+        return self::setFromOrderArticle($oOrderArticle);
     }
 
     /**
@@ -788,7 +788,7 @@ class BasketItem extends \OxidEsales\Eshop\Core\Base
      */
     protected function _setSelectList($aSelList) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setSelectList($aSelList);
+        return self::setSelectList($aSelList);
     }
 
     /**

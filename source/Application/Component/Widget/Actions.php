@@ -48,7 +48,7 @@ class Actions extends \OxidEsales\Eshop\Application\Component\Widget\WidgetContr
      */
     protected function _getLoadActionsParam() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getLoadActionsParam();
+        return self::getLoadActionsParam();
     }
 
     /**

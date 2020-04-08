@@ -189,7 +189,7 @@ class PictureHandler extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getBaseMasterImageFileName($sMasterImageFile) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getBaseMasterImageFileName($sMasterImageFile);
+        return self::getBaseMasterImageFileName($sMasterImageFile);
     }
 
     /**
@@ -235,7 +235,7 @@ class PictureHandler extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getPictureInfo($sFilePath, $sFile, $blAdmin = false, $blSSL = null, $iLang = null, $iShopId = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getPictureInfo($sFilePath, $sFile, $blAdmin, $blSSL, $iLang, $iShopId);
+        return self::getPictureInfo($sFilePath, $sFile, $blAdmin, $blSSL, $iLang, $iShopId);
     }
 
     /**

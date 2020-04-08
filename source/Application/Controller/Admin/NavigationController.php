@@ -150,7 +150,7 @@ class NavigationController extends \OxidEsales\Eshop\Application\Controller\Admi
      */
     protected function _doStartUpChecks() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->doStartUpChecks();
+        return self::doStartUpChecks();
     }
 
     /**
@@ -209,7 +209,7 @@ class NavigationController extends \OxidEsales\Eshop\Application\Controller\Admi
      */
     protected function _checkVersion() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->checkVersion();
+        return self::checkVersion();
     }
 
     /**

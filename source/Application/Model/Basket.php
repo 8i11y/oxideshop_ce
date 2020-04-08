@@ -394,7 +394,7 @@ class Basket extends \OxidEsales\Eshop\Core\Base
      */
     protected function _changeBasketItemKey($sOldKey, $sNewKey, $value = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->changeBasketItemKey($sOldKey, $sNewKey, $value);
+        return self::changeBasketItemKey($sOldKey, $sNewKey, $value);
     }
 
     /**
@@ -632,7 +632,7 @@ class Basket extends \OxidEsales\Eshop\Core\Base
      */
     protected function _clearBundles() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->clearBundles();
+        return self::clearBundles();
     }
 
     /**
@@ -652,7 +652,7 @@ class Basket extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getArticleBundles($oBasketItem) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getArticleBundles($oBasketItem);
+        return self::getArticleBundles($oBasketItem);
     }
 
     /**
@@ -682,7 +682,7 @@ class Basket extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getItemBundles($oBasketItem, $aBundles = []) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getItemBundles($oBasketItem, $aBundles);
+        return self::getItemBundles($oBasketItem, $aBundles);
     }
 
     /**
@@ -727,7 +727,7 @@ class Basket extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getBasketBundles($aBundles = []) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getBasketBundles($aBundles);
+        return self::getBasketBundles($aBundles);
     }
 
     /**
@@ -766,7 +766,7 @@ class Basket extends \OxidEsales\Eshop\Core\Base
      */
     protected function _addBundles() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addBundles();
+        return self::addBundles();
     }
 
     /**
@@ -812,7 +812,7 @@ class Basket extends \OxidEsales\Eshop\Core\Base
      */
     protected function _addBundlesToBasket($aBundles) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addBundlesToBasket($aBundles);
+        return self::addBundlesToBasket($aBundles);
     }
 
     /**
@@ -843,7 +843,7 @@ class Basket extends \OxidEsales\Eshop\Core\Base
      */
     protected function _calcItemsPrice() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->calcItemsPrice();
+        return self::calcItemsPrice();
     }
 
     /**
@@ -930,7 +930,7 @@ class Basket extends \OxidEsales\Eshop\Core\Base
      */
     protected function _mergeDiscounts($aDiscounts, $aItemDiscounts) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->mergeDiscounts($aDiscounts, $aItemDiscounts);
+        return self::mergeDiscounts($aDiscounts, $aItemDiscounts);
     }
 
     /**
@@ -960,7 +960,7 @@ class Basket extends \OxidEsales\Eshop\Core\Base
      */
     protected function _calcDeliveryCost() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->calcDeliveryCost();
+        return self::calcDeliveryCost();
     }
 
     /**
@@ -1085,7 +1085,7 @@ class Basket extends \OxidEsales\Eshop\Core\Base
      */
     protected function _calcTotalPrice() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->calcTotalPrice();
+        return self::calcTotalPrice();
     }
 
 
@@ -1152,7 +1152,7 @@ class Basket extends \OxidEsales\Eshop\Core\Base
      */
     protected function _calcVoucherDiscount() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->calcVoucherDiscount();
+        return self::calcVoucherDiscount();
     }
 
     /**
@@ -1223,7 +1223,7 @@ class Basket extends \OxidEsales\Eshop\Core\Base
      */
     protected function _applyDiscounts() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->applyDiscounts();
+        return self::applyDiscounts();
     }
 
     /**
@@ -1273,7 +1273,7 @@ class Basket extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getPriceObject() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getPriceObject();
+        return self::getPriceObject();
     }
 
     /**
@@ -1298,7 +1298,7 @@ class Basket extends \OxidEsales\Eshop\Core\Base
      */
     protected function _calcBasketDiscount() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->calcBasketDiscount();
+        return self::calcBasketDiscount();
     }
 
     /**
@@ -1368,7 +1368,7 @@ class Basket extends \OxidEsales\Eshop\Core\Base
      */
     protected function _calcBasketTotalDiscount() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->calcBasketTotalDiscount();
+        return self::calcBasketTotalDiscount();
     }
 
     /**
@@ -1397,7 +1397,7 @@ class Basket extends \OxidEsales\Eshop\Core\Base
      */
     protected function _calcBasketWrapping() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->calcBasketWrapping();
+        return self::calcBasketWrapping();
     }
 
     /**
@@ -1430,7 +1430,7 @@ class Basket extends \OxidEsales\Eshop\Core\Base
      */
     protected function _calcBasketGiftCard() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->calcBasketGiftCard();
+        return self::calcBasketGiftCard();
     }
 
     /**
@@ -1470,7 +1470,7 @@ class Basket extends \OxidEsales\Eshop\Core\Base
      */
     protected function _calcPaymentCost() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->calcPaymentCost();
+        return self::calcPaymentCost();
     }
 
     /**
@@ -1789,7 +1789,7 @@ class Basket extends \OxidEsales\Eshop\Core\Base
      */
     protected function _canSaveBasket() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->canSaveBasket();
+        return self::canSaveBasket();
     }
 
     /**
@@ -1835,7 +1835,7 @@ class Basket extends \OxidEsales\Eshop\Core\Base
      */
     protected function _save() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->save();
+        return self::save();
     }
 
     /**
@@ -1866,7 +1866,7 @@ class Basket extends \OxidEsales\Eshop\Core\Base
      */
     protected function _deleteSavedBasket() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->deleteSavedBasket();
+        return self::deleteSavedBasket();
     }
 
     /**
@@ -1891,7 +1891,7 @@ class Basket extends \OxidEsales\Eshop\Core\Base
      */
     protected function _findDelivCountry() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->findDelivCountry();
+        return self::findDelivCountry();
     }
 
     /**
@@ -2860,7 +2860,7 @@ class Basket extends \OxidEsales\Eshop\Core\Base
      */
     public function _getDiscountedProductsSum() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getDiscountedProductsSum();
+        return self::getDiscountedProductsSum();
     }
 
 
@@ -3025,7 +3025,7 @@ class Basket extends \OxidEsales\Eshop\Core\Base
      */
     protected function _isProductInRootCategory($sProductId, $sRootCatId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isProductInRootCategory($sProductId, $sRootCatId);
+        return self::isProductInRootCategory($sProductId, $sRootCatId);
     }
 
     /**

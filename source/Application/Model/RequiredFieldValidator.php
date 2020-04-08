@@ -38,7 +38,7 @@ class RequiredFieldValidator
      */
     private function _validateFieldValueArray($aFieldValues) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->validateFieldValueArray($aFieldValues);
+        return self::validateFieldValueArray($aFieldValues);
     }
 
     /**

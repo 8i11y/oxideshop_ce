@@ -105,7 +105,7 @@ class OxidStartController extends \OxidEsales\Eshop\Application\Controller\Front
      */
     protected function _getSystemEventHandler() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSystemEventHandler();
+        return self::getSystemEventHandler();
     }
 
     /**

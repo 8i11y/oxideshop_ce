@@ -35,7 +35,7 @@ class CreditCardValidator
      */
     protected function _isValidType($type, $number) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isValidType($type, $number);
+        return self::isValidType($type, $number);
     }
 
     /**
@@ -60,7 +60,7 @@ class CreditCardValidator
      */
     protected function _isExpired($date) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isExpired($date);
+        return self::isExpired($date);
     }
 
     /**
@@ -90,7 +90,7 @@ class CreditCardValidator
      */
     protected function _isValidNumer($number) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isValidNumer($number);
+        return self::isValidNumer($number);
     }
 
     /**

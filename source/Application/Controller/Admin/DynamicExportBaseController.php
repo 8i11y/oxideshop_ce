@@ -542,7 +542,7 @@ class DynamicExportBaseController extends \OxidEsales\Eshop\Application\Controll
      */
     protected function _unHtmlEntities($sInput) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->unHtmlEntities($sInput);
+        return self::unHtmlEntities($sInput);
     }
 
     /**
@@ -564,7 +564,7 @@ class DynamicExportBaseController extends \OxidEsales\Eshop\Application\Controll
      */
     protected function _getHeapTableName() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getHeapTableName();
+        return self::getHeapTableName();
     }
 
     /**
@@ -582,7 +582,7 @@ class DynamicExportBaseController extends \OxidEsales\Eshop\Application\Controll
      */
     protected function _generateTableCharSet($sMysqlVersion) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->generateTableCharSet($sMysqlVersion);
+        return self::generateTableCharSet($sMysqlVersion);
     }
 
     /**
@@ -615,7 +615,7 @@ class DynamicExportBaseController extends \OxidEsales\Eshop\Application\Controll
      */
     protected function _createHeapTable($sHeapTable, $sTableCharset) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->createHeapTable($sHeapTable, $sTableCharset);
+        return self::createHeapTable($sHeapTable, $sTableCharset);
     }
 
     /**
@@ -643,7 +643,7 @@ class DynamicExportBaseController extends \OxidEsales\Eshop\Application\Controll
      */
     protected function _getCatAdd($aChosenCat) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCatAdd($aChosenCat);
+        return self::getCatAdd($aChosenCat);
     }
 
     /**
@@ -677,7 +677,7 @@ class DynamicExportBaseController extends \OxidEsales\Eshop\Application\Controll
      */
     protected function _insertArticles($sHeapTable, $sCatAdd) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->insertArticles($sHeapTable, $sCatAdd);
+        return self::insertArticles($sHeapTable, $sCatAdd);
     }
 
     /**
@@ -738,7 +738,7 @@ class DynamicExportBaseController extends \OxidEsales\Eshop\Application\Controll
      */
     protected function _removeParentArticles($sHeapTable) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->removeParentArticles($sHeapTable);
+        return self::removeParentArticles($sHeapTable);
     }
 
     /**
@@ -778,7 +778,7 @@ class DynamicExportBaseController extends \OxidEsales\Eshop\Application\Controll
      */
     protected function _setSessionParams() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setSessionParams();
+        return self::setSessionParams();
     }
 
     /**
@@ -831,7 +831,7 @@ class DynamicExportBaseController extends \OxidEsales\Eshop\Application\Controll
      */
     protected function _loadRootCats() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadRootCats();
+        return self::loadRootCats();
     }
 
     /**
@@ -887,7 +887,7 @@ class DynamicExportBaseController extends \OxidEsales\Eshop\Application\Controll
      */
     protected function _findDeepestCatPath($oArticle) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->findDeepestCatPath($oArticle);
+        return self::findDeepestCatPath($oArticle);
     }
 
     /**
@@ -933,7 +933,7 @@ class DynamicExportBaseController extends \OxidEsales\Eshop\Application\Controll
      */
     protected function _initArticle($sHeapTable, $iCnt, &$blContinue) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->initArticle($sHeapTable, $iCnt, $blContinue);
+        return self::initArticle($sHeapTable, $iCnt, $blContinue);
     }
 
     /**
@@ -976,7 +976,7 @@ class DynamicExportBaseController extends \OxidEsales\Eshop\Application\Controll
      */
     protected function _setCampaignDetailLink($oArticle) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setCampaignDetailLink($oArticle);
+        return self::setCampaignDetailLink($oArticle);
     }
 
     /**

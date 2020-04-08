@@ -127,7 +127,7 @@ class CategoryList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _getSqlSelectFieldsForTree($sTable, $aColumns = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSqlSelectFieldsForTree($sTable, $aColumns);
+        return self::getSqlSelectFieldsForTree($sTable, $aColumns);
     }
 
     /**
@@ -179,7 +179,7 @@ class CategoryList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _getSelectString($blReverse = false, $aColumns = null, $sOrder = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSelectString($blReverse, $aColumns, $sOrder);
+        return self::getSelectString($blReverse, $aColumns, $sOrder);
     }
 
     /**
@@ -223,7 +223,7 @@ class CategoryList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _getDepthSqlSnippet($oCat) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getDepthSqlSnippet($oCat);
+        return self::getDepthSqlSnippet($oCat);
     }
 
     /**
@@ -264,7 +264,7 @@ class CategoryList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _getDepthSqlUnion($oCat, $aColumns = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getDepthSqlUnion($oCat, $aColumns);
+        return self::getDepthSqlUnion($oCat, $aColumns);
     }
 
     /**
@@ -297,7 +297,7 @@ class CategoryList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _loadFromDb() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadFromDb();
+        return self::loadFromDb();
     }
 
     /**
@@ -361,7 +361,7 @@ class CategoryList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _ppLoadFullCategory($sId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->ppLoadFullCategory($sId);
+        return self::ppLoadFullCategory($sId);
     }
 
     /**
@@ -449,7 +449,7 @@ class CategoryList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _ppRemoveInactiveCategories() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->ppRemoveInactiveCategories();
+        return self::ppRemoveInactiveCategories();
     }
 
     /**
@@ -495,7 +495,7 @@ class CategoryList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _ppAddPathInfo() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->ppAddPathInfo();
+        return self::ppAddPathInfo();
     }
 
     /**
@@ -526,7 +526,7 @@ class CategoryList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _ppAddContentCategories() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->ppAddContentCategories();
+        return self::ppAddContentCategories();
     }
 
     /**
@@ -549,7 +549,7 @@ class CategoryList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _ppBuildTree() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->ppBuildTree();
+        return self::ppBuildTree();
     }
 
     /**
@@ -576,7 +576,7 @@ class CategoryList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _ppAddDepthInformation() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->ppAddDepthInformation();
+        return self::ppAddDepthInformation();
     }
 
     /**
@@ -602,7 +602,7 @@ class CategoryList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _addDepthInfo($aTree, $oCat, $sDepth = "") // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addDepthInfo($aTree, $oCat, $sDepth);
+        return self::addDepthInfo($aTree, $oCat, $sDepth);
     }
 
     /**
@@ -703,7 +703,7 @@ class CategoryList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _updateNodes($oxRootId, $isRoot, $thisRoot) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->updateNodes($oxRootId, $isRoot, $thisRoot);
+        return self::updateNodes($oxRootId, $isRoot, $thisRoot);
     }
 
     /**

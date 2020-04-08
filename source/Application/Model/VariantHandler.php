@@ -123,7 +123,7 @@ class VariantHandler extends \OxidEsales\Eshop\Core\Base
      */
     protected function _assignValues($aValues, $oVariants, $oArticle, $aConfLanguages) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->assignValues($aValues, $oVariants, $oArticle, $aConfLanguages);
+        return self::assignValues($aValues, $oVariants, $oArticle, $aConfLanguages);
     }
 
     /**
@@ -218,7 +218,7 @@ class VariantHandler extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getValuePrice($oValue, $dParentPrice) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getValuePrice($oValue, $dParentPrice);
+        return self::getValuePrice($oValue, $dParentPrice);
     }
 
     /**
@@ -253,7 +253,7 @@ class VariantHandler extends \OxidEsales\Eshop\Core\Base
      */
     protected function _createNewVariant($aParams = null, $sParentId = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->createNewVariant($aParams, $sParentId);
+        return self::createNewVariant($aParams, $sParentId);
     }
 
     /**
@@ -288,7 +288,7 @@ class VariantHandler extends \OxidEsales\Eshop\Core\Base
      */
     protected function _updateArticleVarName($sUpdate, $sArtId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->updateArticleVarName($sUpdate, $sArtId);
+        return self::updateArticleVarName($sUpdate, $sArtId);
     }
 
     /**
@@ -326,7 +326,7 @@ class VariantHandler extends \OxidEsales\Eshop\Core\Base
      */
     protected function _fillVariantSelections($oVariantList, $iVarSelCnt, &$aFilter, $sActVariantId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->fillVariantSelections($oVariantList, $iVarSelCnt, $aFilter, $sActVariantId);
+        return self::fillVariantSelections($oVariantList, $iVarSelCnt, $aFilter, $sActVariantId);
     }
 
     /**
@@ -369,7 +369,7 @@ class VariantHandler extends \OxidEsales\Eshop\Core\Base
      */
     protected function _cleanFilter($aFilter) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->cleanFilter($aFilter);
+        return self::cleanFilter($aFilter);
     }
 
     /**
@@ -397,7 +397,7 @@ class VariantHandler extends \OxidEsales\Eshop\Core\Base
      */
     protected function _applyVariantSelectionsFilter($aSelections, $aFilter) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->applyVariantSelectionsFilter($aSelections, $aFilter);
+        return self::applyVariantSelectionsFilter($aSelections, $aFilter);
     }
 
     /**
@@ -455,7 +455,7 @@ class VariantHandler extends \OxidEsales\Eshop\Core\Base
      */
     protected function _buildVariantSelectionsList($aVarSelects, $aSelections) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->buildVariantSelectionsList($aVarSelects, $aSelections);
+        return self::buildVariantSelectionsList($aVarSelects, $aSelections);
     }
 
     /**
@@ -487,7 +487,7 @@ class VariantHandler extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getSelections($sTitle) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSelections($sTitle);
+        return self::getSelections($sTitle);
     }
 
     /**

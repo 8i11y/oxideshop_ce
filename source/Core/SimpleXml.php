@@ -64,7 +64,7 @@ class SimpleXml
      */
     protected function _addSimpleXmlElement($oXml, $oInput, $sPreferredKey = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addSimpleXmlElement($oXml, $oInput, $sPreferredKey);
+        return self::addSimpleXmlElement($oXml, $oInput, $sPreferredKey);
     }
 
     /**
@@ -91,7 +91,7 @@ class SimpleXml
      */
     protected function _addChildNode($oXml, $sKey, $mElement, $sPreferredKey = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addChildNode($oXml, $sKey, $mElement, $sPreferredKey);
+        return self::addChildNode($oXml, $sKey, $mElement, $sPreferredKey);
     }
 
     /**
@@ -132,7 +132,7 @@ class SimpleXml
      */
     protected function _addNodeAttributes($oNode, $aAttributes) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addNodeAttributes($oNode, $aAttributes);
+        return self::addNodeAttributes($oNode, $aAttributes);
     }
 
     /**

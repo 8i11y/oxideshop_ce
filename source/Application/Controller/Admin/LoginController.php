@@ -176,7 +176,7 @@ class LoginController extends \OxidEsales\Eshop\Application\Controller\Admin\Adm
      */
     protected function _authorize() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->authorize();
+        return self::authorize();
     }
 
     /**
@@ -204,7 +204,7 @@ class LoginController extends \OxidEsales\Eshop\Application\Controller\Admin\Adm
      */
     protected function _getAvailableLanguages() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getAvailableLanguages();
+        return self::getAvailableLanguages();
     }
 
     /**
@@ -229,7 +229,7 @@ class LoginController extends \OxidEsales\Eshop\Application\Controller\Admin\Adm
      */
     protected function _getBrowserLanguage() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getBrowserLanguage();
+        return self::getBrowserLanguage();
     }
 
     /**

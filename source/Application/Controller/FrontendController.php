@@ -456,7 +456,7 @@ class FrontendController extends \OxidEsales\Eshop\Core\Controller\BaseControlle
      */
     protected function _getComponentNames() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getComponentNames();
+        return self::getComponentNames();
     }
 
     /**
@@ -491,7 +491,7 @@ class FrontendController extends \OxidEsales\Eshop\Core\Controller\BaseControlle
      */
     protected function _processRequest() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->processRequest();
+        return self::processRequest();
     }
 
     /**
@@ -1037,7 +1037,7 @@ class FrontendController extends \OxidEsales\Eshop\Core\Controller\BaseControlle
      */
     protected function _getMetaFromSeo($dataType) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getMetaFromSeo($dataType);
+        return self::getMetaFromSeo($dataType);
     }
 
     /**
@@ -1065,7 +1065,7 @@ class FrontendController extends \OxidEsales\Eshop\Core\Controller\BaseControlle
      */
     protected function _getMetaFromContent($metaIdent) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getMetaFromContent($metaIdent);
+        return self::getMetaFromContent($metaIdent);
     }
 
     /**
@@ -1173,7 +1173,7 @@ class FrontendController extends \OxidEsales\Eshop\Core\Controller\BaseControlle
      */
     protected function _forceNoIndex() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->forceNoIndex();
+        return self::forceNoIndex();
     }
 
     /**
@@ -1234,7 +1234,7 @@ class FrontendController extends \OxidEsales\Eshop\Core\Controller\BaseControlle
      */
     protected function _setNrOfArtPerPage() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setNrOfArtPerPage();
+        return self::setNrOfArtPerPage();
     }
 
     /**
@@ -1296,7 +1296,7 @@ class FrontendController extends \OxidEsales\Eshop\Core\Controller\BaseControlle
      */
     protected function _getSeoObjectId() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSeoObjectId();
+        return self::getSeoObjectId();
     }
 
     /**
@@ -1310,7 +1310,7 @@ class FrontendController extends \OxidEsales\Eshop\Core\Controller\BaseControlle
      */
     protected function _prepareMetaDescription($meta, $length = 1024, $removeDuplicatedWords = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->prepareMetaDescription($meta, $length, $removeDuplicatedWords);
+        return self::prepareMetaDescription($meta, $length, $removeDuplicatedWords);
     }
 
     /**
@@ -1364,7 +1364,7 @@ class FrontendController extends \OxidEsales\Eshop\Core\Controller\BaseControlle
      */
     protected function _prepareMetaKeyword($keywords, $removeDuplicatedWords = true) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->prepareMetaKeyword($keywords, $removeDuplicatedWords);
+        return self::prepareMetaKeyword($keywords, $removeDuplicatedWords);
     }
 
     /**
@@ -1390,7 +1390,7 @@ class FrontendController extends \OxidEsales\Eshop\Core\Controller\BaseControlle
      */
     protected function _removeDuplicatedWords($input, $skipTags = []) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->removeDuplicatedWords($input, $skipTags);
+        return self::removeDuplicatedWords($input, $skipTags);
     }
 
     /**
@@ -1575,7 +1575,7 @@ class FrontendController extends \OxidEsales\Eshop\Core\Controller\BaseControlle
      */
     protected function _getSubject($languageId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSubject($languageId);
+        return self::getSubject($languageId);
     }
 
 
@@ -1706,7 +1706,7 @@ class FrontendController extends \OxidEsales\Eshop\Core\Controller\BaseControlle
      */
     protected function _getRequestParams($addPageNumber = true) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getRequestParams($addPageNumber);
+        return self::getRequestParams($addPageNumber);
     }
 
     /**
@@ -1804,7 +1804,7 @@ class FrontendController extends \OxidEsales\Eshop\Core\Controller\BaseControlle
      */
     protected function _getSeoRequestParams() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSeoRequestParams();
+        return self::getSeoRequestParams();
     }
 
     /**
@@ -2076,7 +2076,7 @@ class FrontendController extends \OxidEsales\Eshop\Core\Controller\BaseControlle
      */
     protected function _addPageNrParam($url, $page, $languageId = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addPageNrParam($url, $page, $languageId);
+        return self::addPageNrParam($url, $page, $languageId);
     }
 
     /**
@@ -2507,7 +2507,7 @@ class FrontendController extends \OxidEsales\Eshop\Core\Controller\BaseControlle
      */
     protected function _canRedirect() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->canRedirect();
+        return self::canRedirect();
     }
 
     /**

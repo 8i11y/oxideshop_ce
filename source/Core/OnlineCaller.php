@@ -120,7 +120,7 @@ abstract class OnlineCaller
      */
     protected function _castExceptionAndWriteToLog(\Exception $oEx) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->castExceptionAndWriteToLog($oEx);
+        return self::castExceptionAndWriteToLog($oEx);
     }
 
     /**
@@ -145,7 +145,7 @@ abstract class OnlineCaller
      */
     protected function _formEmail($oRequest) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->formEmail($oRequest);
+        return self::formEmail($oRequest);
     }
 
     /**
@@ -164,7 +164,7 @@ abstract class OnlineCaller
      */
     protected function _formXMLRequest($oRequest) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->formXMLRequest($oRequest);
+        return self::formXMLRequest($oRequest);
     }
 
     /**
@@ -183,7 +183,7 @@ abstract class OnlineCaller
      */
     protected function _getSimpleXml() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSimpleXml();
+        return self::getSimpleXml();
     }
 
     /**
@@ -200,7 +200,7 @@ abstract class OnlineCaller
      */
     protected function _getCurl() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCurl();
+        return self::getCurl();
     }
 
     /**
@@ -217,7 +217,7 @@ abstract class OnlineCaller
      */
     protected function _getEmailBuilder() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getEmailBuilder();
+        return self::getEmailBuilder();
     }
 
     /**
@@ -234,7 +234,7 @@ abstract class OnlineCaller
      */
     private function _executeCurlCall($sUrl, $sXml) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->executeCurlCall($sUrl, $sXml);
+        return self::executeCurlCall($sUrl, $sXml);
     }
 
     /**
@@ -263,7 +263,7 @@ abstract class OnlineCaller
      */
     private function _sendEmail($sBody) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->sendEmail($sBody);
+        return self::sendEmail($sBody);
     }
 
     /**
@@ -281,7 +281,7 @@ abstract class OnlineCaller
      */
     private function _resetFailedCallsCount($iFailedOnlineCallsCount) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->resetFailedCallsCount($iFailedOnlineCallsCount);
+        return self::resetFailedCallsCount($iFailedOnlineCallsCount);
     }
 
     /**
@@ -300,7 +300,7 @@ abstract class OnlineCaller
      */
     private function _increaseFailedCallsCount($iFailedOnlineCallsCount) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->increaseFailedCallsCount($iFailedOnlineCallsCount);
+        return self::increaseFailedCallsCount($iFailedOnlineCallsCount);
     }
 
     /**

@@ -65,7 +65,7 @@ class ThemeConfiguration extends \OxidEsales\Eshop\Application\Controller\Admin\
      */
     protected function _getModuleForConfigVars() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getModuleForConfigVars();
+        return self::getModuleForConfigVars();
     }
 
     /**

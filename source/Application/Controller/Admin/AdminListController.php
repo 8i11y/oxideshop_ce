@@ -189,7 +189,7 @@ class AdminListController extends \OxidEsales\Eshop\Application\Controller\Admin
      */
     protected function _getUserDefListSize() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getUserDefListSize();
+        return self::getUserDefListSize();
     }
 
     /**
@@ -257,7 +257,7 @@ class AdminListController extends \OxidEsales\Eshop\Application\Controller\Admin
      */
     protected function _calcListItemsCount($sql) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->calcListItemsCount($sql);
+        return self::calcListItemsCount($sql);
     }
 
     /**
@@ -287,7 +287,7 @@ class AdminListController extends \OxidEsales\Eshop\Application\Controller\Admin
      */
     protected function _setCurrentListPosition($page = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setCurrentListPosition($page);
+        return self::setCurrentListPosition($page);
     }
 
     /**
@@ -316,7 +316,7 @@ class AdminListController extends \OxidEsales\Eshop\Application\Controller\Admin
      */
     protected function _prepareOrderByQuery($query = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->prepareOrderByQuery($query);
+        return self::prepareOrderByQuery($query);
     }
 
     /**
@@ -367,7 +367,7 @@ class AdminListController extends \OxidEsales\Eshop\Application\Controller\Admin
      */
     protected function _buildSelectString($listObject = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->buildSelectString($listObject);
+        return self::buildSelectString($listObject);
     }
 
     /**
@@ -386,7 +386,7 @@ class AdminListController extends \OxidEsales\Eshop\Application\Controller\Admin
      */
     protected function _processFilter($fieldValue) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->processFilter($fieldValue);
+        return self::processFilter($fieldValue);
     }
 
 
@@ -413,7 +413,7 @@ class AdminListController extends \OxidEsales\Eshop\Application\Controller\Admin
      */
     protected function _buildFilter($value, $isSearchValue) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->buildFilter($value, $isSearchValue);
+        return self::buildFilter($value, $isSearchValue);
     }
 
     /**
@@ -441,7 +441,7 @@ class AdminListController extends \OxidEsales\Eshop\Application\Controller\Admin
      */
     protected function _isSearchValue($fieldValue) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isSearchValue($fieldValue);
+        return self::isSearchValue($fieldValue);
     }
 
     /**
@@ -460,7 +460,7 @@ class AdminListController extends \OxidEsales\Eshop\Application\Controller\Admin
      */
     protected function _prepareWhereQuery($whereQuery, $fullQuery) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->prepareWhereQuery($whereQuery, $fullQuery);
+        return self::prepareWhereQuery($whereQuery, $fullQuery);
     }
 
     /**
@@ -529,7 +529,7 @@ class AdminListController extends \OxidEsales\Eshop\Application\Controller\Admin
      */
     protected function _changeselect($query) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->changeselect($query);
+        return self::changeselect($query);
     }
 
     /**
@@ -589,7 +589,7 @@ class AdminListController extends \OxidEsales\Eshop\Application\Controller\Admin
      */
     protected function _convertToDBDate($value, $fieldType) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->convertToDBDate($value, $fieldType);
+        return self::convertToDBDate($value, $fieldType);
     }
 
     /**
@@ -629,7 +629,7 @@ class AdminListController extends \OxidEsales\Eshop\Application\Controller\Admin
      */
     protected function _convertDate($date) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->convertDate($date);
+        return self::convertDate($date);
     }
 
     /**
@@ -674,7 +674,7 @@ class AdminListController extends \OxidEsales\Eshop\Application\Controller\Admin
      */
     protected function _convertTime($fullDate) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->convertTime($fullDate);
+        return self::convertTime($fullDate);
     }
 
     /**
@@ -723,7 +723,7 @@ class AdminListController extends \OxidEsales\Eshop\Application\Controller\Admin
      */
     protected function _setListNavigationParams() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setListNavigationParams();
+        return self::setListNavigationParams();
     }
 
     /**
@@ -813,7 +813,7 @@ class AdminListController extends \OxidEsales\Eshop\Application\Controller\Admin
      */
     protected function _setupNavigation($node) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setupNavigation($node);
+        return self::setupNavigation($node);
     }
 
     /**

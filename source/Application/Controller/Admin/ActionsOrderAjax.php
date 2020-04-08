@@ -33,7 +33,7 @@ class ActionsOrderAjax extends \OxidEsales\Eshop\Application\Controller\Admin\Li
      */
     protected function _getQuery() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getQuery();
+        return self::getQuery();
     }
 
     /**
@@ -54,7 +54,7 @@ class ActionsOrderAjax extends \OxidEsales\Eshop\Application\Controller\Admin\Li
      */
     protected function _getSorting() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSorting();
+        return self::getSorting();
     }
 
     /**

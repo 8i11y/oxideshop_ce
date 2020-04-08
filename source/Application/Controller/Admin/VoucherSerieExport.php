@@ -81,7 +81,7 @@ class VoucherSerieExport extends \OxidEsales\Eshop\Application\Controller\Admin\
      */
     protected function _getExportFileName() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getExportFileName();
+        return self::getExportFileName();
     }
 
     /**
@@ -104,7 +104,7 @@ class VoucherSerieExport extends \OxidEsales\Eshop\Application\Controller\Admin\
      */
     protected function _getExportFilePath() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getExportFilePath();
+        return self::getExportFilePath();
     }
 
     /**

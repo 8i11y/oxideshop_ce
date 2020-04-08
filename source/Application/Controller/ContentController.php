@@ -163,7 +163,7 @@ class ContentController extends \OxidEsales\Eshop\Application\Controller\Fronten
      */
     protected function _canShowContent($sContentIdent) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->canShowContent($sContentIdent);
+        return self::canShowContent($sContentIdent);
     }
 
     /**
@@ -185,7 +185,7 @@ class ContentController extends \OxidEsales\Eshop\Application\Controller\Fronten
      */
     protected function _prepareMetaDescription($sMeta, $iLength = 200, $blDescTag = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->prepareMetaDescription($sMeta, $iLength, $blDescTag);
+        return self::prepareMetaDescription($sMeta, $iLength, $blDescTag);
     }
 
     /**
@@ -204,14 +204,14 @@ class ContentController extends \OxidEsales\Eshop\Application\Controller\Fronten
             $sMeta = $this->getContent()->oxcontents__oxtitle->value;
         }
 
-        return parent::prepareMetaDescription($sMeta, $iLength, $blDescTag);
+        return parent::_prepareMetaDescription($sMeta, $iLength, $blDescTag);
     }
     /**
      * @deprecated use self::prepareMetaKeyword instead
      */
     protected function _prepareMetaKeyword($sKeywords, $blRemoveDuplicatedWords = true) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->prepareMetaKeyword($sKeywords, $blRemoveDuplicatedWords);
+        return self::prepareMetaKeyword($sKeywords, $blRemoveDuplicatedWords);
     }
 
     /**
@@ -229,7 +229,7 @@ class ContentController extends \OxidEsales\Eshop\Application\Controller\Fronten
             $sKeywords = $this->getContent()->oxcontents__oxtitle->value;
         }
 
-        return parent::prepareMetaKeyword($sKeywords, $blRemoveDuplicatedWords);
+        return parent::_prepareMetaKeyword($sKeywords, $blRemoveDuplicatedWords);
     }
 
     /**
@@ -276,7 +276,7 @@ class ContentController extends \OxidEsales\Eshop\Application\Controller\Fronten
      */
     protected function _getSeoObjectId() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSeoObjectId();
+        return self::getSeoObjectId();
     }
 
     /**
@@ -343,7 +343,7 @@ class ContentController extends \OxidEsales\Eshop\Application\Controller\Fronten
      */
     protected function _getSubject($iLang) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSubject($iLang);
+        return self::getSubject($iLang);
     }
 
     /**
@@ -363,7 +363,7 @@ class ContentController extends \OxidEsales\Eshop\Application\Controller\Fronten
      */
     protected function _getTplName() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getTplName();
+        return self::getTplName();
     }
 
     /**

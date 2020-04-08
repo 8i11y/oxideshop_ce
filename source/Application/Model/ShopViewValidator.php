@@ -138,7 +138,7 @@ class ShopViewValidator
      */
     protected function _getAllViews() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getAllViews();
+        return self::getAllViews();
     }
 
     /**
@@ -159,7 +159,7 @@ class ShopViewValidator
      */
     protected function _isCurrentShopView($sViewName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isCurrentShopView($sViewName);
+        return self::isCurrentShopView($sViewName);
     }
 
     /**
@@ -191,7 +191,7 @@ class ShopViewValidator
      */
     protected function _getShopViews() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getShopViews();
+        return self::getShopViews();
     }
 
 
@@ -220,7 +220,7 @@ class ShopViewValidator
      */
     protected function _getValidShopViews() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getValidShopViews();
+        return self::getValidShopViews();
     }
 
     /**
@@ -274,7 +274,7 @@ class ShopViewValidator
      */
     protected function _isViewValid($sViewName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isViewValid($sViewName);
+        return self::isViewValid($sViewName);
     }
 
     /**

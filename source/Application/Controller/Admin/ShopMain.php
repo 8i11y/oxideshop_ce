@@ -145,7 +145,7 @@ class ShopMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminDetai
      */
     protected function _getNonCopyConfigVars() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getNonCopyConfigVars();
+        return self::getNonCopyConfigVars();
     }
 
     /**
@@ -187,7 +187,7 @@ class ShopMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminDetai
      */
     protected function _copyConfigVars($shop) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->copyConfigVars($shop);
+        return self::copyConfigVars($shop);
     }
 
     /**

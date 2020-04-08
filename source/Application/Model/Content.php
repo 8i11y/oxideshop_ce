@@ -124,7 +124,7 @@ class Content extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _loadFromDb($sLoadId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadFromDb($sLoadId);
+        return self::loadFromDb($sLoadId);
     }
 
     /**
@@ -354,7 +354,7 @@ class Content extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _setFieldData($sFieldName, $sValue, $iDataType = \OxidEsales\Eshop\Core\Field::T_TEXT) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setFieldData($sFieldName, $sValue, $iDataType);
+        return self::setFieldData($sFieldName, $sValue, $iDataType);
     }
 
     /**
@@ -373,7 +373,7 @@ class Content extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
             $iDataType = \OxidEsales\Eshop\Core\Field::T_RAW;
         }
 
-        return parent::setFieldData($sFieldName, $sValue, $iDataType);
+        return parent::_setFieldData($sFieldName, $sValue, $iDataType);
     }
 
     /**

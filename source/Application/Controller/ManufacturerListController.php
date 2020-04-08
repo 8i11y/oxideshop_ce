@@ -122,7 +122,7 @@ class ManufacturerListController extends \OxidEsales\Eshop\Application\Controlle
      */
     protected function _getProductLinkType() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getProductLinkType();
+        return self::getProductLinkType();
     }
 
     /**
@@ -139,7 +139,7 @@ class ManufacturerListController extends \OxidEsales\Eshop\Application\Controlle
      */
     protected function _loadArticles($oManufacturer) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadArticles($oManufacturer);
+        return self::loadArticles($oManufacturer);
     }
 
     /**
@@ -174,7 +174,7 @@ class ManufacturerListController extends \OxidEsales\Eshop\Application\Controlle
      */
     protected function _getSeoObjectId() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSeoObjectId();
+        return self::getSeoObjectId();
     }
 
     /**
@@ -193,7 +193,7 @@ class ManufacturerListController extends \OxidEsales\Eshop\Application\Controlle
      */
     protected function _addPageNrParam($sUrl, $iPage, $iLang = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addPageNrParam($sUrl, $iPage, $iLang);
+        return self::addPageNrParam($sUrl, $iPage, $iLang);
     }
 
     /**
@@ -215,7 +215,7 @@ class ManufacturerListController extends \OxidEsales\Eshop\Application\Controlle
             }
         }
 
-        return parent::addPageNrParam($sUrl, $iPage, $iLang);
+        return parent::_addPageNrParam($sUrl, $iPage, $iLang);
     }
 
     /**
@@ -374,7 +374,7 @@ class ManufacturerListController extends \OxidEsales\Eshop\Application\Controlle
      */
     protected function _prepareMetaKeyword($aCatPath, $blRemoveDuplicatedWords = true) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->prepareMetaKeyword($aCatPath, $blRemoveDuplicatedWords);
+        return self::prepareMetaKeyword($aCatPath, $blRemoveDuplicatedWords);
     }
 
     /**
@@ -387,14 +387,14 @@ class ManufacturerListController extends \OxidEsales\Eshop\Application\Controlle
      */
     protected function prepareMetaKeyword($aCatPath, $blRemoveDuplicatedWords = true)
     {
-        return parent::collectMetaKeyword($aCatPath);
+        return parent::_collectMetaKeyword($aCatPath);
     }
     /**
      * @deprecated use self::prepareMetaDescription instead
      */
     protected function _prepareMetaDescription($aCatPath, $iLength = 1024, $blDescTag = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->prepareMetaDescription($aCatPath, $iLength, $blDescTag);
+        return self::prepareMetaDescription($aCatPath, $iLength, $blDescTag);
     }
 
     /**
@@ -411,14 +411,14 @@ class ManufacturerListController extends \OxidEsales\Eshop\Application\Controlle
      */
     protected function prepareMetaDescription($aCatPath, $iLength = 1024, $blDescTag = false)
     {
-        return parent::collectMetaDescription($aCatPath, $iLength, $blDescTag);
+        return parent::_collectMetaDescription($aCatPath, $iLength, $blDescTag);
     }
     /**
      * @deprecated use self::getSubject instead
      */
     protected function _getSubject($iLang) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSubject($iLang);
+        return self::getSubject($iLang);
     }
 
     /**

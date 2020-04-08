@@ -135,7 +135,7 @@ class ArticleSeo extends \OxidEsales\Eshop\Application\Controller\Admin\ObjectSe
      */
     protected function _getCategoryList($oArticle) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCategoryList($oArticle);
+        return self::getCategoryList($oArticle);
     }
 
     /**
@@ -188,7 +188,7 @@ class ArticleSeo extends \OxidEsales\Eshop\Application\Controller\Admin\ObjectSe
      */
     protected function _getVendorList($oArticle) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getVendorList($oArticle);
+        return self::getVendorList($oArticle);
     }
 
     /**
@@ -212,7 +212,7 @@ class ArticleSeo extends \OxidEsales\Eshop\Application\Controller\Admin\ObjectSe
      */
     protected function _getManufacturerList($oArticle) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getManufacturerList($oArticle);
+        return self::getManufacturerList($oArticle);
     }
 
     /**
@@ -298,7 +298,7 @@ class ArticleSeo extends \OxidEsales\Eshop\Application\Controller\Admin\ObjectSe
      */
     protected function _getAltSeoEntryId() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getAltSeoEntryId();
+        return self::getAltSeoEntryId();
     }
 
     /**
@@ -315,7 +315,7 @@ class ArticleSeo extends \OxidEsales\Eshop\Application\Controller\Admin\ObjectSe
      */
     protected function _getType() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getType();
+        return self::getType();
     }
 
     /**
@@ -344,7 +344,7 @@ class ArticleSeo extends \OxidEsales\Eshop\Application\Controller\Admin\ObjectSe
      */
     protected function _getEncoder() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getEncoder();
+        return self::getEncoder();
     }
 
     /**
@@ -398,7 +398,7 @@ class ArticleSeo extends \OxidEsales\Eshop\Application\Controller\Admin\ObjectSe
      */
     protected function _getSaveObjectId() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSaveObjectId();
+        return self::getSaveObjectId();
     }
 
     /**

@@ -63,7 +63,7 @@ class BasketContentMarkGenerator
      */
     private function _getBasket() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getBasket();
+        return self::getBasket();
     }
 
     /**
@@ -80,7 +80,7 @@ class BasketContentMarkGenerator
      */
     private function _formMarks($sCurrentMark) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->formMarks($sCurrentMark);
+        return self::formMarks($sCurrentMark);
     }
 
     /**

@@ -134,7 +134,7 @@ class DeliveryList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _getFilterSelect($oUser, $sCountryId, $sDelSet) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getFilterSelect($oUser, $sCountryId, $sDelSet);
+        return self::getFilterSelect($oUser, $sCountryId, $sDelSet);
     }
 
     /**

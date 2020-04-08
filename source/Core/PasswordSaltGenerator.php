@@ -54,7 +54,7 @@ class PasswordSaltGenerator
      */
     protected function _getOpenSSLFunctionalityChecker() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getOpenSSLFunctionalityChecker();
+        return self::getOpenSSLFunctionalityChecker();
     }
 
     /**
@@ -71,7 +71,7 @@ class PasswordSaltGenerator
      */
     protected function _customSaltGenerator() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->customSaltGenerator();
+        return self::customSaltGenerator();
     }
 
     /**

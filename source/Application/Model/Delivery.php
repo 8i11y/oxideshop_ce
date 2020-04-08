@@ -422,7 +422,7 @@ class Delivery extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel
      */
     protected function _isForArticle($content, $artAmount) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isForArticle($content, $artAmount);
+        return self::isForArticle($content, $artAmount);
     }
     /**
      * Checks if delivery fits for one article
@@ -461,7 +461,7 @@ class Delivery extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel
      */
     protected function _checkDeliveryAmount($iAmount) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->checkDeliveryAmount($iAmount);
+        return self::checkDeliveryAmount($iAmount);
     }
 
     /**
@@ -599,7 +599,7 @@ class Delivery extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel
      */
     protected function _getMultiplier() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getMultiplier();
+        return self::getMultiplier();
     }
 
     /**
@@ -626,7 +626,7 @@ class Delivery extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel
      */
     protected function _getCostSum() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCostSum();
+        return self::getCostSum();
     }
 
     /**

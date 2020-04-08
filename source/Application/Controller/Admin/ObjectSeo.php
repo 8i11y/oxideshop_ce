@@ -117,7 +117,7 @@ class ObjectSeo extends \OxidEsales\Eshop\Application\Controller\Admin\AdminDeta
      */
     protected function _getSaveObjectId() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSaveObjectId();
+        return self::getSaveObjectId();
     }
 
     /**
@@ -168,7 +168,7 @@ class ObjectSeo extends \OxidEsales\Eshop\Application\Controller\Admin\AdminDeta
      */
     protected function _getType() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getType();
+        return self::getType();
     }
 
     /**
@@ -182,7 +182,7 @@ class ObjectSeo extends \OxidEsales\Eshop\Application\Controller\Admin\AdminDeta
      */
     protected function _getStdUrl($sOxid) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getStdUrl($sOxid);
+        return self::getStdUrl($sOxid);
     }
 
     /**
@@ -216,7 +216,7 @@ class ObjectSeo extends \OxidEsales\Eshop\Application\Controller\Admin\AdminDeta
      */
     protected function _getAltSeoEntryId() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getAltSeoEntryId();
+        return self::getAltSeoEntryId();
     }
 
     /**
@@ -230,7 +230,7 @@ class ObjectSeo extends \OxidEsales\Eshop\Application\Controller\Admin\AdminDeta
      */
     protected function _getSeoEntryType() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSeoEntryType();
+        return self::getSeoEntryType();
     }
 
     /**
@@ -259,7 +259,7 @@ class ObjectSeo extends \OxidEsales\Eshop\Application\Controller\Admin\AdminDeta
      */
     protected function _getEncoder() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getEncoder();
+        return self::getEncoder();
     }
 
     /**

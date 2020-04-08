@@ -79,7 +79,7 @@ class UtilsServer extends \OxidEsales\Eshop\Core\Base
      */
     protected function _mustSaveToSession() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->mustSaveToSession();
+        return self::mustSaveToSession();
     }
 
     /**
@@ -114,7 +114,7 @@ class UtilsServer extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getSessionCookieKey($blGet) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSessionCookieKey($blGet);
+        return self::getSessionCookieKey($blGet);
     }
 
     /**
@@ -140,7 +140,7 @@ class UtilsServer extends \OxidEsales\Eshop\Core\Base
      */
     protected function _saveSessionCookie($sName, $sValue, $iExpire, $sPath, $sDomain) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->saveSessionCookie($sName, $sValue, $iExpire, $sPath, $sDomain);
+        return self::saveSessionCookie($sName, $sValue, $iExpire, $sPath, $sDomain);
     }
 
     /**
@@ -189,7 +189,7 @@ class UtilsServer extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getCookiePath($sPath) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCookiePath($sPath);
+        return self::getCookiePath($sPath);
     }
 
     /**
@@ -218,7 +218,7 @@ class UtilsServer extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getCookieDomain($sDomain) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCookieDomain($sDomain);
+        return self::getCookieDomain($sDomain);
     }
 
     /**

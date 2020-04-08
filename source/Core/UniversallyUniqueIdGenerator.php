@@ -88,7 +88,7 @@ class UniversallyUniqueIdGenerator
      */
     protected function _getOpenSSLChecker() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getOpenSSLChecker();
+        return self::getOpenSSLChecker();
     }
 
     /**
@@ -105,7 +105,7 @@ class UniversallyUniqueIdGenerator
      */
     protected function _generateBasedOnOpenSSL() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->generateBasedOnOpenSSL();
+        return self::generateBasedOnOpenSSL();
     }
 
     /**
@@ -126,7 +126,7 @@ class UniversallyUniqueIdGenerator
      */
     protected function _generateBasedOnMtRand() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->generateBasedOnMtRand();
+        return self::generateBasedOnMtRand();
     }
 
     /**

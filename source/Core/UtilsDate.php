@@ -274,7 +274,7 @@ class UtilsDate extends \OxidEsales\Eshop\Core\Base
      */
     protected function _setDefaultFormatedValue($oObject, $sDate, $sLocalDateFormat, $sLocalTimeFormat, $blOnlyDate) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setDefaultFormatedValue($oObject, $sDate, $sLocalDateFormat, $sLocalTimeFormat, $blOnlyDate);
+        return self::setDefaultFormatedValue($oObject, $sDate, $sLocalDateFormat, $sLocalTimeFormat, $blOnlyDate);
     }
 
     /**
@@ -323,7 +323,7 @@ class UtilsDate extends \OxidEsales\Eshop\Core\Base
      */
     protected function _defineAndCheckDefaultTimeValues($blToTimeStamp) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->defineAndCheckDefaultTimeValues($blToTimeStamp);
+        return self::defineAndCheckDefaultTimeValues($blToTimeStamp);
     }
 
     /**
@@ -349,7 +349,7 @@ class UtilsDate extends \OxidEsales\Eshop\Core\Base
      */
     protected function _defineAndCheckDefaultDateValues($blToTimeStamp) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->defineAndCheckDefaultDateValues($blToTimeStamp);
+        return self::defineAndCheckDefaultDateValues($blToTimeStamp);
     }
 
     /**
@@ -375,7 +375,7 @@ class UtilsDate extends \OxidEsales\Eshop\Core\Base
      */
     protected function _defaultDatePattern() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->defaultDatePattern();
+        return self::defaultDatePattern();
     }
 
     /**
@@ -395,7 +395,7 @@ class UtilsDate extends \OxidEsales\Eshop\Core\Base
      */
     protected function _defaultTimePattern() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->defaultTimePattern();
+        return self::defaultTimePattern();
     }
 
     /**
@@ -415,7 +415,7 @@ class UtilsDate extends \OxidEsales\Eshop\Core\Base
      */
     protected function _regexp2ValidateDateInput() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->regexp2ValidateDateInput();
+        return self::regexp2ValidateDateInput();
     }
 
     /**
@@ -435,7 +435,7 @@ class UtilsDate extends \OxidEsales\Eshop\Core\Base
      */
     protected function _regexp2ValidateTimeInput() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->regexp2ValidateTimeInput();
+        return self::regexp2ValidateTimeInput();
     }
 
     /**
@@ -455,7 +455,7 @@ class UtilsDate extends \OxidEsales\Eshop\Core\Base
      */
     protected function _defineDateFormattingRules() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->defineDateFormattingRules();
+        return self::defineDateFormattingRules();
     }
 
     /**
@@ -475,7 +475,7 @@ class UtilsDate extends \OxidEsales\Eshop\Core\Base
      */
     protected function _defineTimeFormattingRules() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->defineTimeFormattingRules();
+        return self::defineTimeFormattingRules();
     }
 
     /**
@@ -495,7 +495,7 @@ class UtilsDate extends \OxidEsales\Eshop\Core\Base
      */
     protected function _setDefaultDateTimeValue($oObject, $sLocalDateFormat, $sLocalTimeFormat, $blOnlyDate) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setDefaultDateTimeValue($oObject, $sLocalDateFormat, $sLocalTimeFormat, $blOnlyDate);
+        return self::setDefaultDateTimeValue($oObject, $sLocalDateFormat, $sLocalTimeFormat, $blOnlyDate);
     }
 
     /**
@@ -529,7 +529,7 @@ class UtilsDate extends \OxidEsales\Eshop\Core\Base
      */
     protected function _setDate($oObject, $sDateFormat, $aDFields, $aDateMatches) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setDate($oObject, $sDateFormat, $aDFields, $aDateMatches);
+        return self::setDate($oObject, $sDateFormat, $aDFields, $aDateMatches);
     }
 
     /**
@@ -565,7 +565,7 @@ class UtilsDate extends \OxidEsales\Eshop\Core\Base
      */
     protected function _formatCorrectTimeValue($oObject, $sDateFormat, $sTimeFormat, $aDateMatches, $aTimeMatches, $aTFields, $aDFields) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->formatCorrectTimeValue($oObject, $sDateFormat, $sTimeFormat, $aDateMatches, $aTimeMatches, $aTFields, $aDFields);
+        return self::formatCorrectTimeValue($oObject, $sDateFormat, $sTimeFormat, $aDateMatches, $aTimeMatches, $aTFields, $aDFields);
     }
 
     /**
@@ -772,7 +772,7 @@ class UtilsDate extends \OxidEsales\Eshop\Core\Base
      */
     protected function _processDate($aTime, $aDate, $blGerman, $sFormat) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->processDate($aTime, $aDate, $blGerman, $sFormat);
+        return self::processDate($aTime, $aDate, $blGerman, $sFormat);
     }
 
     /**

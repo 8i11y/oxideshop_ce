@@ -65,7 +65,7 @@ class AdminDetailsController extends \OxidEsales\Eshop\Application\Controller\Ad
      */
     protected function _getEditValue($oObject, $sField) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getEditValue($oObject, $sField);
+        return self::getEditValue($oObject, $sField);
     }
 
     /**
@@ -97,7 +97,7 @@ class AdminDetailsController extends \OxidEsales\Eshop\Application\Controller\Ad
      */
     protected function _processEditValue($sValue) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->processEditValue($sValue);
+        return self::processEditValue($sValue);
     }
 
     /**
@@ -124,7 +124,7 @@ class AdminDetailsController extends \OxidEsales\Eshop\Application\Controller\Ad
      */
     protected function _getPlainEditor($width, $height, $object, $field) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getPlainEditor($width, $height, $object, $field);
+        return self::getPlainEditor($width, $height, $object, $field);
     }
 
     /**
@@ -163,7 +163,7 @@ class AdminDetailsController extends \OxidEsales\Eshop\Application\Controller\Ad
      */
     protected function _generateTextEditor($width, $height, $object, $field, $stylesheet = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->generateTextEditor($width, $height, $object, $field, $stylesheet);
+        return self::generateTextEditor($width, $height, $object, $field, $stylesheet);
     }
 
     /**
@@ -218,7 +218,7 @@ class AdminDetailsController extends \OxidEsales\Eshop\Application\Controller\Ad
      */
     protected function _createCategoryTree($sTplVarName, $sEditCatId = '', $blForceNonCache = false, $iTreeShopId = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->createCategoryTree($sTplVarName, $sEditCatId, $blForceNonCache, $iTreeShopId);
+        return self::createCategoryTree($sTplVarName, $sEditCatId, $blForceNonCache, $iTreeShopId);
     }
 
     /**
@@ -268,7 +268,7 @@ class AdminDetailsController extends \OxidEsales\Eshop\Application\Controller\Ad
      */
     protected function _getCategoryTree($sTplVarName, $sSelectedCatId, $sEditCatId = '', $blForceNonCache = false, $iTreeShopId = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCategoryTree($sTplVarName, $sSelectedCatId, $sEditCatId, $blForceNonCache, $iTreeShopId);
+        return self::getCategoryTree($sTplVarName, $sSelectedCatId, $sEditCatId, $blForceNonCache, $iTreeShopId);
     }
 
     /**
@@ -339,7 +339,7 @@ class AdminDetailsController extends \OxidEsales\Eshop\Application\Controller\Ad
      */
     protected function _setupNavigation($sNode) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setupNavigation($sNode);
+        return self::setupNavigation($sNode);
     }
 
     /**
@@ -365,7 +365,7 @@ class AdminDetailsController extends \OxidEsales\Eshop\Application\Controller\Ad
      */
     protected function _resetCounts($aIds) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->resetCounts($aIds);
+        return self::resetCounts($aIds);
     }
 
     /**

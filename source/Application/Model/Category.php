@@ -209,7 +209,7 @@ class Category extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implement
      */
     protected function _loadFromDb($sOXID) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadFromDb($sOXID);
+        return self::loadFromDb($sOXID);
     }
 
     /**
@@ -842,7 +842,7 @@ class Category extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implement
      */
     protected function _insert() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->insert();
+        return self::insert();
     }
 
     /**
@@ -892,7 +892,7 @@ class Category extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implement
             $this->oxcategories__oxleft = new \OxidEsales\Eshop\Core\Field($oParent->oxcategories__oxright->value, \OxidEsales\Eshop\Core\Field::T_RAW);
             $this->oxcategories__oxright = new \OxidEsales\Eshop\Core\Field($oParent->oxcategories__oxright->value + 1, \OxidEsales\Eshop\Core\Field::T_RAW);
 
-            return parent::insert();
+            return parent::_insert();
         } else {
             // root entry
             if (!$this->getId()) {
@@ -903,7 +903,7 @@ class Category extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implement
             $this->oxcategories__oxleft = new \OxidEsales\Eshop\Core\Field(1, \OxidEsales\Eshop\Core\Field::T_RAW);
             $this->oxcategories__oxright = new \OxidEsales\Eshop\Core\Field(2, \OxidEsales\Eshop\Core\Field::T_RAW);
 
-            return parent::insert();
+            return parent::_insert();
         }
     }
     /**
@@ -911,7 +911,7 @@ class Category extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implement
      */
     protected function _update() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->update();
+        return self::update();
     }
 
     /**
@@ -935,7 +935,7 @@ class Category extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implement
             \OxidEsales\Eshop\Core\Registry::get(\OxidEsales\Eshop\Application\Model\SeoEncoderCategory::class)->markRelatedAsExpired($this);
         }
 
-        $blRes = parent::update();
+        $blRes = parent::_update();
 
         // #872C - need to update category tree oxleft and oxright values (nested sets),
         // then sub trees are moved inside one root, or to another root.
@@ -1039,7 +1039,7 @@ class Category extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implement
      */
     protected function _setFieldData($fieldName, $value, $dataType = \OxidEsales\Eshop\Core\Field::T_TEXT) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setFieldData($fieldName, $value, $dataType);
+        return self::setFieldData($fieldName, $value, $dataType);
     }
 
     /**
@@ -1062,7 +1062,7 @@ class Category extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implement
             }
         }
 
-        return parent::setFieldData($fieldName, $value, $dataType);
+        return parent::_setFieldData($fieldName, $value, $dataType);
     }
 
     /**

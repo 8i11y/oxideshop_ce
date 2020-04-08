@@ -76,7 +76,7 @@ class AmountPriceList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _loadFromDb() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadFromDb();
+        return self::loadFromDb();
     }
 
     /**

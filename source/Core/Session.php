@@ -298,7 +298,7 @@ class Session extends \OxidEsales\Eshop\Core\Base
      */
     protected function _initNewSessionChallenge() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->initNewSessionChallenge();
+        return self::initNewSessionChallenge();
     }
 
     /**
@@ -313,7 +313,7 @@ class Session extends \OxidEsales\Eshop\Core\Base
      */
     protected function _sessionStart() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->sessionStart();
+        return self::sessionStart();
     }
 
     /**
@@ -405,7 +405,7 @@ class Session extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getNewSessionId($blUnset = true) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getNewSessionId($blUnset);
+        return self::getNewSessionId($blUnset);
     }
 
     /**
@@ -653,7 +653,7 @@ class Session extends \OxidEsales\Eshop\Core\Base
      */
     protected function _validateBasket(\OxidEsales\Eshop\Application\Model\Basket $oBasket) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->validateBasket($oBasket);
+        return self::validateBasket($oBasket);
     }
 
     /**
@@ -837,7 +837,7 @@ class Session extends \OxidEsales\Eshop\Core\Base
      */
     protected function _forceSessionStart() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->forceSessionStart();
+        return self::forceSessionStart();
     }
 
     /**
@@ -855,7 +855,7 @@ class Session extends \OxidEsales\Eshop\Core\Base
      */
     protected function _allowSessionStart() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->allowSessionStart();
+        return self::allowSessionStart();
     }
 
     /**
@@ -895,7 +895,7 @@ class Session extends \OxidEsales\Eshop\Core\Base
      */
     protected function _isSwappedClient() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isSwappedClient();
+        return self::isSwappedClient();
     }
 
     /**
@@ -932,7 +932,7 @@ class Session extends \OxidEsales\Eshop\Core\Base
      */
     protected function _checkUserAgent($sAgent, $sExistingAgent) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->checkUserAgent($sAgent, $sExistingAgent);
+        return self::checkUserAgent($sAgent, $sExistingAgent);
     }
 
     /**
@@ -965,7 +965,7 @@ class Session extends \OxidEsales\Eshop\Core\Base
      */
     protected function _checkCookies($sCookieSid, $aSessCookieSetOnce) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->checkCookies($sCookieSid, $aSessCookieSetOnce);
+        return self::checkCookies($sCookieSid, $aSessCookieSetOnce);
     }
 
     /**
@@ -1021,7 +1021,7 @@ class Session extends \OxidEsales\Eshop\Core\Base
      */
     protected function _setSessionId($sSessId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setSessionId($sSessId);
+        return self::setSessionId($sSessId);
     }
 
     /**
@@ -1048,7 +1048,7 @@ class Session extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getBasketName() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getBasketName();
+        return self::getBasketName();
     }
 
     /**
@@ -1070,7 +1070,7 @@ class Session extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getCookieSid() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCookieSid();
+        return self::getCookieSid();
     }
 
     /**
@@ -1087,7 +1087,7 @@ class Session extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getRequireSessionWithParams() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getRequireSessionWithParams();
+        return self::getRequireSessionWithParams();
     }
 
     /**
@@ -1117,7 +1117,7 @@ class Session extends \OxidEsales\Eshop\Core\Base
      */
     protected function _isSessionRequiredAction() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isSessionRequiredAction();
+        return self::isSessionRequiredAction();
     }
 
     /**
@@ -1147,7 +1147,7 @@ class Session extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getSessionUseCookies() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSessionUseCookies();
+        return self::getSessionUseCookies();
     }
 
     /**
@@ -1164,7 +1164,7 @@ class Session extends \OxidEsales\Eshop\Core\Base
      */
     protected function _isValidRemoteAccessToken() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isValidRemoteAccessToken();
+        return self::isValidRemoteAccessToken();
     }
 
     /**

@@ -46,7 +46,7 @@ class ShopIdCalculator
      */
     protected function _getConfKey() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getConfKey();
+        return self::getConfKey();
     }
 
     /**
@@ -69,7 +69,7 @@ class ShopIdCalculator
      */
     protected function _getShopUrlMap() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getShopUrlMap();
+        return self::getShopUrlMap();
     }
 
     /**

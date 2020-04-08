@@ -32,7 +32,7 @@ class DynamicScreenController extends \OxidEsales\Eshop\Application\Controller\A
      */
     protected function _setupNavigation($sNode) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setupNavigation($sNode);
+        return self::setupNavigation($sNode);
     }
 
     /**

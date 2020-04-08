@@ -106,7 +106,7 @@ class Search extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getSearchSelect($sSearchParamForQuery = false, $sInitialSearchCat = false, $sInitialSearchVendor = false, $sInitialSearchManufacturer = false, $sSortBy = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSearchSelect($sSearchParamForQuery, $sInitialSearchCat, $sInitialSearchVendor, $sInitialSearchManufacturer, $sSortBy);
+        return self::getSearchSelect($sSearchParamForQuery, $sInitialSearchCat, $sInitialSearchVendor, $sInitialSearchManufacturer, $sSortBy);
     }
 
     /**
@@ -244,7 +244,7 @@ class Search extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getWhere($sSearchString) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getWhere($sSearchString);
+        return self::getWhere($sSearchString);
     }
 
     /**

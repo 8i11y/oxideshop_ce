@@ -134,7 +134,7 @@ class UserPayment extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _insert() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->insert();
+        return self::insert();
     }
 
 
@@ -163,7 +163,7 @@ class UserPayment extends \OxidEsales\Eshop\Core\Model\BaseModel
             $this->oxuserpayments__oxvalue->setValue($sEncodedValue);
         }
 
-        $blRet = parent::insert();
+        $blRet = parent::_insert();
 
         //restore, as encoding was needed only for saving
         if ($sEncodedValue) {
@@ -177,7 +177,7 @@ class UserPayment extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _update() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->update();
+        return self::update();
     }
 
     /**
@@ -198,7 +198,7 @@ class UserPayment extends \OxidEsales\Eshop\Core\Model\BaseModel
             $this->oxuserpayments__oxvalue->setValue($sEncodedValue);
         }
 
-        $blRet = parent::update();
+        $blRet = parent::_update();
 
         //restore, as encoding was needed only for saving
         if ($sEncodedValue) {

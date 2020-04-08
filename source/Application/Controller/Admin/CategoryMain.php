@@ -172,7 +172,7 @@ class CategoryMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminD
      */
     protected function _processLongDesc($sValue) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->processLongDesc($sValue);
+        return self::processLongDesc($sValue);
     }
 
     /**
@@ -234,7 +234,7 @@ class CategoryMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminD
      */
     protected function _deleteCatPicture($item, $field) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->deleteCatPicture($item, $field);
+        return self::deleteCatPicture($item, $field);
     }
 
     /**
@@ -289,7 +289,7 @@ class CategoryMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminD
      */
     protected function _parseRequestParametersForSave($aReqParams) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->parseRequestParametersForSave($aReqParams);
+        return self::parseRequestParametersForSave($aReqParams);
     }
 
     /**

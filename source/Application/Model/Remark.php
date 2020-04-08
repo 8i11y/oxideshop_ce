@@ -60,7 +60,7 @@ class Remark extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _insert() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->insert();
+        return self::insert();
     }
 
     /**
@@ -75,6 +75,6 @@ class Remark extends \OxidEsales\Eshop\Core\Model\BaseModel
         $this->oxremark__oxcreate = new \OxidEsales\Eshop\Core\Field($sNow, \OxidEsales\Eshop\Core\Field::T_RAW);
         $this->oxremark__oxheader = new \OxidEsales\Eshop\Core\Field($sNow, \OxidEsales\Eshop\Core\Field::T_RAW);
 
-        return parent::insert();
+        return parent::_insert();
     }
 }

@@ -60,7 +60,7 @@ class OnlineModuleVersionNotifier
      */
     protected function _prepareModulesInformation() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->prepareModulesInformation();
+        return self::prepareModulesInformation();
     }
 
     /**
@@ -100,7 +100,7 @@ class OnlineModuleVersionNotifier
      */
     protected function _formRequest() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->formRequest();
+        return self::formRequest();
     }
 
     /**
@@ -122,7 +122,7 @@ class OnlineModuleVersionNotifier
      */
     protected function _getOnlineModuleNotifierCaller() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getOnlineModuleNotifierCaller();
+        return self::getOnlineModuleNotifierCaller();
     }
 
     /**
@@ -139,7 +139,7 @@ class OnlineModuleVersionNotifier
      */
     protected function _getModules() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getModules();
+        return self::getModules();
     }
 
     /**

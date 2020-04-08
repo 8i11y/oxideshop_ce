@@ -74,7 +74,7 @@ class ListComponentAjax extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getActionIds($sId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getActionIds($sId);
+        return self::getActionIds($sId);
     }
 
     /**
@@ -110,7 +110,7 @@ class ListComponentAjax extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getQuery() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getQuery();
+        return self::getQuery();
     }
 
     /**
@@ -127,7 +127,7 @@ class ListComponentAjax extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getDataQuery($sQ) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getDataQuery($sQ);
+        return self::getDataQuery($sQ);
     }
 
     /**
@@ -146,7 +146,7 @@ class ListComponentAjax extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getCountQuery($sQ) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCountQuery($sQ);
+        return self::getCountQuery($sQ);
     }
 
     /**
@@ -186,7 +186,7 @@ class ListComponentAjax extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getSortCol() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSortCol();
+        return self::getSortCol();
     }
 
     /**
@@ -208,7 +208,7 @@ class ListComponentAjax extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getColNames($sId = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getColNames($sId);
+        return self::getColNames($sId);
     }
 
 
@@ -237,7 +237,7 @@ class ListComponentAjax extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getIdentColNames() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getIdentColNames();
+        return self::getIdentColNames();
     }
 
     /**
@@ -264,7 +264,7 @@ class ListComponentAjax extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getVisibleColNames() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getVisibleColNames();
+        return self::getVisibleColNames();
     }
 
     /**
@@ -305,7 +305,7 @@ class ListComponentAjax extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getQueryCols() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getQueryCols();
+        return self::getQueryCols();
     }
 
     /**
@@ -326,7 +326,7 @@ class ListComponentAjax extends \OxidEsales\Eshop\Core\Base
      */
     protected function _buildColsQuery($aIdentCols, $blIdentCols = true) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->buildColsQuery($aIdentCols, $blIdentCols);
+        return self::buildColsQuery($aIdentCols, $blIdentCols);
     }
 
     /**
@@ -360,7 +360,7 @@ class ListComponentAjax extends \OxidEsales\Eshop\Core\Base
      */
     protected function _isExtendedColumn($sColumn) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isExtendedColumn($sColumn);
+        return self::isExtendedColumn($sColumn);
     }
 
     /**
@@ -382,7 +382,7 @@ class ListComponentAjax extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getExtendedColQuery($sViewTable, $sColumn, $iCnt) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getExtendedColQuery($sViewTable, $sColumn, $iCnt);
+        return self::getExtendedColQuery($sViewTable, $sColumn, $iCnt);
     }
 
     /**
@@ -409,7 +409,7 @@ class ListComponentAjax extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getSorting() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSorting();
+        return self::getSorting();
     }
 
     /**
@@ -426,7 +426,7 @@ class ListComponentAjax extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getLimit($iStart) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getLimit($iStart);
+        return self::getLimit($iStart);
     }
 
     /**
@@ -448,7 +448,7 @@ class ListComponentAjax extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getFilter() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getFilter();
+        return self::getFilter();
     }
 
     /**
@@ -497,7 +497,7 @@ class ListComponentAjax extends \OxidEsales\Eshop\Core\Base
      */
     protected function _addFilter($sQ) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addFilter($sQ);
+        return self::addFilter($sQ);
     }
 
     /**
@@ -520,7 +520,7 @@ class ListComponentAjax extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getAll($sQ) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getAll($sQ);
+        return self::getAll($sQ);
     }
 
     /**
@@ -548,7 +548,7 @@ class ListComponentAjax extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getSortDir() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSortDir();
+        return self::getSortDir();
     }
 
     /**
@@ -570,7 +570,7 @@ class ListComponentAjax extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getStartIndex() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getStartIndex();
+        return self::getStartIndex();
     }
 
     /**
@@ -587,7 +587,7 @@ class ListComponentAjax extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getTotalCount($sQ) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getTotalCount($sQ);
+        return self::getTotalCount($sQ);
     }
 
     /**
@@ -613,7 +613,7 @@ class ListComponentAjax extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getDataFields($sQ) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getDataFields($sQ);
+        return self::getDataFields($sQ);
     }
 
     /**
@@ -633,7 +633,7 @@ class ListComponentAjax extends \OxidEsales\Eshop\Core\Base
      */
     protected function _outputResponse($aData) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->outputResponse($aData);
+        return self::outputResponse($aData);
     }
 
     /**
@@ -650,7 +650,7 @@ class ListComponentAjax extends \OxidEsales\Eshop\Core\Base
      */
     protected function _output($sOut) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->output($sOut);
+        return self::output($sOut);
     }
 
     /**
@@ -667,7 +667,7 @@ class ListComponentAjax extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getViewName($sTable) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getViewName($sTable);
+        return self::getViewName($sTable);
     }
 
     /**
@@ -686,7 +686,7 @@ class ListComponentAjax extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getData($sCountQ, $sQ) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getData($sCountQ, $sQ);
+        return self::getData($sCountQ, $sQ);
     }
 
     /**
@@ -812,7 +812,7 @@ class ListComponentAjax extends \OxidEsales\Eshop\Core\Base
      */
     protected function _resetCaches() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->resetCaches();
+        return self::resetCaches();
     }
 
     /**

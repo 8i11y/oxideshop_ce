@@ -710,7 +710,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _createSqlActiveSnippet($forceCoreTable) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->createSqlActiveSnippet($forceCoreTable);
+        return self::createSqlActiveSnippet($forceCoreTable);
     }
 
     /**
@@ -978,7 +978,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _calculateVarMinPrice() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->calculateVarMinPrice();
+        return self::calculateVarMinPrice();
     }
 
     /**
@@ -1023,7 +1023,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _prepareModifiedPrice($dPrice) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->prepareModifiedPrice($dPrice);
+        return self::prepareModifiedPrice($dPrice);
     }
 
     /**
@@ -1160,7 +1160,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _setShopValues($article) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setShopValues($article);
+        return self::setShopValues($article);
     }
 
     /**
@@ -1206,7 +1206,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _loadData($articleId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadData($articleId);
+        return self::loadData($articleId);
     }
 
     /**
@@ -1856,7 +1856,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _createMultilanguageVendorObject() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->createMultilanguageVendorObject();
+        return self::createMultilanguageVendorObject();
     }
 
     /**
@@ -2101,7 +2101,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _getModifiedAmountPrice($amount) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getModifiedAmountPrice($amount);
+        return self::getModifiedAmountPrice($amount);
     }
 
     /**
@@ -3604,7 +3604,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _loadVariantList($loadSimpleVariants, $blRemoveNotOrderables = true, $forceCoreTableUsage = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadVariantList($loadSimpleVariants, $blRemoveNotOrderables, $forceCoreTableUsage);
+        return self::loadVariantList($loadSimpleVariants, $blRemoveNotOrderables, $forceCoreTableUsage);
     }
 
     /**
@@ -3695,7 +3695,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _selectCategoryIds($query, $field) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->selectCategoryIds($query, $field);
+        return self::selectCategoryIds($query, $field);
     }
 
     /**
@@ -3725,7 +3725,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _getCategoryIdsSelect($blActCats = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCategoryIdsSelect($blActCats);
+        return self::getCategoryIdsSelect($blActCats);
     }
 
     /**
@@ -3760,7 +3760,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _getActiveCategorySelectSnippet() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getActiveCategorySelectSnippet();
+        return self::getActiveCategorySelectSnippet();
     }
 
     /**
@@ -3779,7 +3779,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _calculatePrice($oPrice, $dVat = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->calculatePrice($oPrice, $dVat);
+        return self::calculatePrice($oPrice, $dVat);
     }
 
     /**
@@ -3818,7 +3818,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _hasAnyVariant($blForceCoreTable = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->hasAnyVariant($blForceCoreTable);
+        return self::hasAnyVariant($blForceCoreTable);
     }
 
     /**
@@ -3849,7 +3849,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _isStockStatusChanged() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isStockStatusChanged();
+        return self::isStockStatusChanged();
     }
 
     /**
@@ -3866,7 +3866,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _isVisibilityChanged() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isVisibilityChanged();
+        return self::isVisibilityChanged();
     }
 
     /**
@@ -3883,7 +3883,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _saveArtLongDesc() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->saveArtLongDesc();
+        return self::saveArtLongDesc();
     }
 
     /**
@@ -3944,7 +3944,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _skipSaveFields() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->skipSaveFields();
+        return self::skipSaveFields();
     }
 
     /**
@@ -3968,7 +3968,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _mergeDiscounts($aDiscounts, $aItemDiscounts) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->mergeDiscounts($aDiscounts, $aItemDiscounts);
+        return self::mergeDiscounts($aDiscounts, $aItemDiscounts);
     }
 
     /**
@@ -3998,7 +3998,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _getGroupPrice() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getGroupPrice();
+        return self::getGroupPrice();
     }
 
     /**
@@ -4024,7 +4024,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _getAmountPrice($amount = 1) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getAmountPrice($amount);
+        return self::getAmountPrice($amount);
     }
 
     /**
@@ -4060,7 +4060,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _modifySelectListPrice($dPrice, $aChosenList = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->modifySelectListPrice($dPrice, $aChosenList);
+        return self::modifySelectListPrice($dPrice, $aChosenList);
     }
 
     /**
@@ -4097,7 +4097,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _fillAmountPriceList($aAmPriceList) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->fillAmountPriceList($aAmPriceList);
+        return self::fillAmountPriceList($aAmPriceList);
     }
 
     /**
@@ -4193,7 +4193,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _applyVAT(\OxidEsales\Eshop\Core\Price $oPrice, $dVat) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->applyVAT($oPrice, $dVat);
+        return self::applyVAT($oPrice, $dVat);
     }
 
     /**
@@ -4218,7 +4218,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _applyCurrency(\OxidEsales\Eshop\Core\Price $oPrice, $oCur = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->applyCurrency($oPrice, $oCur);
+        return self::applyCurrency($oPrice, $oCur);
     }
 
     /**
@@ -4240,7 +4240,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _getAttribsString(&$sAttributeSql, &$iCnt) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getAttribsString($sAttributeSql, $iCnt);
+        return self::getAttribsString($sAttributeSql, $iCnt);
     }
 
     /**
@@ -4274,7 +4274,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _getSimList($sAttributeSql, $iCnt) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSimList($sAttributeSql, $iCnt);
+        return self::getSimList($sAttributeSql, $iCnt);
     }
 
     /**
@@ -4317,7 +4317,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _generateSimListSearchStr($sArticleTable, $aList) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->generateSimListSearchStr($sArticleTable, $aList);
+        return self::generateSimListSearchStr($sArticleTable, $aList);
     }
 
     /**
@@ -4347,7 +4347,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _generateSearchStr($sOXID, $blSearchPriceCat = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->generateSearchStr($sOXID, $blSearchPriceCat);
+        return self::generateSearchStr($sOXID, $blSearchPriceCat);
     }
 
     /**
@@ -4378,7 +4378,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _generateSearchStrForCustomerBought() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->generateSearchStrForCustomerBought();
+        return self::generateSearchStrForCustomerBought();
     }
 
     /**
@@ -4444,7 +4444,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _generateSelectCatStr($sOXID, $sCatId, $dPriceFromTo = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->generateSelectCatStr($sOXID, $sCatId, $dPriceFromTo);
+        return self::generateSelectCatStr($sOXID, $sCatId, $dPriceFromTo);
     }
 
     /**
@@ -4489,7 +4489,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _getAmountPriceList() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->buildAmountPriceList();
+        return self::buildAmountPriceList();
     }
 
     /**
@@ -4530,7 +4530,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _isFieldEmpty($sFieldName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isFieldEmpty($sFieldName);
+        return self::isFieldEmpty($sFieldName);
     }
 
     /**
@@ -4592,7 +4592,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _assignParentFieldValue($sFieldName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->assignParentFieldValue($sFieldName);
+        return self::assignParentFieldValue($sFieldName);
     }
 
     /**
@@ -4638,7 +4638,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _isImageField($sFieldName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isImageField($sFieldName);
+        return self::isImageField($sFieldName);
     }
 
     /**
@@ -4660,7 +4660,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _assignParentFieldValues() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->assignParentFieldValues();
+        return self::assignParentFieldValues();
     }
 
     /**
@@ -4684,7 +4684,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _assignNotBuyableParent() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->assignNotBuyableParent();
+        return self::assignNotBuyableParent();
     }
 
     /**
@@ -4704,7 +4704,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _assignStock() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->assignStock();
+        return self::assignStock();
     }
 
     /**
@@ -4782,7 +4782,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _assignPersistentParam() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->assignPersistentParam();
+        return self::assignPersistentParam();
     }
 
     /**
@@ -4803,7 +4803,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _assignDynImageDir() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->assignDynImageDir();
+        return self::assignDynImageDir();
     }
 
     /**
@@ -4825,7 +4825,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _assignComparisonListFlag() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->assignComparisonListFlag();
+        return self::assignComparisonListFlag();
     }
 
     /**
@@ -4845,7 +4845,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _insert() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->insert();
+        return self::insert();
     }
 
     /**
@@ -4864,14 +4864,14 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
             $this->oxarticles__oxsubclass = new \OxidEsales\Eshop\Core\Field('oxarticle');
         }
 
-        return parent::insert();
+        return parent::_insert();
     }
     /**
      * @deprecated use self::update instead
      */
     protected function _update() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->update();
+        return self::update();
     }
 
     /**
@@ -4886,14 +4886,14 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
 
         $this->_skipSaveFields();
 
-        return parent::update();
+        return parent::_update();
     }
     /**
      * @deprecated use self::deleteRecords instead
      */
     protected function _deleteRecords($articleId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->deleteRecords($articleId);
+        return self::deleteRecords($articleId);
     }
 
     /**
@@ -4982,7 +4982,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _deleteVariantRecords($sOXID) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->deleteVariantRecords($sOXID);
+        return self::deleteVariantRecords($sOXID);
     }
 
     /**
@@ -5014,7 +5014,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _deletePics() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->deletePics();
+        return self::deletePics();
     }
 
     /**
@@ -5042,7 +5042,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _onChangeResetCounts($sOxid, $sVendorId = null, $sManufacturerId = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->onChangeResetCounts($sOxid, $sVendorId, $sManufacturerId);
+        return self::onChangeResetCounts($sOxid, $sVendorId, $sManufacturerId);
     }
 
     /**
@@ -5075,7 +5075,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _onChangeUpdateStock($parentId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->onChangeUpdateStock($parentId);
+        return self::onChangeUpdateStock($parentId);
     }
 
     /**
@@ -5129,7 +5129,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _onChangeStockResetCount($sOxid) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->onChangeStockResetCount($sOxid);
+        return self::onChangeStockResetCount($sOxid);
     }
 
     /**
@@ -5157,7 +5157,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _onChangeUpdateVarCount($parentId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->onChangeUpdateVarCount($parentId);
+        return self::onChangeUpdateVarCount($parentId);
     }
 
     /**
@@ -5187,7 +5187,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _setVarMinMaxPrice($sParentId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setVarMinMaxPrice($sParentId);
+        return self::setVarMinMaxPrice($sParentId);
     }
 
     /**
@@ -5241,7 +5241,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _hasMasterImage($iIndex) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->hasMasterImage($iIndex);
+        return self::hasMasterImage($iIndex);
     }
 
     /**
@@ -5279,7 +5279,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _isPriceViewModeNetto() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isPriceViewModeNetto();
+        return self::isPriceViewModeNetto();
     }
 
 
@@ -5303,7 +5303,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _getPriceObject($blCalculationModeNetto = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getPriceObject($blCalculationModeNetto);
+        return self::getPriceObject($blCalculationModeNetto);
     }
 
 
@@ -5336,7 +5336,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _getPriceForView($oPrice) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getPriceForView($oPrice);
+        return self::getPriceForView($oPrice);
     }
 
     /**
@@ -5361,7 +5361,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _preparePrice($dPrice, $dVat, $blCalculationModeNetto = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->preparePrice($dPrice, $dVat, $blCalculationModeNetto);
+        return self::preparePrice($dPrice, $dVat, $blCalculationModeNetto);
     }
 
 
@@ -5396,7 +5396,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _getUserPriceSufix() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getUserPriceSufix();
+        return self::getUserPriceSufix();
     }
 
 
@@ -5486,7 +5486,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _getVarMaxPrice() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getVarMaxPrice();
+        return self::getVarMaxPrice();
     }
 
     /**
@@ -5531,7 +5531,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _getShopVarMinPrice() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getShopVarMinPrice();
+        return self::getShopVarMinPrice();
     }
 
     /**
@@ -5549,7 +5549,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _getShopVarMaxPrice() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getShopVarMaxPrice();
+        return self::getShopVarMaxPrice();
     }
 
     /**
@@ -5567,7 +5567,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _loadFromDb($articleId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadFromDb($articleId);
+        return self::loadFromDb($articleId);
     }
 
     /**
@@ -5599,7 +5599,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _updateParentDependFields() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->updateParentDependFields();
+        return self::updateParentDependFields();
     }
 
     /**
@@ -5627,7 +5627,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _getCopyParentFields() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCopyParentFields();
+        return self::getCopyParentFields();
     }
 
     /**
@@ -5644,7 +5644,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _assignParentDependFields() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->assignParentDependFields();
+        return self::assignParentDependFields();
     }
 
     /**
@@ -5664,7 +5664,7 @@ class Article extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel implements
      */
     protected function _saveSortingFieldValuesOnLoad() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->saveSortingFieldValuesOnLoad();
+        return self::saveSortingFieldValuesOnLoad();
     }
 
     /**

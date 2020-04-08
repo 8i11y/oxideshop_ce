@@ -42,7 +42,7 @@ class ClearCookiesController extends \OxidEsales\Eshop\Application\Controller\Fr
      */
     protected function _removeCookies() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->removeCookies();
+        return self::removeCookies();
     }
 
     /**

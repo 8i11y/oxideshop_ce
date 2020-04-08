@@ -114,7 +114,7 @@ class OrderList extends \OxidEsales\Eshop\Application\Controller\Admin\AdminList
      */
     protected function _prepareWhereQuery($whereQuery, $fullQuery) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->prepareWhereQuery($whereQuery, $fullQuery);
+        return self::prepareWhereQuery($whereQuery, $fullQuery);
     }
 
     /**
@@ -128,7 +128,7 @@ class OrderList extends \OxidEsales\Eshop\Application\Controller\Admin\AdminList
     protected function prepareWhereQuery($whereQuery, $fullQuery)
     {
         $database = \OxidEsales\Eshop\Core\DatabaseProvider::getDb();
-        $query = parent::prepareWhereQuery($whereQuery, $fullQuery);
+        $query = parent::_prepareWhereQuery($whereQuery, $fullQuery);
         $config = $this->getConfig();
         $folders = $config->getConfigParam('aOrderfolder');
         $folder = \OxidEsales\Eshop\Core\Registry::getConfig()->getRequestParameter('folder');
@@ -147,7 +147,7 @@ class OrderList extends \OxidEsales\Eshop\Application\Controller\Admin\AdminList
      */
     protected function _buildSelectString($listObject = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->buildSelectString($listObject);
+        return self::buildSelectString($listObject);
     }
 
     /**
@@ -159,7 +159,7 @@ class OrderList extends \OxidEsales\Eshop\Application\Controller\Admin\AdminList
      */
     protected function buildSelectString($listObject = null)
     {
-        $query = parent::buildSelectString($listObject);
+        $query = parent::_buildSelectString($listObject);
         $database = \OxidEsales\Eshop\Core\DatabaseProvider::getDb();
 
         $searchQuery = \OxidEsales\Eshop\Core\Registry::getConfig()->getRequestParameter('addsearch');

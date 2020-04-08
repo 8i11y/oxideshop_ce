@@ -155,7 +155,7 @@ class Manufacturer extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel imple
      */
     protected function _setRootObjectData() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setRootObjectData();
+        return self::setRootObjectData();
     }
 
     /**

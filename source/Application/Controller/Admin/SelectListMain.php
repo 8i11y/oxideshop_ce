@@ -315,7 +315,7 @@ class SelectListMain extends \OxidEsales\Eshop\Application\Controller\Admin\Admi
      */
     protected function _rearrangeFields($oField, $iPos) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->rearrangeFields($oField, $iPos);
+        return self::rearrangeFields($oField, $iPos);
     }
 
     /**

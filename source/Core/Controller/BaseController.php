@@ -556,7 +556,7 @@ class BaseController extends \OxidEsales\Eshop\Core\Base
      */
     protected function _executeNewAction($sNewAction) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->executeNewAction($sNewAction);
+        return self::executeNewAction($sNewAction);
     }
 
     /**

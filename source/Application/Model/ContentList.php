@@ -113,7 +113,7 @@ class ContentList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _loadFromDb($iType) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadFromDb($iType);
+        return self::loadFromDb($iType);
     }
 
     /**
@@ -135,7 +135,7 @@ class ContentList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _load($type) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->load($type);
+        return self::load($type);
     }
 
     /**
@@ -162,7 +162,7 @@ class ContentList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _extractListToArray() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->extractListToArray();
+        return self::extractListToArray();
     }
 
     /**
@@ -182,7 +182,7 @@ class ContentList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _getSQLByType($iType) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSQLByType($iType);
+        return self::getSQLByType($iType);
     }
 
     /**

@@ -36,7 +36,7 @@ class Decryptor
      */
     protected function _formKey($key, $string) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->formKey($key, $string);
+        return self::formKey($key, $string);
     }
 
     /**

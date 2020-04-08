@@ -201,7 +201,7 @@ class ArticleFiles extends \OxidEsales\Eshop\Application\Controller\Admin\AdminD
      */
     protected function _processOptions($aParams) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->processOptions($aParams);
+        return self::processOptions($aParams);
     }
 
     /**

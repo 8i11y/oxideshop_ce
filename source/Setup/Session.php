@@ -56,7 +56,7 @@ class Session extends Core
      */
     protected function _startSession() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->startSession();
+        return self::startSession();
     }
 
     /**
@@ -87,7 +87,7 @@ class Session extends Core
      */
     protected function _validateSession() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->validateSession();
+        return self::validateSession();
     }
 
     /**
@@ -115,7 +115,7 @@ class Session extends Core
      */
     protected function _getNewSessionID() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getNewSessionID();
+        return self::getNewSessionID();
     }
 
     /**
@@ -156,7 +156,7 @@ class Session extends Core
      */
     protected function _initSessionData() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->initSessionData();
+        return self::initSessionData();
     }
 
     /**
@@ -202,7 +202,7 @@ class Session extends Core
      */
     protected function &_getSessionData() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSessionData();
+        return self::getSessionData();
     }
 
     /**

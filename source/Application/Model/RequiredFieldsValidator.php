@@ -125,7 +125,7 @@ class RequiredFieldsValidator
      */
     private function _setInvalidFields($aFields) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setInvalidFields($aFields);
+        return self::setInvalidFields($aFields);
     }
 
     /**

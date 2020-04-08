@@ -521,7 +521,7 @@ class Discount extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel
      */
     protected function _checkForArticleCategories($oArticle) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->checkForArticleCategories($oArticle);
+        return self::checkForArticleCategories($oArticle);
     }
 
     /**
@@ -559,7 +559,7 @@ class Discount extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel
      */
     protected function _getProductCheckQuery($oProduct) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getProductCheckQuery($oProduct);
+        return self::getProductCheckQuery($oProduct);
     }
 
     /**
@@ -587,7 +587,7 @@ class Discount extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel
      */
     protected function _isArticleAssigned($oArticle) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isArticleAssigned($oArticle);
+        return self::isArticleAssigned($oArticle);
     }
 
     /**
@@ -618,7 +618,7 @@ class Discount extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel
      */
     protected function _isCategoriesAssigned($aCategoryIds) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isCategoriesAssigned($aCategoryIds);
+        return self::isCategoriesAssigned($aCategoryIds);
     }
 
     /**

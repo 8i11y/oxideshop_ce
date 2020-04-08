@@ -422,7 +422,7 @@ class Price
      */
     protected function _flushDiscounts() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->flushDiscounts();
+        return self::flushDiscounts();
     }
 
     /**

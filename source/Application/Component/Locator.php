@@ -86,7 +86,7 @@ class Locator extends \OxidEsales\Eshop\Core\Base
      */
     protected function _setListLocatorData($oLocatorTarget, $oCurrArticle) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setListLocatorData($oLocatorTarget, $oCurrArticle);
+        return self::setListLocatorData($oLocatorTarget, $oCurrArticle);
     }
 
     /**
@@ -136,7 +136,7 @@ class Locator extends \OxidEsales\Eshop\Core\Base
      */
     protected function _setVendorLocatorData($oLocatorTarget, $oCurrArticle) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setVendorLocatorData($oLocatorTarget, $oCurrArticle);
+        return self::setVendorLocatorData($oLocatorTarget, $oCurrArticle);
     }
 
     /**
@@ -187,7 +187,7 @@ class Locator extends \OxidEsales\Eshop\Core\Base
      */
     protected function _setManufacturerLocatorData($oLocatorTarget, $oCurrArticle) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setManufacturerLocatorData($oLocatorTarget, $oCurrArticle);
+        return self::setManufacturerLocatorData($oLocatorTarget, $oCurrArticle);
     }
 
     /**
@@ -248,7 +248,7 @@ class Locator extends \OxidEsales\Eshop\Core\Base
      */
     protected function _setSearchLocatorData($oLocatorTarget, $oCurrArticle) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setSearchLocatorData($oLocatorTarget, $oCurrArticle);
+        return self::setSearchLocatorData($oLocatorTarget, $oCurrArticle);
     }
 
     /**
@@ -319,7 +319,7 @@ class Locator extends \OxidEsales\Eshop\Core\Base
      */
     protected function _setRecommlistLocatorData($oLocatorTarget, $oCurrArticle) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setRecommlistLocatorData($oLocatorTarget, $oCurrArticle);
+        return self::setRecommlistLocatorData($oLocatorTarget, $oCurrArticle);
     }
 
     /**
@@ -389,7 +389,7 @@ class Locator extends \OxidEsales\Eshop\Core\Base
      */
     protected function _loadIdsInList($oCategory, $oCurrArticle, $sOrderBy = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadIdsInList($oCategory, $oCurrArticle, $sOrderBy);
+        return self::loadIdsInList($oCategory, $oCurrArticle, $sOrderBy);
     }
 
     /**
@@ -428,7 +428,7 @@ class Locator extends \OxidEsales\Eshop\Core\Base
      */
     protected function _makeLink($sLink, $sParams) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->makeLink($sLink, $sParams);
+        return self::makeLink($sLink, $sParams);
     }
 
     /**
@@ -452,7 +452,7 @@ class Locator extends \OxidEsales\Eshop\Core\Base
      */
     protected function _findActPageNumber($iPageNr, $oIdList = null, $oArticle = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->findActPageNumber($iPageNr, $oIdList, $oArticle);
+        return self::findActPageNumber($iPageNr, $oIdList, $oArticle);
     }
 
     /**
@@ -487,7 +487,7 @@ class Locator extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getPageNumber($iPageNr) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getPageNumber($iPageNr);
+        return self::getPageNumber($iPageNr);
     }
 
     /**
@@ -509,7 +509,7 @@ class Locator extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getProductPos($oArticle, $oIdList, $oLocatorTarget) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getProductPos($oArticle, $oIdList, $oLocatorTarget);
+        return self::getProductPos($oArticle, $oIdList, $oLocatorTarget);
     }
 
     /**

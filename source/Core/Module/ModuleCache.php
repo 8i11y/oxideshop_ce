@@ -73,7 +73,7 @@ class ModuleCache extends \OxidEsales\Eshop\Core\Base
      */
     protected function _clearApcCache() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->clearApcCache();
+        return self::clearApcCache();
     }
 
     /**

@@ -208,7 +208,7 @@ class PaymentController extends \OxidEsales\Eshop\Application\Controller\Fronten
      */
     protected function _setDefaultEmptyPayment() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setDefaultEmptyPayment();
+        return self::setDefaultEmptyPayment();
     }
 
     /**
@@ -236,7 +236,7 @@ class PaymentController extends \OxidEsales\Eshop\Application\Controller\Fronten
      */
     protected function _unsetPaymentErrors() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->unsetPaymentErrors();
+        return self::unsetPaymentErrors();
     }
 
     /**
@@ -431,7 +431,7 @@ class PaymentController extends \OxidEsales\Eshop\Application\Controller\Fronten
      */
     protected function _setValues(&$aPaymentList, $oBasket = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setValues($aPaymentList, $oBasket);
+        return self::setValues($aPaymentList, $oBasket);
     }
 
     /**
@@ -537,7 +537,7 @@ class PaymentController extends \OxidEsales\Eshop\Application\Controller\Fronten
      */
     protected function _assignDebitNoteParams() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->assignDebitNoteParams();
+        return self::assignDebitNoteParams();
     }
 
     /**
@@ -648,7 +648,7 @@ class PaymentController extends \OxidEsales\Eshop\Application\Controller\Fronten
      */
     protected function _checkArrValuesEmpty($aData, $aKeys) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->checkArrValuesEmpty($aData, $aKeys);
+        return self::checkArrValuesEmpty($aData, $aKeys);
     }
 
     /**
@@ -678,7 +678,7 @@ class PaymentController extends \OxidEsales\Eshop\Application\Controller\Fronten
      */
     protected function _filterDynData() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->filterDynData();
+        return self::filterDynData();
     }
 
 

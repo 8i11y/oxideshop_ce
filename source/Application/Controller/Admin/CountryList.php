@@ -74,7 +74,7 @@ class CountryList extends \OxidEsales\Eshop\Application\Controller\Admin\AdminLi
      */
     protected function _getSecondSortFieldName() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSecondSortFieldName();
+        return self::getSecondSortFieldName();
     }
 
     /**

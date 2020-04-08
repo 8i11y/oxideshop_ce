@@ -30,7 +30,7 @@ class SeoEncoderArticle extends \OxidEsales\Eshop\Core\SeoEncoder
      */
     protected function _getUrlExtension() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getUrlExtension();
+        return self::getUrlExtension();
     }
 
     /**
@@ -47,7 +47,7 @@ class SeoEncoderArticle extends \OxidEsales\Eshop\Core\SeoEncoder
      */
     protected function _getProductForLang($oArticle, $iLang) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getProductForLang($oArticle, $iLang);
+        return self::getProductForLang($oArticle, $iLang);
     }
 
     /**
@@ -120,7 +120,7 @@ class SeoEncoderArticle extends \OxidEsales\Eshop\Core\SeoEncoder
      */
     protected function _getRecomm($oArticle, $iLang) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getRecomm($oArticle, $iLang);
+        return self::getRecomm($oArticle, $iLang);
     }
 
     /**
@@ -148,7 +148,7 @@ class SeoEncoderArticle extends \OxidEsales\Eshop\Core\SeoEncoder
      */
     protected function _getListType() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getListType();
+        return self::getListType();
     }
 
     /**
@@ -165,7 +165,7 @@ class SeoEncoderArticle extends \OxidEsales\Eshop\Core\SeoEncoder
      */
     protected function _createArticleCategoryUri($oArticle, $oCategory, $iLang) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->createArticleCategoryUri($oArticle, $oCategory, $iLang);
+        return self::createArticleCategoryUri($oArticle, $oCategory, $iLang);
     }
 
     /**
@@ -256,7 +256,7 @@ class SeoEncoderArticle extends \OxidEsales\Eshop\Core\SeoEncoder
      */
     protected function _getCategory($oArticle, $iLang) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCategory($oArticle, $iLang);
+        return self::getCategory($oArticle, $iLang);
     }
 
     /**
@@ -284,7 +284,7 @@ class SeoEncoderArticle extends \OxidEsales\Eshop\Core\SeoEncoder
      */
     protected function _getMainCategory($oArticle) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getMainCategory($oArticle);
+        return self::getMainCategory($oArticle);
     }
 
     /**
@@ -377,7 +377,7 @@ class SeoEncoderArticle extends \OxidEsales\Eshop\Core\SeoEncoder
      */
     protected function _prepareArticleTitle($oArticle) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->prepareArticleTitle($oArticle);
+        return self::prepareArticleTitle($oArticle);
     }
 
     /**
@@ -469,7 +469,7 @@ class SeoEncoderArticle extends \OxidEsales\Eshop\Core\SeoEncoder
      */
     protected function _getVendor($oArticle, $iLang) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getVendor($oArticle, $iLang);
+        return self::getVendor($oArticle, $iLang);
     }
 
     /**
@@ -553,7 +553,7 @@ class SeoEncoderArticle extends \OxidEsales\Eshop\Core\SeoEncoder
      */
     protected function _getManufacturer($oArticle, $iLang) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getManufacturer($oArticle, $iLang);
+        return self::getManufacturer($oArticle, $iLang);
     }
 
     /**
@@ -669,7 +669,7 @@ class SeoEncoderArticle extends \OxidEsales\Eshop\Core\SeoEncoder
      */
     protected function _getAltUri($sObjectId, $iLang) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getAltUri($sObjectId, $iLang);
+        return self::getAltUri($sObjectId, $iLang);
     }
 
     /**

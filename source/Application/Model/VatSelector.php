@@ -75,7 +75,7 @@ class VatSelector extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getForeignCountryUserVat(\OxidEsales\Eshop\Application\Model\User $oUser, \OxidEsales\Eshop\Application\Model\Country $oCountry) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getForeignCountryUserVat($oUser, $oCountry);
+        return self::getForeignCountryUserVat($oUser, $oCountry);
     }
 
     /**
@@ -103,7 +103,7 @@ class VatSelector extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getVatForArticleCategory(\OxidEsales\Eshop\Application\Model\Article $oArticle) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getVatForArticleCategory($oArticle);
+        return self::getVatForArticleCategory($oArticle);
     }
 
     /**
@@ -211,7 +211,7 @@ class VatSelector extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getVatCountry(\OxidEsales\Eshop\Application\Model\User $oUser) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getVatCountry($oUser);
+        return self::getVatCountry($oUser);
     }
 
 

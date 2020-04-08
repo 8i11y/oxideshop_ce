@@ -41,7 +41,7 @@ class Dispatcher extends Core
      */
     protected function _chooseCurrentAction() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->chooseCurrentAction();
+        return self::chooseCurrentAction();
     }
 
     /**

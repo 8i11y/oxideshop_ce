@@ -42,7 +42,7 @@ class ArticleBundleAjax extends \OxidEsales\Eshop\Application\Controller\Admin\L
      */
     protected function _getQuery() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getQuery();
+        return self::getQuery();
     }
 
     /**
@@ -90,7 +90,7 @@ class ArticleBundleAjax extends \OxidEsales\Eshop\Application\Controller\Admin\L
      */
     protected function _addFilter($sQ) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addFilter($sQ);
+        return self::addFilter($sQ);
     }
 
     /**
@@ -103,7 +103,7 @@ class ArticleBundleAjax extends \OxidEsales\Eshop\Application\Controller\Admin\L
     protected function addFilter($sQ)
     {
         $sArtTable = $this->_getViewName('oxarticles');
-        $sQ = parent::addFilter($sQ);
+        $sQ = parent::_addFilter($sQ);
 
         // display variants or not ?
         $sQ .= $this->getConfig()->getConfigParam('blVariantsSelection') ? ' group by ' . $sArtTable . '.oxid ' : '';

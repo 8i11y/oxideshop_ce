@@ -492,7 +492,7 @@ class OrderController extends \OxidEsales\Eshop\Application\Controller\FrontendC
      */
     protected function _getNextStep($iSuccess) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getNextStep($iSuccess);
+        return self::getNextStep($iSuccess);
     }
 
     /**
@@ -547,7 +547,7 @@ class OrderController extends \OxidEsales\Eshop\Application\Controller\FrontendC
      */
     protected function _validateTermsAndConditions() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->validateTermsAndConditions();
+        return self::validateTermsAndConditions();
     }
 
     /**

@@ -246,7 +246,7 @@ class Diagnostics
      */
     protected function _countRows($sTable, $blMode) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->countRows($sTable, $blMode);
+        return self::countRows($sTable, $blMode);
     }
 
     /**
@@ -372,7 +372,7 @@ class Diagnostics
      */
     protected function _getApacheVersion() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getApacheVersion();
+        return self::getApacheVersion();
     }
 
     /**
@@ -395,7 +395,7 @@ class Diagnostics
      */
     protected function _getVirtualizationSystem() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getVirtualizationSystem();
+        return self::getVirtualizationSystem();
     }
 
     /**
@@ -440,7 +440,7 @@ class Diagnostics
      */
     protected function _getDeviceList($sSystemType) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getDeviceList($sSystemType);
+        return self::getDeviceList($sSystemType);
     }
 
     /**
@@ -459,7 +459,7 @@ class Diagnostics
      */
     protected function _getCpuAmount() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCpuAmount();
+        return self::getCpuAmount();
     }
 
     /**
@@ -477,7 +477,7 @@ class Diagnostics
      */
     protected function _getCpuMhz() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCpuMhz();
+        return self::getCpuMhz();
     }
 
     /**
@@ -494,7 +494,7 @@ class Diagnostics
      */
     protected function _getBogoMips() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getBogoMips();
+        return self::getBogoMips();
     }
 
     /**
@@ -511,7 +511,7 @@ class Diagnostics
      */
     protected function _getMemoryTotal() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getMemoryTotal();
+        return self::getMemoryTotal();
     }
 
     /**
@@ -528,7 +528,7 @@ class Diagnostics
      */
     protected function _getMemoryFree() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getMemoryFree();
+        return self::getMemoryFree();
     }
 
     /**
@@ -545,7 +545,7 @@ class Diagnostics
      */
     protected function _getCpuModel() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCpuModel();
+        return self::getCpuModel();
     }
 
     /**
@@ -562,7 +562,7 @@ class Diagnostics
      */
     protected function _getDiskTotalSpace() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getDiskTotalSpace();
+        return self::getDiskTotalSpace();
     }
 
     /**
@@ -579,7 +579,7 @@ class Diagnostics
      */
     protected function _getDiskFreeSpace() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getDiskFreeSpace();
+        return self::getDiskFreeSpace();
     }
 
     /**
@@ -596,7 +596,7 @@ class Diagnostics
      */
     protected function _getPhpVersion() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getPhpVersion();
+        return self::getPhpVersion();
     }
 
     /**
@@ -613,7 +613,7 @@ class Diagnostics
      */
     protected function _getMySqlServerInfo() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getMySqlServerInfo();
+        return self::getMySqlServerInfo();
     }
 
     /**

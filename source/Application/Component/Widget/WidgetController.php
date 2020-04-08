@@ -60,7 +60,7 @@ class WidgetController extends \OxidEsales\Eshop\Application\Controller\Frontend
      */
     protected function _processRequest() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->processRequest();
+        return self::processRequest();
     }
 
     /**

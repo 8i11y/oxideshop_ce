@@ -52,7 +52,7 @@ class AttributeMainAjax extends \OxidEsales\Eshop\Application\Controller\Admin\L
      */
     protected function _getQuery() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getQuery();
+        return self::getQuery();
     }
 
     /**
@@ -105,7 +105,7 @@ class AttributeMainAjax extends \OxidEsales\Eshop\Application\Controller\Admin\L
      */
     protected function _addFilter($sQ) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addFilter($sQ);
+        return self::addFilter($sQ);
     }
 
     /**
@@ -117,7 +117,7 @@ class AttributeMainAjax extends \OxidEsales\Eshop\Application\Controller\Admin\L
      */
     protected function addFilter($sQ)
     {
-        $sQ = parent::addFilter($sQ);
+        $sQ = parent::_addFilter($sQ);
 
         // display variants or not ?
         if ($this->getConfig()->getConfigParam('blVariantsSelection')) {
@@ -142,7 +142,7 @@ class AttributeMainAjax extends \OxidEsales\Eshop\Application\Controller\Admin\L
         if (\OxidEsales\Eshop\Core\Registry::getConfig()->getRequestParameter('all')) {
             $sO2AttributeView = $this->_getViewName('oxobject2attribute');
 
-            $sQ = parent::addFilter("delete $sO2AttributeView.* " . $this->_getQuery());
+            $sQ = parent::_addFilter("delete $sO2AttributeView.* " . $this->_getQuery());
             \OxidEsales\Eshop\Core\DatabaseProvider::getDb()->Execute($sQ);
         } elseif (is_array($aChosenCat)) {
             $sChosenCategories = implode(", ", \OxidEsales\Eshop\Core\DatabaseProvider::getDb()->quoteArray($aChosenCat));

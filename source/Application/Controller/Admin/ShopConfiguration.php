@@ -122,7 +122,7 @@ class ShopConfiguration extends \OxidEsales\Eshop\Application\Controller\Admin\A
      */
     protected function _getModuleForConfigVars() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getModuleForConfigVars();
+        return self::getModuleForConfigVars();
     }
 
     /**
@@ -270,7 +270,7 @@ class ShopConfiguration extends \OxidEsales\Eshop\Application\Controller\Admin\A
      */
     protected function _parseConstraint($type, $constraint) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->parseConstraint($type, $constraint);
+        return self::parseConstraint($type, $constraint);
     }
 
     /**
@@ -295,7 +295,7 @@ class ShopConfiguration extends \OxidEsales\Eshop\Application\Controller\Admin\A
      */
     protected function _serializeConstraint($type, $constraint) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->serializeConstraint($type, $constraint);
+        return self::serializeConstraint($type, $constraint);
     }
 
     /**
@@ -320,7 +320,7 @@ class ShopConfiguration extends \OxidEsales\Eshop\Application\Controller\Admin\A
      */
     public function _unserializeConfVar($type, $name, $value) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->unserializeConfVar($type, $name, $value);
+        return self::unserializeConfVar($type, $name, $value);
     }
 
     /**
@@ -376,7 +376,7 @@ class ShopConfiguration extends \OxidEsales\Eshop\Application\Controller\Admin\A
      */
     public function _serializeConfVar($type, $name, $value) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->serializeConfVar($type, $name, $value);
+        return self::serializeConfVar($type, $name, $value);
     }
 
     /**
@@ -423,7 +423,7 @@ class ShopConfiguration extends \OxidEsales\Eshop\Application\Controller\Admin\A
      */
     protected function _arrayToMultiline($input) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->arrayToMultiline($input);
+        return self::arrayToMultiline($input);
     }
 
     /**
@@ -442,7 +442,7 @@ class ShopConfiguration extends \OxidEsales\Eshop\Application\Controller\Admin\A
      */
     protected function _multilineToArray($multiline) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->multilineToArray($multiline);
+        return self::multilineToArray($multiline);
     }
 
     /**
@@ -471,7 +471,7 @@ class ShopConfiguration extends \OxidEsales\Eshop\Application\Controller\Admin\A
      */
     protected function _aarrayToMultiline($input) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->aarrayToMultiline($input);
+        return self::aarrayToMultiline($input);
     }
 
     /**
@@ -500,7 +500,7 @@ class ShopConfiguration extends \OxidEsales\Eshop\Application\Controller\Admin\A
      */
     protected function _multilineToAarray($multiline) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->multilineToAarray($multiline);
+        return self::multilineToAarray($multiline);
     }
 
     /**

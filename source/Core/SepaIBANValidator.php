@@ -88,7 +88,7 @@ class SepaIBANValidator
      */
     protected function _isLengthValid($sIBAN) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isLengthValid($sIBAN);
+        return self::isLengthValid($sIBAN);
     }
 
 
@@ -112,7 +112,7 @@ class SepaIBANValidator
      */
     protected function _getLengthForCountry($sIBAN) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getLengthForCountry($sIBAN);
+        return self::getLengthForCountry($sIBAN);
     }
 
 
@@ -138,7 +138,7 @@ class SepaIBANValidator
      */
     protected function _isAlgorithmValid($sIBAN) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isAlgorithmValid($sIBAN);
+        return self::isAlgorithmValid($sIBAN);
     }
 
     /**
@@ -161,7 +161,7 @@ class SepaIBANValidator
      */
     protected function _moveInitialCharactersToEnd($sIBAN) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->moveInitialCharactersToEnd($sIBAN);
+        return self::moveInitialCharactersToEnd($sIBAN);
     }
 
     /**
@@ -185,7 +185,7 @@ class SepaIBANValidator
      */
     protected function _replaceLettersToNumbers($sIBAN) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->replaceLettersToNumbers($sIBAN);
+        return self::replaceLettersToNumbers($sIBAN);
     }
 
     /**
@@ -237,7 +237,7 @@ class SepaIBANValidator
      */
     protected function _isIBANChecksumValid($sIBAN) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isIBANChecksumValid($sIBAN);
+        return self::isIBANChecksumValid($sIBAN);
     }
 
     /**
@@ -256,7 +256,7 @@ class SepaIBANValidator
      */
     protected function _isNotEmptyArray($aCodeLengths) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isNotEmptyArray($aCodeLengths);
+        return self::isNotEmptyArray($aCodeLengths);
     }
 
     /**
@@ -275,7 +275,7 @@ class SepaIBANValidator
      */
     protected function _isEachCodeLengthValid($aCodeLengths) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isEachCodeLengthValid($aCodeLengths);
+        return self::isEachCodeLengthValid($aCodeLengths);
     }
 
     /**
@@ -306,7 +306,7 @@ class SepaIBANValidator
      */
     protected function _isCodeLengthKeyValid($sCountryAbbr) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isCodeLengthKeyValid($sCountryAbbr);
+        return self::isCodeLengthKeyValid($sCountryAbbr);
     }
 
     /**
@@ -325,7 +325,7 @@ class SepaIBANValidator
      */
     protected function _isCodeLengthValueValid($iLength) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isCodeLengthValueValid($iLength);
+        return self::isCodeLengthValueValid($iLength);
     }
 
     /**

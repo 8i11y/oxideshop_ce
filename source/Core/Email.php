@@ -378,7 +378,7 @@ class Email extends PHPMailer
      */
     protected function _getSmarty() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSmarty();
+        return self::getSmarty();
     }
 
 
@@ -481,7 +481,7 @@ class Email extends PHPMailer
      */
     protected function _setSmtpProtocol($url) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setSmtpProtocol($url);
+        return self::setSmtpProtocol($url);
     }
 
     /**
@@ -547,7 +547,7 @@ class Email extends PHPMailer
      */
     protected function _isValidSmtpHost($smtpHost) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isValidSmtpHost($smtpHost);
+        return self::isValidSmtpHost($smtpHost);
     }
 
     /**
@@ -904,7 +904,7 @@ class Email extends PHPMailer
      */
     protected function _getNewsSubsLink($id, $confirmCode = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getNewsSubsLink($id, $confirmCode);
+        return self::getNewsSubsLink($id, $confirmCode);
     }
 
     /**
@@ -1476,7 +1476,7 @@ class Email extends PHPMailer
      */
     protected function _includeImages($imageDir = null, $imageDirNoSSL = null, $dynImageDir = null, $absImageDir = null, $absDynImageDir = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->includeImages($imageDir, $imageDirNoSSL, $dynImageDir, $absImageDir, $absDynImageDir);
+        return self::includeImages($imageDir, $imageDirNoSSL, $dynImageDir, $absImageDir, $absDynImageDir);
     }
 
     /**
@@ -1931,7 +1931,7 @@ class Email extends PHPMailer
      */
     protected function _getUseInlineImages() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getUseInlineImages();
+        return self::getUseInlineImages();
     }
 
     /**
@@ -1948,7 +1948,7 @@ class Email extends PHPMailer
      */
     protected function _sendMailErrorMsg() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->sendMailErrorMsg();
+        return self::sendMailErrorMsg();
     }
 
     /**
@@ -1980,7 +1980,7 @@ class Email extends PHPMailer
      */
     protected function _addUserInfoOrderEMail($order) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addUserInfoOrderEMail($order);
+        return self::addUserInfoOrderEMail($order);
     }
 
     /**
@@ -2001,7 +2001,7 @@ class Email extends PHPMailer
      */
     protected function _addUserRegisterEmail($user) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addUserRegisterEmail($user);
+        return self::addUserRegisterEmail($user);
     }
 
     /**
@@ -2022,7 +2022,7 @@ class Email extends PHPMailer
      */
     protected function _addForgotPwdEmail($shop) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addForgotPwdEmail($shop);
+        return self::addForgotPwdEmail($shop);
     }
 
     /**
@@ -2043,7 +2043,7 @@ class Email extends PHPMailer
      */
     protected function _addNewsletterDbOptInMail($user) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addNewsletterDbOptInMail($user);
+        return self::addNewsletterDbOptInMail($user);
     }
 
     /**
@@ -2064,7 +2064,7 @@ class Email extends PHPMailer
      */
     protected function _clearMailer() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->clearMailer();
+        return self::clearMailer();
     }
 
     /**
@@ -2083,7 +2083,7 @@ class Email extends PHPMailer
      */
     protected function _setMailParams($shop = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setMailParams($shop);
+        return self::setMailParams($shop);
     }
 
     /**
@@ -2140,7 +2140,7 @@ class Email extends PHPMailer
      */
     protected function _setSmtpAuthInfo($userName = null, $userPassword = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setSmtpAuthInfo($userName, $userPassword);
+        return self::setSmtpAuthInfo($userName, $userPassword);
     }
 
     /**
@@ -2160,7 +2160,7 @@ class Email extends PHPMailer
      */
     protected function _setSmtpDebug($debug = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setSmtpDebug($debug);
+        return self::setSmtpDebug($debug);
     }
 
     /**
@@ -2177,7 +2177,7 @@ class Email extends PHPMailer
      */
     protected function _makeOutputProcessing() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->makeOutputProcessing();
+        return self::makeOutputProcessing();
     }
 
     /**
@@ -2196,7 +2196,7 @@ class Email extends PHPMailer
      */
     protected function _sendMail() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->sendMail();
+        return self::sendMail();
     }
 
     /**
@@ -2226,7 +2226,7 @@ class Email extends PHPMailer
      */
     protected function _processViewArray() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->processViewArray();
+        return self::processViewArray();
     }
 
     /**
@@ -2386,7 +2386,7 @@ class Email extends PHPMailer
      */
     private function _clearSidFromBody($altBody) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->clearSidFromBody($altBody);
+        return self::clearSidFromBody($altBody);
     }
 
     /**

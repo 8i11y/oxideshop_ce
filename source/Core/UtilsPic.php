@@ -70,7 +70,7 @@ class UtilsPic extends \OxidEsales\Eshop\Core\Base
      */
     protected function _deletePicture($sPicName, $sAbsDynImageDir) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->deletePicture($sPicName, $sAbsDynImageDir);
+        return self::deletePicture($sPicName, $sAbsDynImageDir);
     }
 
     /**
@@ -115,7 +115,7 @@ class UtilsPic extends \OxidEsales\Eshop\Core\Base
      */
     protected function _isPicDeletable($sPicName, $sTable, $sField) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isPicDeletable($sPicName, $sTable, $sField);
+        return self::isPicDeletable($sPicName, $sTable, $sField);
     }
 
 
@@ -192,7 +192,7 @@ class UtilsPic extends \OxidEsales\Eshop\Core\Base
      */
     protected function _resizeGif($sSrc, $sTarget, $iNewWidth, $iNewHeight, $iOriginalWidth, $iOriginalHeigth, $iGDVer, $blDisableTouch) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->resizeGif($sSrc, $sTarget, $iNewWidth, $iNewHeight, $iOriginalWidth, $iOriginalHeigth, $iGDVer, $blDisableTouch);
+        return self::resizeGif($sSrc, $sTarget, $iNewWidth, $iNewHeight, $iOriginalWidth, $iOriginalHeigth, $iGDVer, $blDisableTouch);
     }
 
     /**
@@ -218,7 +218,7 @@ class UtilsPic extends \OxidEsales\Eshop\Core\Base
      */
     protected function _resize($aImageInfo, $sSrc, $hDestinationImage, $sTarget, $iNewWidth, $iNewHeight, $iGdVer, $blDisableTouch, $iDefQuality) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->resize($aImageInfo, $sSrc, $hDestinationImage, $sTarget, $iNewWidth, $iNewHeight, $iGdVer, $blDisableTouch, $iDefQuality);
+        return self::resize($aImageInfo, $sSrc, $hDestinationImage, $sTarget, $iNewWidth, $iNewHeight, $iGdVer, $blDisableTouch, $iDefQuality);
     }
 
     /**
@@ -270,7 +270,7 @@ class UtilsPic extends \OxidEsales\Eshop\Core\Base
      */
     protected function _copyAlteredImage($sDestinationImage, $sSourceImage, $iNewWidth, $iNewHeight, $aImageInfo, $sTarget, $iGdVer, $blDisableTouch) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->copyAlteredImage($sDestinationImage, $sSourceImage, $iNewWidth, $iNewHeight, $aImageInfo, $sTarget, $iGdVer, $blDisableTouch);
+        return self::copyAlteredImage($sDestinationImage, $sSourceImage, $iNewWidth, $iNewHeight, $aImageInfo, $sTarget, $iGdVer, $blDisableTouch);
     }
 
     /**

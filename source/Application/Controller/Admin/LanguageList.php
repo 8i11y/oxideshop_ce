@@ -92,7 +92,7 @@ class LanguageList extends \OxidEsales\Eshop\Application\Controller\Admin\AdminL
      */
     protected function _getLanguagesList() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getLanguagesList();
+        return self::getLanguagesList();
     }
 
     /**
@@ -141,7 +141,7 @@ class LanguageList extends \OxidEsales\Eshop\Application\Controller\Admin\AdminL
      */
     protected function _sortLanguagesCallback($oLang1, $oLang2) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->sortLanguagesCallback($oLang1, $oLang2);
+        return self::sortLanguagesCallback($oLang1, $oLang2);
     }
 
     /**
@@ -170,7 +170,7 @@ class LanguageList extends \OxidEsales\Eshop\Application\Controller\Admin\AdminL
      */
     protected function _resetMultiLangDbFields($iLangId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->resetMultiLangDbFields($iLangId);
+        return self::resetMultiLangDbFields($iLangId);
     }
 
     /**

@@ -46,7 +46,7 @@ class CategoryOrderAjax extends \OxidEsales\Eshop\Application\Controller\Admin\L
      */
     protected function _getQuery() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getQuery();
+        return self::getQuery();
     }
 
     /**
@@ -84,7 +84,7 @@ class CategoryOrderAjax extends \OxidEsales\Eshop\Application\Controller\Admin\L
      */
     protected function _getSorting() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSorting();
+        return self::getSorting();
     }
 
     /**
@@ -96,7 +96,7 @@ class CategoryOrderAjax extends \OxidEsales\Eshop\Application\Controller\Admin\L
     {
         $sOrder = '';
         if (\OxidEsales\Eshop\Core\Registry::getConfig()->getRequestParameter('synchoxid')) {
-            $sOrder = parent::getSorting();
+            $sOrder = parent::_getSorting();
         } elseif (($aSkipArt = \OxidEsales\Eshop\Core\Registry::getSession()->getVariable('neworder_sess'))) {
             $sOrderBy = '';
             $sArtTable = $this->_getViewName('oxarticles');

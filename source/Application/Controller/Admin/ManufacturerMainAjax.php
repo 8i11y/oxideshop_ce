@@ -52,7 +52,7 @@ class ManufacturerMainAjax extends \OxidEsales\Eshop\Application\Controller\Admi
      */
     protected function _getQuery() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getQuery();
+        return self::getQuery();
     }
 
     /**
@@ -95,7 +95,7 @@ class ManufacturerMainAjax extends \OxidEsales\Eshop\Application\Controller\Admi
      */
     protected function _addFilter($query) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addFilter($query);
+        return self::addFilter($query);
     }
 
     /**
@@ -109,7 +109,7 @@ class ManufacturerMainAjax extends \OxidEsales\Eshop\Application\Controller\Admi
     {
         $config = $this->getConfig();
         $articleViewName = $this->_getViewName('oxarticles');
-        $query = parent::addFilter($query);
+        $query = parent::_addFilter($query);
 
         // display variants or not ?
         $query .= $config->getConfigParam('blVariantsSelection') ? ' group by ' . $articleViewName . '.oxid ' : '';

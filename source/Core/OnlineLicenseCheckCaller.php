@@ -50,7 +50,7 @@ class OnlineLicenseCheckCaller extends \OxidEsales\Eshop\Core\OnlineCaller
      */
     protected function _formEmail($oRequest) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->formEmail($oRequest);
+        return self::formEmail($oRequest);
     }
 
     /**
@@ -64,14 +64,14 @@ class OnlineLicenseCheckCaller extends \OxidEsales\Eshop\Core\OnlineCaller
     {
         $oRequest->keys = null;
 
-        return parent::formEmail($oRequest);
+        return parent::_formEmail($oRequest);
     }
     /**
      * @deprecated use self::formResponse instead
      */
     protected function _formResponse($sRawResponse) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->formResponse($sRawResponse);
+        return self::formResponse($sRawResponse);
     }
 
     /**
@@ -120,7 +120,7 @@ class OnlineLicenseCheckCaller extends \OxidEsales\Eshop\Core\OnlineCaller
      */
     protected function _getXMLDocumentName() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getXMLDocumentName();
+        return self::getXMLDocumentName();
     }
 
     /**
@@ -137,7 +137,7 @@ class OnlineLicenseCheckCaller extends \OxidEsales\Eshop\Core\OnlineCaller
      */
     protected function _getServiceUrl() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getServiceUrl();
+        return self::getServiceUrl();
     }
 
     /**

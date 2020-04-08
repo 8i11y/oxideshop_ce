@@ -49,7 +49,7 @@ class PaymentList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _getFilterSelect($sShipSetId, $dPrice, $oUser) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getFilterSelect($sShipSetId, $dPrice, $oUser);
+        return self::getFilterSelect($sShipSetId, $dPrice, $oUser);
     }
 
     /**

@@ -249,7 +249,7 @@ class FileChecker
      */
     protected function _isWebServiceOnline() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isWebServiceOnline();
+        return self::isWebServiceOnline();
     }
 
     /**
@@ -294,7 +294,7 @@ class FileChecker
      */
     protected function _isShopVersionIsKnown() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isShopVersionIsKnown();
+        return self::isShopVersionIsKnown();
     }
 
 
@@ -412,7 +412,7 @@ class FileChecker
      */
     protected function _getFileVersion($sMD5, $sFile) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getFileVersion($sMD5, $sFile);
+        return self::getFileVersion($sMD5, $sFile);
     }
 
     /**

@@ -39,7 +39,7 @@ class SimpleVariantList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _assignElement($oListObject, $aDbFields) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->assignElement($oListObject, $aDbFields);
+        return self::assignElement($oListObject, $aDbFields);
     }
 
     /**
@@ -51,6 +51,6 @@ class SimpleVariantList extends \OxidEsales\Eshop\Core\Model\ListModel
     protected function assignElement($oListObject, $aDbFields)
     {
         $oListObject->setParent($this->_oParent);
-        parent::assignElement($oListObject, $aDbFields);
+        parent::_assignElement($oListObject, $aDbFields);
     }
 }

@@ -133,7 +133,7 @@ class News extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel
      */
     protected function _update() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->update();
+        return self::update();
     }
 
     /**
@@ -143,14 +143,14 @@ class News extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel
     {
         $this->oxnews__oxdate->setValue(\OxidEsales\Eshop\Core\Registry::getUtilsDate()->formatDBDate($this->oxnews__oxdate->value, true));
 
-        parent::update();
+        parent::_update();
     }
     /**
      * @deprecated use self::insert instead
      */
     protected function _insert() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->insert();
+        return self::insert();
     }
 
     /**
@@ -167,14 +167,14 @@ class News extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel
             $this->oxnews__oxdate = new \OxidEsales\Eshop\Core\Field(\OxidEsales\Eshop\Core\Registry::getUtilsDate()->formatDBDate($this->oxnews__oxdate->value, true));
         }
 
-        return parent::insert();
+        return parent::_insert();
     }
     /**
      * @deprecated use self::setFieldData instead
      */
     protected function _setFieldData($sFieldName, $sValue, $iDataType = \OxidEsales\Eshop\Core\Field::T_TEXT) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setFieldData($sFieldName, $sValue, $iDataType);
+        return self::setFieldData($sFieldName, $sValue, $iDataType);
     }
 
     /**
@@ -194,7 +194,7 @@ class News extends \OxidEsales\Eshop\Core\Model\MultiLanguageModel
                 $iDataType = \OxidEsales\Eshop\Core\Field::T_RAW;
                 break;
         }
-        return parent::setFieldData($sFieldName, $sValue, $iDataType);
+        return parent::_setFieldData($sFieldName, $sValue, $iDataType);
     }
 
     /**

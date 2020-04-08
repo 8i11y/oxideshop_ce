@@ -37,7 +37,7 @@ class SeoDecoder extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getIdent($sSeoUrl, $blIgnore = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getIdent($sSeoUrl, $blIgnore);
+        return self::getIdent($sSeoUrl, $blIgnore);
     }
 
     /**
@@ -98,7 +98,7 @@ class SeoDecoder extends \OxidEsales\Eshop\Core\Base
      */
     protected function _decodeOldUrl($seoUrl) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->decodeOldUrl($seoUrl);
+        return self::decodeOldUrl($seoUrl);
     }
 
     /**
@@ -158,7 +158,7 @@ class SeoDecoder extends \OxidEsales\Eshop\Core\Base
      */
     protected function _addQueryString($sUrl) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addQueryString($sUrl);
+        return self::addQueryString($sUrl);
     }
 
     /**
@@ -185,7 +185,7 @@ class SeoDecoder extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getSeoUrl($sObjectId, $iLang, $iShopId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSeoUrl($sObjectId, $iLang, $iShopId);
+        return self::getSeoUrl($sObjectId, $iLang, $iShopId);
     }
 
     /**
@@ -271,7 +271,7 @@ class SeoDecoder extends \OxidEsales\Eshop\Core\Base
      */
     protected function _decodeSimpleUrl($sParams) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->decodeSimpleUrl($sParams);
+        return self::decodeSimpleUrl($sParams);
     }
 
     /**
@@ -314,7 +314,7 @@ class SeoDecoder extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getObjectUrl($sSeoId, $sTable, $iLanguage, $sType) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getObjectUrl($sSeoId, $sTable, $iLanguage, $sType);
+        return self::getObjectUrl($sSeoId, $sTable, $iLanguage, $sType);
     }
 
     /**
@@ -353,7 +353,7 @@ class SeoDecoder extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getParams($sRequest, $sPath) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getParams($sRequest, $sPath);
+        return self::getParams($sRequest, $sPath);
     }
 
     /**

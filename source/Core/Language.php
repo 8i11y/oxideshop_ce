@@ -465,7 +465,7 @@ class Language extends \OxidEsales\Eshop\Core\Base
      */
     protected function _collectSimilar($aData, $sKey, $aCollection = []) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->collectSimilar($aData, $sKey, $aCollection);
+        return self::collectSimilar($aData, $sKey, $aCollection);
     }
 
     /**
@@ -648,7 +648,7 @@ class Language extends \OxidEsales\Eshop\Core\Base
      */
     protected function _recodeLangArray($aLangArray, $sCharset, $blRecodeKeys = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->recodeLangArray($aLangArray, $sCharset, $blRecodeKeys);
+        return self::recodeLangArray($aLangArray, $sCharset, $blRecodeKeys);
     }
 
     /**
@@ -682,7 +682,7 @@ class Language extends \OxidEsales\Eshop\Core\Base
      */
     protected function _recodeLangArrayValues(&$aLangArray, $sCharset, $newEncoding) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->recodeLangArrayValues($aLangArray, $sCharset, $newEncoding);
+        return self::recodeLangArrayValues($aLangArray, $sCharset, $newEncoding);
     }
 
     /**
@@ -705,7 +705,7 @@ class Language extends \OxidEsales\Eshop\Core\Base
      */
     protected function _recodeLangArrayWithKeys($aLangArray, $sCharset, $newEncoding) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->recodeLangArrayWithKeys($aLangArray, $sCharset, $newEncoding);
+        return self::recodeLangArrayWithKeys($aLangArray, $sCharset, $newEncoding);
     }
 
     /**
@@ -745,7 +745,7 @@ class Language extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getLangFilesPathArray($iLang) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getLangFilesPathArray($iLang);
+        return self::getLangFilesPathArray($iLang);
     }
 
     /**
@@ -818,7 +818,7 @@ class Language extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getAdminLangFilesPathArray($activeLanguage) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getAdminLangFilesPathArray($activeLanguage);
+        return self::getAdminLangFilesPathArray($activeLanguage);
     }
 
     /**
@@ -871,7 +871,7 @@ class Language extends \OxidEsales\Eshop\Core\Base
      */
     protected function _appendLangFile($aLangFiles, $sFullPath, $sFilePattern = "lang") // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->appendLangFile($aLangFiles, $sFullPath, $sFilePattern);
+        return self::appendLangFile($aLangFiles, $sFullPath, $sFilePattern);
     }
 
     /**
@@ -901,7 +901,7 @@ class Language extends \OxidEsales\Eshop\Core\Base
      */
     protected function _appendCustomLangFiles($languageFiles, $language, $forAdmin = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->appendCustomLangFiles($languageFiles, $language, $forAdmin);
+        return self::appendCustomLangFiles($languageFiles, $language, $forAdmin);
     }
 
     /**
@@ -951,7 +951,7 @@ class Language extends \OxidEsales\Eshop\Core\Base
      */
     protected function _appendModuleLangFiles($aLangFiles, $aModulePaths, $sLang, $blForAdmin = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->appendModuleLangFiles($aLangFiles, $aModulePaths, $sLang, $blForAdmin);
+        return self::appendModuleLangFiles($aLangFiles, $aModulePaths, $sLang, $blForAdmin);
     }
 
     /**
@@ -986,7 +986,7 @@ class Language extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getLangFileCacheName($blAdmin, $iLang, $aLangFiles = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getLangFileCacheName($blAdmin, $iLang, $aLangFiles);
+        return self::getLangFileCacheName($blAdmin, $iLang, $aLangFiles);
     }
 
     /**
@@ -1013,7 +1013,7 @@ class Language extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getLanguageFileData($blAdmin = false, $iLang = 0, $aLangFiles = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getLanguageFileData($blAdmin, $iLang, $aLangFiles);
+        return self::getLanguageFileData($blAdmin, $iLang, $aLangFiles);
     }
 
     /**
@@ -1075,7 +1075,7 @@ class Language extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getLanguageMap($language, $isAdmin = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getLanguageMap($language, $isAdmin);
+        return self::getLanguageMap($language, $isAdmin);
     }
 
     /**
@@ -1148,7 +1148,7 @@ class Language extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getCacheLanguageId($blAdmin, $iLang = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCacheLanguageId($blAdmin, $iLang);
+        return self::getCacheLanguageId($blAdmin, $iLang);
     }
 
     /**
@@ -1176,7 +1176,7 @@ class Language extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getLangTranslationArray($iLang = null, $blAdmin = null, $aLangFiles = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getLangTranslationArray($iLang, $blAdmin, $aLangFiles);
+        return self::getLangTranslationArray($iLang, $blAdmin, $aLangFiles);
     }
 
     /**
@@ -1214,7 +1214,7 @@ class Language extends \OxidEsales\Eshop\Core\Base
      */
     protected function _sortLanguagesCallback($a1, $a2) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->sortLanguagesCallback($a1, $a2);
+        return self::sortLanguagesCallback($a1, $a2);
     }
 
     /**
@@ -1380,7 +1380,7 @@ class Language extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getActiveModuleInfo() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getActiveModuleInfo();
+        return self::getActiveModuleInfo();
     }
 
     /**
@@ -1402,7 +1402,7 @@ class Language extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getDisabledModuleInfo() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getDisabledModuleInfo();
+        return self::getDisabledModuleInfo();
     }
 
     /**
@@ -1424,7 +1424,7 @@ class Language extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getBrowserLanguage() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getBrowserLanguage();
+        return self::getBrowserLanguage();
     }
 
     /**
@@ -1491,7 +1491,7 @@ class Language extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getLanguageIdsFromDatabase($shopId = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getLanguageIdsFromDatabase($shopId);
+        return self::getLanguageIdsFromDatabase($shopId);
     }
 
     /**
@@ -1510,7 +1510,7 @@ class Language extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getConfigLanguageValues($sLanguageParameterName, $iShopId = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getConfigLanguageValues($sLanguageParameterName, $iShopId);
+        return self::getConfigLanguageValues($sLanguageParameterName, $iShopId);
     }
 
     /**
@@ -1546,7 +1546,7 @@ class Language extends \OxidEsales\Eshop\Core\Base
      */
     protected function _selectLanguageParamValues($sParamName, $sShopId = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->selectLanguageParamValues($sParamName, $sShopId);
+        return self::selectLanguageParamValues($sParamName, $sShopId);
     }
 
     /**
@@ -1582,7 +1582,7 @@ class Language extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getLanguageIdsFromLanguageParamsArray($aLanguageParams) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getLanguageIdsFromLanguageParamsArray($aLanguageParams);
+        return self::getLanguageIdsFromLanguageParamsArray($aLanguageParams);
     }
 
     /**
@@ -1607,7 +1607,7 @@ class Language extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getLanguageIdsFromLanguagesArray($aLanguages) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getLanguageIdsFromLanguagesArray($aLanguages);
+        return self::getLanguageIdsFromLanguagesArray($aLanguages);
     }
 
     /**

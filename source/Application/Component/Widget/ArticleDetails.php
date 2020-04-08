@@ -223,7 +223,7 @@ class ArticleDetails extends \OxidEsales\Eshop\Application\Component\Widget\Widg
      */
     protected function _getParentProduct($sParentId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getParentProduct($sParentId);
+        return self::getParentProduct($sParentId);
     }
 
     /**
@@ -264,7 +264,7 @@ class ArticleDetails extends \OxidEsales\Eshop\Application\Component\Widget\Widg
      */
     protected function _processProduct($oProduct) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->processProduct($oProduct);
+        return self::processProduct($oProduct);
     }
 
     /**
@@ -709,7 +709,7 @@ class ArticleDetails extends \OxidEsales\Eshop\Application\Component\Widget\Widg
      */
     protected function _getSubject($iLang) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSubject($iLang);
+        return self::getSubject($iLang);
     }
 
     /**
@@ -922,7 +922,7 @@ class ArticleDetails extends \OxidEsales\Eshop\Application\Component\Widget\Widg
      */
     protected function _setSortingParameters() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setSortingParameters();
+        return self::setSortingParameters();
     }
 
     /**
@@ -996,7 +996,7 @@ class ArticleDetails extends \OxidEsales\Eshop\Application\Component\Widget\Widg
      */
     protected function _additionalChecksForArticle($myUtils, $myConfig) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->additionalChecksForArticle($myUtils, $myConfig);
+        return self::additionalChecksForArticle($myUtils, $myConfig);
     }
 
     /**

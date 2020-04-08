@@ -106,7 +106,7 @@ class RecommendationList extends \OxidEsales\Eshop\Core\Model\BaseModel implemen
      */
     protected function _getArticleSelect() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getArticleSelect();
+        return self::getArticleSelect();
     }
 
     /**
@@ -305,7 +305,7 @@ class RecommendationList extends \OxidEsales\Eshop\Core\Model\BaseModel implemen
      */
     protected function _loadFirstArticles(\OxidEsales\Eshop\Core\Model\ListModel $oRecommList, $aIds) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadFirstArticles($oRecommList, $aIds);
+        return self::loadFirstArticles($oRecommList, $aIds);
     }
 
     /**
@@ -401,7 +401,7 @@ class RecommendationList extends \OxidEsales\Eshop\Core\Model\BaseModel implemen
      */
     protected function _getSearchSelect($sSearchStr) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSearchSelect($sSearchStr);
+        return self::getSearchSelect($sSearchStr);
     }
 
     /**

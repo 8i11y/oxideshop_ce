@@ -189,7 +189,7 @@ class ViewConfig extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getHelpContentIdents() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getHelpContentIdents();
+        return self::getHelpContentIdents();
     }
 
     /**
@@ -1403,7 +1403,7 @@ class ViewConfig extends \OxidEsales\Eshop\Core\Base
      */
     private function _moduleExists($sModuleId, $aModuleVersions) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->moduleExists($sModuleId, $aModuleVersions);
+        return self::moduleExists($sModuleId, $aModuleVersions);
     }
 
     /**
@@ -1442,7 +1442,7 @@ class ViewConfig extends \OxidEsales\Eshop\Core\Base
      */
     private function _isModuleVersionCorrect($sModuleId, $sVersionFrom, $sVersionTo) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isModuleVersionCorrect($sModuleId, $sVersionFrom, $sVersionTo);
+        return self::isModuleVersionCorrect($sModuleId, $sVersionFrom, $sVersionTo);
     }
 
     /**

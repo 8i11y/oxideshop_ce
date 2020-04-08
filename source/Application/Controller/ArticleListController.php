@@ -236,7 +236,7 @@ class ArticleListController extends \OxidEsales\Eshop\Application\Controller\Fro
      */
     protected function _checkRequestedPage() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->checkRequestedPage();
+        return self::checkRequestedPage();
     }
 
     /**
@@ -264,7 +264,7 @@ class ArticleListController extends \OxidEsales\Eshop\Application\Controller\Fro
      */
     protected function _processListArticles() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->processListArticles();
+        return self::processListArticles();
     }
 
     /**
@@ -325,7 +325,7 @@ class ArticleListController extends \OxidEsales\Eshop\Application\Controller\Fro
      */
     protected function _getProductLinkType() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getProductLinkType();
+        return self::getProductLinkType();
     }
 
     /**
@@ -384,7 +384,7 @@ class ArticleListController extends \OxidEsales\Eshop\Application\Controller\Fro
      */
     protected function _loadArticles($category) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadArticles($category);
+        return self::loadArticles($category);
     }
 
     /**
@@ -442,7 +442,7 @@ class ArticleListController extends \OxidEsales\Eshop\Application\Controller\Fro
      */
     protected function _getRequestPageNr() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getRequestPageNr();
+        return self::getRequestPageNr();
     }
 
     /**
@@ -479,7 +479,7 @@ class ArticleListController extends \OxidEsales\Eshop\Application\Controller\Fro
      */
     protected function _getSeoObjectId() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSeoObjectId();
+        return self::getSeoObjectId();
     }
 
     /**
@@ -498,7 +498,7 @@ class ArticleListController extends \OxidEsales\Eshop\Application\Controller\Fro
      */
     protected function _getCatPathString() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getCatPathString();
+        return self::getCatPathString();
     }
 
     /**
@@ -532,7 +532,7 @@ class ArticleListController extends \OxidEsales\Eshop\Application\Controller\Fro
      */
     protected function _prepareMetaDescription($meta, $length = 1024, $descriptionTag = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->prepareMetaDescription($meta, $length, $descriptionTag);
+        return self::prepareMetaDescription($meta, $length, $descriptionTag);
     }
 
     /**
@@ -595,7 +595,7 @@ class ArticleListController extends \OxidEsales\Eshop\Application\Controller\Fro
      */
     protected function _collectMetaDescription($meta, $length = 1024, $descriptionTag = false) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->collectMetaDescription($meta, $length, $descriptionTag);
+        return self::collectMetaDescription($meta, $length, $descriptionTag);
     }
 
     /**
@@ -637,14 +637,14 @@ class ArticleListController extends \OxidEsales\Eshop\Application\Controller\Fro
             $meta = $additionalText;
         }
 
-        return parent::prepareMetaDescription($meta, $length, $descriptionTag);
+        return parent::_prepareMetaDescription($meta, $length, $descriptionTag);
     }
     /**
      * @deprecated use self::prepareMetaKeyword instead
      */
     protected function _prepareMetaKeyword($keywords, $removeDuplicatedWords = true) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->prepareMetaKeyword($keywords, $removeDuplicatedWords);
+        return self::prepareMetaKeyword($keywords, $removeDuplicatedWords);
     }
 
     /**
@@ -679,7 +679,7 @@ class ArticleListController extends \OxidEsales\Eshop\Application\Controller\Fro
             }
         }
 
-        $keywords = parent::prepareMetaDescription($keywords, -1, $removeDuplicatedWords);
+        $keywords = parent::_prepareMetaDescription($keywords, -1, $removeDuplicatedWords);
 
         return trim($keywords);
     }
@@ -688,7 +688,7 @@ class ArticleListController extends \OxidEsales\Eshop\Application\Controller\Fro
      */
     protected function _collectMetaKeyword($keywords) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->collectMetaKeyword($keywords);
+        return self::collectMetaKeyword($keywords);
     }
 
     /**
@@ -738,7 +738,7 @@ class ArticleListController extends \OxidEsales\Eshop\Application\Controller\Fro
             $text = "{$keywords}, {$text}";
         }
 
-        return parent::prepareMetaKeyword($text);
+        return parent::_prepareMetaKeyword($text);
     }
 
     /**
@@ -764,7 +764,7 @@ class ArticleListController extends \OxidEsales\Eshop\Application\Controller\Fro
      */
     protected function _addPageNrParam($url, $currentPage, $languageId = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addPageNrParam($url, $currentPage, $languageId);
+        return self::addPageNrParam($url, $currentPage, $languageId);
     }
 
     /**
@@ -784,7 +784,7 @@ class ArticleListController extends \OxidEsales\Eshop\Application\Controller\Fro
                 $url = $category->getBaseSeoLink($languageId, $currentPage);
             }
         } else {
-            $url = parent::addPageNrParam($url, $currentPage, $languageId);
+            $url = parent::_addPageNrParam($url, $currentPage, $languageId);
         }
 
         return $url;
@@ -794,7 +794,7 @@ class ArticleListController extends \OxidEsales\Eshop\Application\Controller\Fro
      */
     protected function _isActCategory() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isActCategory();
+        return self::isActCategory();
     }
 
     /**
@@ -872,7 +872,7 @@ class ArticleListController extends \OxidEsales\Eshop\Application\Controller\Fro
      */
     protected function _getSubject($languageId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getSubject($languageId);
+        return self::getSubject($languageId);
     }
 
     /**

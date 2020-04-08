@@ -60,7 +60,7 @@ class ShopSeo extends \OxidEsales\Eshop\Application\Controller\Admin\ShopConfigu
      */
     protected function _loadActiveUrl($iShopId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadActiveUrl($iShopId);
+        return self::loadActiveUrl($iShopId);
     }
 
     /**
@@ -123,7 +123,7 @@ class ShopSeo extends \OxidEsales\Eshop\Application\Controller\Admin\ShopConfigu
      */
     protected function _processUrls($aUrls) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->processUrls($aUrls);
+        return self::processUrls($aUrls);
     }
 
     /**
@@ -152,7 +152,7 @@ class ShopSeo extends \OxidEsales\Eshop\Application\Controller\Admin\ShopConfigu
      */
     protected function _cleanupUrl($sUrl) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->cleanupUrl($sUrl);
+        return self::cleanupUrl($sUrl);
     }
 
     /**

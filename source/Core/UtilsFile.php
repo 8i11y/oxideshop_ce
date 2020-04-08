@@ -139,7 +139,7 @@ class UtilsFile extends \OxidEsales\Eshop\Core\Base
      */
     protected function _setNewFilesCounter($iNewFilesCounter) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setNewFilesCounter($iNewFilesCounter);
+        return self::setNewFilesCounter($iNewFilesCounter);
     }
 
     /**
@@ -261,7 +261,7 @@ class UtilsFile extends \OxidEsales\Eshop\Core\Base
      */
     protected function _prepareImageName($sValue, $sType, $blDemo, $sImagePath, $blUnique = true) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->prepareImageName($sValue, $sType, $blDemo, $sImagePath, $blUnique);
+        return self::prepareImageName($sValue, $sType, $blDemo, $sImagePath, $blUnique);
     }
 
     /**
@@ -312,7 +312,7 @@ class UtilsFile extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getImagePath($sType) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getImagePath($sType);
+        return self::getImagePath($sType);
     }
 
     /**
@@ -333,7 +333,7 @@ class UtilsFile extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getImageSize($sImgType, $iImgNum, $sImgConf) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getImageSize($sImgType, $iImgNum, $sImgConf);
+        return self::getImageSize($sImgType, $iImgNum, $sImgConf);
     }
 
     /**
@@ -371,7 +371,7 @@ class UtilsFile extends \OxidEsales\Eshop\Core\Base
      */
     protected function _copyFile($sSource, $sTarget) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->copyFile($sSource, $sTarget);
+        return self::copyFile($sSource, $sTarget);
     }
 
     /**
@@ -404,7 +404,7 @@ class UtilsFile extends \OxidEsales\Eshop\Core\Base
      */
     protected function _moveImage($sSource, $sTarget) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->moveImage($sSource, $sTarget);
+        return self::moveImage($sSource, $sTarget);
     }
 
     /**
@@ -627,7 +627,7 @@ class UtilsFile extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getUniqueFileName($sFilePath, $sFileName, $sFileExt, $sSufix = "", $blUnique = true) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getUniqueFileName($sFilePath, $sFileName, $sFileExt, $sSufix, $blUnique);
+        return self::getUniqueFileName($sFilePath, $sFileName, $sFileExt, $sSufix, $blUnique);
     }
 
     /**

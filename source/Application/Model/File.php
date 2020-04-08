@@ -110,7 +110,7 @@ class File extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _checkArticleFile($aFileInfo) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->checkArticleFile($aFileInfo);
+        return self::checkArticleFile($aFileInfo);
     }
 
     /**
@@ -137,7 +137,7 @@ class File extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _getBaseDownloadDirPath() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getBaseDownloadDirPath();
+        return self::getBaseDownloadDirPath();
     }
 
     /**
@@ -205,7 +205,7 @@ class File extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _getFileLocation() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getFileLocation();
+        return self::getFileLocation();
     }
 
     /**
@@ -238,7 +238,7 @@ class File extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _getHashedFileDir($sFileHash) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getHashedFileDir($sFileHash);
+        return self::getHashedFileDir($sFileHash);
     }
 
     /**
@@ -266,7 +266,7 @@ class File extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _getFileHash($sFileName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getFileHash($sFileName);
+        return self::getFileHash($sFileName);
     }
 
     /**
@@ -286,7 +286,7 @@ class File extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _uploadFile($sSource, $sTarget) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->uploadFile($sSource, $sTarget);
+        return self::uploadFile($sSource, $sTarget);
     }
 
     /**
@@ -351,7 +351,7 @@ class File extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _deleteFile() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->deleteFile();
+        return self::deleteFile();
     }
 
     /**
@@ -382,7 +382,7 @@ class File extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _getFilenameForUrl() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getFilenameForUrl();
+        return self::getFilenameForUrl();
     }
 
     /**

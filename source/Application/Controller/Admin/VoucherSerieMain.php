@@ -131,7 +131,7 @@ class VoucherSerieMain extends \OxidEsales\Eshop\Application\Controller\Admin\Dy
      */
     protected function _getVoucherSerie() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getVoucherSerie();
+        return self::getVoucherSerie();
     }
 
 

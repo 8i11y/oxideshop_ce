@@ -62,7 +62,7 @@ class UserBasket extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _insert() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->insert();
+        return self::insert();
     }
 
     /**
@@ -82,7 +82,7 @@ class UserBasket extends \OxidEsales\Eshop\Core\Model\BaseModel
         $iTime = \OxidEsales\Eshop\Core\Registry::getUtilsDate()->getTime();
         $this->oxuserbaskets__oxupdate = new \OxidEsales\Eshop\Core\Field($iTime);
 
-        return parent::insert();
+        return parent::_insert();
     }
 
     /**
@@ -188,7 +188,7 @@ class UserBasket extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _createItem($sProductId, $aSelList = null, $aPersParams = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->createItem($sProductId, $aSelList, $aPersParams);
+        return self::createItem($sProductId, $aSelList, $aPersParams);
     }
 
     /**
@@ -256,7 +256,7 @@ class UserBasket extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     protected function _getItemKey($sProductId, $aSel = null, $aPersParam = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getItemKey($sProductId, $aSel, $aPersParam);
+        return self::getItemKey($sProductId, $aSel, $aPersParam);
     }
 
     /**

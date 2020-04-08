@@ -39,7 +39,7 @@ class PriceAlarmList extends \OxidEsales\Eshop\Application\Controller\Admin\Admi
      */
     protected function _buildSelectString($oListObject = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->buildSelectString($oListObject);
+        return self::buildSelectString($oListObject);
     }
 
     /**

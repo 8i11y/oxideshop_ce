@@ -54,7 +54,7 @@ class Information extends \OxidEsales\Eshop\Application\Component\Widget\WidgetC
      */
     protected function _getContentList() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getContentList();
+        return self::getContentList();
     }
 
     /**

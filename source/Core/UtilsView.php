@@ -361,7 +361,7 @@ class UtilsView extends \OxidEsales\Eshop\Core\Base
      */
     protected function _fillCommonSmartyProperties($smarty) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->fillCommonSmartyProperties($smarty);
+        return self::fillCommonSmartyProperties($smarty);
     }
 
     /**
@@ -471,7 +471,7 @@ class UtilsView extends \OxidEsales\Eshop\Core\Base
      */
     protected function _smartyCompileCheck($smarty) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->smartyCompileCheck($smarty);
+        return self::smartyCompileCheck($smarty);
     }
 
     /**
@@ -495,7 +495,7 @@ class UtilsView extends \OxidEsales\Eshop\Core\Base
      */
     public function _smartyDefaultTemplateHandler($resourceType, $resourceName, &$resourceContent, &$resourceTimestamp, $smarty) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->smartyDefaultTemplateHandler($resourceType, $resourceName, $resourceContent, $resourceTimestamp, $smarty);
+        return self::smartyDefaultTemplateHandler($resourceType, $resourceName, $resourceContent, $resourceTimestamp, $smarty);
     }
 
     /**
@@ -529,7 +529,7 @@ class UtilsView extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getTemplateBlock($moduleId, $fileName) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getTemplateBlock($moduleId, $fileName);
+        return self::getTemplateBlock($moduleId, $fileName);
     }
 
     /**
@@ -603,7 +603,7 @@ class UtilsView extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getActiveModuleInfo() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getActiveModuleInfo();
+        return self::getActiveModuleInfo();
     }
 
     /**

@@ -527,7 +527,7 @@ class Utils extends \OxidEsales\Eshop\Core\Base
      */
     protected function _readFile($sFilePath) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->readFile($sFilePath);
+        return self::readFile($sFilePath);
     }
 
     /**
@@ -548,7 +548,7 @@ class Utils extends \OxidEsales\Eshop\Core\Base
      */
     protected function _includeFile($sFilePath) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->includeFile($sFilePath);
+        return self::includeFile($sFilePath);
     }
 
     /**
@@ -570,7 +570,7 @@ class Utils extends \OxidEsales\Eshop\Core\Base
      */
     protected function _processCache($sKey, $mContents) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->processCache($sKey, $mContents);
+        return self::processCache($sKey, $mContents);
     }
 
     /**
@@ -628,7 +628,7 @@ class Utils extends \OxidEsales\Eshop\Core\Base
      */
     protected function _lockFile($sFilePath, $sIdent, $iLockMode = LOCK_EX) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->lockFile($sFilePath, $sIdent, $iLockMode);
+        return self::lockFile($sFilePath, $sIdent, $iLockMode);
     }
 
     /**
@@ -688,7 +688,7 @@ class Utils extends \OxidEsales\Eshop\Core\Base
      */
     protected function _releaseFile($sIdent, $iLockMode = LOCK_EX) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->releaseFile($sIdent, $iLockMode);
+        return self::releaseFile($sIdent, $iLockMode);
     }
 
     /**
@@ -1041,7 +1041,7 @@ class Utils extends \OxidEsales\Eshop\Core\Base
      */
     protected function _simpleRedirect($sUrl, $sHeaderCode) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->simpleRedirect($sUrl, $sHeaderCode);
+        return self::simpleRedirect($sUrl, $sHeaderCode);
     }
 
     /**
@@ -1174,7 +1174,7 @@ class Utils extends \OxidEsales\Eshop\Core\Base
      */
     protected function _addUrlParameters($sUrl, $aParams) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addUrlParameters($sUrl, $aParams);
+        return self::addUrlParameters($sUrl, $aParams);
     }
 
     /**
@@ -1200,7 +1200,7 @@ class Utils extends \OxidEsales\Eshop\Core\Base
      */
     protected function _fillExplodeArray($aName, $dVat = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->fillExplodeArray($aName, $dVat);
+        return self::fillExplodeArray($aName, $dVat);
     }
 
     /**
@@ -1273,7 +1273,7 @@ class Utils extends \OxidEsales\Eshop\Core\Base
      */
     protected function _preparePrice($dPrice, $dVat) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->preparePrice($dPrice, $dVat);
+        return self::preparePrice($dPrice, $dVat);
     }
 
     /**
@@ -1304,7 +1304,7 @@ class Utils extends \OxidEsales\Eshop\Core\Base
      */
     protected function _isPriceViewModeNetto() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->isPriceViewModeNetto();
+        return self::isPriceViewModeNetto();
     }
 
     /**
@@ -1327,7 +1327,7 @@ class Utils extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getArticleUser() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getArticleUser();
+        return self::getArticleUser();
     }
 
     /**

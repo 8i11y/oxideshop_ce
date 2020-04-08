@@ -243,7 +243,7 @@ class CompareController extends \OxidEsales\Eshop\Application\Controller\Fronten
      */
     protected function _setArticlesPerPage($iNumber) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setArticlesPerPage($iNumber);
+        return self::setArticlesPerPage($iNumber);
     }
 
     /**
@@ -355,7 +355,7 @@ class CompareController extends \OxidEsales\Eshop\Application\Controller\Fronten
      */
     protected function _removeArticlesFromPage($aItems, $oList) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->removeArticlesFromPage($aItems, $oList);
+        return self::removeArticlesFromPage($aItems, $oList);
     }
 
     /**
@@ -390,7 +390,7 @@ class CompareController extends \OxidEsales\Eshop\Application\Controller\Fronten
      */
     protected function _changeArtListOrder($aItems, $oList) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->changeArtListOrder($aItems, $oList);
+        return self::changeArtListOrder($aItems, $oList);
     }
 
     /**

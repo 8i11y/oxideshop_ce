@@ -64,7 +64,7 @@ class DiagnosticsMain extends \OxidEsales\Eshop\Application\Controller\Admin\Adm
      */
     protected function _hasError() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->hasError();
+        return self::hasError();
     }
 
     /**
@@ -81,7 +81,7 @@ class DiagnosticsMain extends \OxidEsales\Eshop\Application\Controller\Admin\Adm
      */
     protected function _getErrorMessage() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getErrorMessage();
+        return self::getErrorMessage();
     }
 
     /**
@@ -128,7 +128,7 @@ class DiagnosticsMain extends \OxidEsales\Eshop\Application\Controller\Admin\Adm
      */
     protected function _getFilesToCheck() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getFilesToCheck();
+        return self::getFilesToCheck();
     }
 
     /**
@@ -162,7 +162,7 @@ class DiagnosticsMain extends \OxidEsales\Eshop\Application\Controller\Admin\Adm
      */
     protected function _checkOxidFiles($aFileList) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->checkOxidFiles($aFileList);
+        return self::checkOxidFiles($aFileList);
     }
 
     /**
@@ -206,7 +206,7 @@ class DiagnosticsMain extends \OxidEsales\Eshop\Application\Controller\Admin\Adm
      */
     protected function _getFileCheckReport($oFileCheckerResult) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getFileCheckReport($oFileCheckerResult);
+        return self::getFileCheckReport($oFileCheckerResult);
     }
 
     /**
@@ -267,7 +267,7 @@ class DiagnosticsMain extends \OxidEsales\Eshop\Application\Controller\Admin\Adm
      */
     protected function _runBasicDiagnostics() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->runBasicDiagnostics();
+        return self::runBasicDiagnostics();
     }
 
     /**

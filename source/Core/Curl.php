@@ -338,7 +338,7 @@ class Curl
      */
     protected function _setResource($rCurl) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setResource($rCurl);
+        return self::setResource($rCurl);
     }
 
     /**
@@ -355,7 +355,7 @@ class Curl
      */
     protected function _getResource() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getResource();
+        return self::getResource();
     }
 
     /**
@@ -376,7 +376,7 @@ class Curl
      */
     protected function _setOptions() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setOptions();
+        return self::setOptions();
     }
 
     /**
@@ -416,7 +416,7 @@ class Curl
      */
     protected function _close() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->close();
+        return self::close();
     }
 
     /**
@@ -432,7 +432,7 @@ class Curl
      */
     protected function _setOpt($name, $value) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setOpt($name, $value);
+        return self::setOpt($name, $value);
     }
 
     /**
@@ -450,7 +450,7 @@ class Curl
      */
     protected function _getErrorNumber() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getErrorNumber();
+        return self::getErrorNumber();
     }
 
     /**
@@ -467,7 +467,7 @@ class Curl
      */
     protected function _saveStatusCode() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->saveStatusCode();
+        return self::saveStatusCode();
     }
 
     /**
@@ -482,7 +482,7 @@ class Curl
      */
     protected function _prepareQueryParameters($params) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->prepareQueryParameters($params);
+        return self::prepareQueryParameters($params);
     }
 
     /**
@@ -501,7 +501,7 @@ class Curl
      */
     protected function _htmlDecode($mParam) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->htmlDecode($mParam);
+        return self::htmlDecode($mParam);
     }
 
     /**

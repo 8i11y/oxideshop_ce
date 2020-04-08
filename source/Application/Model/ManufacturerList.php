@@ -146,7 +146,7 @@ class ManufacturerList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _addCategoryFields($oManufacturer) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addCategoryFields($oManufacturer);
+        return self::addCategoryFields($oManufacturer);
     }
 
     /**
@@ -189,7 +189,7 @@ class ManufacturerList extends \OxidEsales\Eshop\Core\Model\ListModel
      */
     protected function _seoSetManufacturerData() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->seoSetManufacturerData();
+        return self::seoSetManufacturerData();
     }
 
     /**

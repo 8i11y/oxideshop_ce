@@ -49,7 +49,7 @@ class NavigationTree extends \OxidEsales\Eshop\Core\Base
      */
     protected function _cleanEmptyParents($dom, $parentXPath, $childXPath) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->cleanEmptyParents($dom, $parentXPath, $childXPath);
+        return self::cleanEmptyParents($dom, $parentXPath, $childXPath);
     }
 
     /**
@@ -77,7 +77,7 @@ class NavigationTree extends \OxidEsales\Eshop\Core\Base
      */
     protected function _addLinks($dom) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addLinks($dom);
+        return self::addLinks($dom);
     }
 
     /**
@@ -110,7 +110,7 @@ class NavigationTree extends \OxidEsales\Eshop\Core\Base
      */
     protected function _loadFromFile($menuFile, $dom) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->loadFromFile($menuFile, $dom);
+        return self::loadFromFile($menuFile, $dom);
     }
 
     /**
@@ -153,7 +153,7 @@ class NavigationTree extends \OxidEsales\Eshop\Core\Base
      */
     protected function _addDynLinks($dom) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addDynLinks($dom);
+        return self::addDynLinks($dom);
     }
 
     /**
@@ -231,7 +231,7 @@ class NavigationTree extends \OxidEsales\Eshop\Core\Base
      */
     protected function _sessionizeLocalUrls($dom) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->sessionizeLocalUrls($dom);
+        return self::sessionizeLocalUrls($dom);
     }
 
     /**
@@ -259,7 +259,7 @@ class NavigationTree extends \OxidEsales\Eshop\Core\Base
      */
     protected function _checkRights($dom) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->checkRights($dom);
+        return self::checkRights($dom);
     }
 
     /**
@@ -297,7 +297,7 @@ class NavigationTree extends \OxidEsales\Eshop\Core\Base
      */
     protected function _checkGroups($dom) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->checkGroups($dom);
+        return self::checkGroups($dom);
     }
 
     /**
@@ -335,7 +335,7 @@ class NavigationTree extends \OxidEsales\Eshop\Core\Base
      */
     protected function _checkDemoShopDenials($dom) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->checkDemoShopDenials($dom);
+        return self::checkDemoShopDenials($dom);
     }
 
     /**
@@ -381,7 +381,7 @@ class NavigationTree extends \OxidEsales\Eshop\Core\Base
      */
     protected function _copyAttributes($domElemTo, $domElemFrom) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->copyAttributes($domElemTo, $domElemFrom);
+        return self::copyAttributes($domElemTo, $domElemFrom);
     }
 
     /**
@@ -401,7 +401,7 @@ class NavigationTree extends \OxidEsales\Eshop\Core\Base
      */
     protected function _mergeNodes($domElemTo, $domElemFrom, $xPathTo, $domDocTo, $queryStart) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->mergeNodes($domElemTo, $domElemFrom, $xPathTo, $domDocTo, $queryStart);
+        return self::mergeNodes($domElemTo, $domElemFrom, $xPathTo, $domDocTo, $queryStart);
     }
 
     /**
@@ -445,7 +445,7 @@ class NavigationTree extends \OxidEsales\Eshop\Core\Base
      */
     protected function _merge($domNew, $dom) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->merge($domNew, $dom);
+        return self::merge($domNew, $dom);
     }
 
     /**
@@ -533,7 +533,7 @@ class NavigationTree extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getMenuFiles() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getMenuFiles();
+        return self::getMenuFiles();
     }
 
     /**
@@ -571,7 +571,7 @@ class NavigationTree extends \OxidEsales\Eshop\Core\Base
      */
     protected function _checkDynFile($dynFilePath) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->checkDynFile($dynFilePath);
+        return self::checkDynFile($dynFilePath);
     }
 
     /**
@@ -611,7 +611,7 @@ class NavigationTree extends \OxidEsales\Eshop\Core\Base
      */
     protected function _processCachedFile($cacheContents) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->processCachedFile($cacheContents);
+        return self::processCachedFile($cacheContents);
     }
 
     /**
@@ -630,7 +630,7 @@ class NavigationTree extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getInitialDom() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getInitialDom();
+        return self::getInitialDom();
     }
 
     /**
@@ -814,7 +814,7 @@ class NavigationTree extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getAdminUrl() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getAdminUrl();
+        return self::getAdminUrl();
     }
 
     /**
@@ -839,7 +839,7 @@ class NavigationTree extends \OxidEsales\Eshop\Core\Base
      */
     protected function _hasRights($rights) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->hasRights($rights);
+        return self::hasRights($rights);
     }
 
     /**
@@ -858,7 +858,7 @@ class NavigationTree extends \OxidEsales\Eshop\Core\Base
      */
     protected function _hasGroup($groupId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->hasGroup($groupId);
+        return self::hasGroup($groupId);
     }
 
     /**
@@ -893,7 +893,7 @@ class NavigationTree extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getDynMenuUrl($lang, $loadDynContents) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getDynMenuUrl($lang, $loadDynContents);
+        return self::getDynMenuUrl($lang, $loadDynContents);
     }
 
 
@@ -925,7 +925,7 @@ class NavigationTree extends \OxidEsales\Eshop\Core\Base
      */
     protected function _getDynMenuLang() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getDynMenuLang();
+        return self::getDynMenuLang();
     }
 
     /**

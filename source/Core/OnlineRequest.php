@@ -73,7 +73,7 @@ class OnlineRequest
      */
     private function _getClusterId() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getClusterId();
+        return self::getClusterId();
     }
 
     /**

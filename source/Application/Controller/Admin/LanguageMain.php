@@ -181,7 +181,7 @@ class LanguageMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminD
      */
     protected function _getLanguageInfo($sOxId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getLanguageInfo($sOxId);
+        return self::getLanguageInfo($sOxId);
     }
 
     /**
@@ -209,7 +209,7 @@ class LanguageMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminD
      */
     protected function _setLanguages($aLangData) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setLanguages($aLangData);
+        return self::setLanguages($aLangData);
     }
 
     /**
@@ -226,7 +226,7 @@ class LanguageMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminD
      */
     protected function _getLanguages() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getLanguages();
+        return self::getLanguages();
     }
 
     /**
@@ -255,7 +255,7 @@ class LanguageMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminD
      */
     protected function _updateAbbervation($sOldId, $sNewId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->updateAbbervation($sOldId, $sNewId);
+        return self::updateAbbervation($sOldId, $sNewId);
     }
 
     /**
@@ -287,7 +287,7 @@ class LanguageMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminD
      */
     protected function _sortLangArraysByBaseId() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->sortLangArraysByBaseId();
+        return self::sortLangArraysByBaseId();
     }
 
     /**
@@ -318,7 +318,7 @@ class LanguageMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminD
      */
     protected function _assignDefaultLangParams($aLanguages) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->assignDefaultLangParams($aLanguages);
+        return self::assignDefaultLangParams($aLanguages);
     }
 
     /**
@@ -348,7 +348,7 @@ class LanguageMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminD
      */
     protected function _setDefaultLang($sOxId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->setDefaultLang($sOxId);
+        return self::setDefaultLang($sOxId);
     }
 
     /**
@@ -366,7 +366,7 @@ class LanguageMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminD
      */
     protected function _getAvailableLangBaseId() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getAvailableLangBaseId();
+        return self::getAvailableLangBaseId();
     }
 
     /**
@@ -400,7 +400,7 @@ class LanguageMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminD
      */
     protected function _checkLangTranslations($sOxId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->checkLangTranslations($sOxId);
+        return self::checkLangTranslations($sOxId);
     }
 
     /**
@@ -426,7 +426,7 @@ class LanguageMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminD
      */
     protected function _checkMultilangFieldsExistsInDb($sOxId) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->checkMultilangFieldsExistsInDb($sOxId);
+        return self::checkMultilangFieldsExistsInDb($sOxId);
     }
 
     /**
@@ -451,7 +451,7 @@ class LanguageMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminD
      */
     protected function _addNewMultilangFieldsToDb() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addNewMultilangFieldsToDb();
+        return self::addNewMultilangFieldsToDb();
     }
 
     /**
@@ -486,7 +486,7 @@ class LanguageMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminD
      */
     protected function _checkLangExists($sAbbr) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->checkLangExists($sAbbr);
+        return self::checkLangExists($sAbbr);
     }
 
     /**
@@ -507,7 +507,7 @@ class LanguageMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminD
      */
     protected function _sortLangParamsByBaseIdCallback($oLang1, $oLang2) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->sortLangParamsByBaseIdCallback($oLang1, $oLang2);
+        return self::sortLangParamsByBaseIdCallback($oLang1, $oLang2);
     }
 
     /**
@@ -528,7 +528,7 @@ class LanguageMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminD
      */
     protected function _validateInput() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->validateInput();
+        return self::validateInput();
     }
 
     /**

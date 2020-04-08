@@ -153,7 +153,7 @@ class RecommListController extends \OxidEsales\Eshop\Application\Controller\Arti
      */
     protected function _getProductLinkType() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->getProductLinkType();
+        return self::getProductLinkType();
     }
 
     /**
@@ -489,7 +489,7 @@ class RecommListController extends \OxidEsales\Eshop\Application\Controller\Arti
      */
     protected function _addPageNrParam($sUrl, $iPage, $iLang = null) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->addPageNrParam($sUrl, $iPage, $iLang);
+        return self::addPageNrParam($sUrl, $iPage, $iLang);
     }
 
     /**

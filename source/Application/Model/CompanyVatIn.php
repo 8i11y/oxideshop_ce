@@ -55,7 +55,7 @@ class CompanyVatIn
      */
     protected function _cleanUp($sValue) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->cleanUp($sValue);
+        return self::cleanUp($sValue);
     }
 
     /**

@@ -66,7 +66,7 @@ class ShopLicense extends \OxidEsales\Eshop\Application\Controller\Admin\ShopCon
      */
     protected function _canUpdate() // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->canUpdate();
+        return self::canUpdate();
     }
 
     /**
@@ -93,7 +93,7 @@ class ShopLicense extends \OxidEsales\Eshop\Application\Controller\Admin\ShopCon
      */
     protected function _fetchCurVersionInfo($sUrl) // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
-        return $this->fetchCurVersionInfo($sUrl);
+        return self::fetchCurVersionInfo($sUrl);
     }
 
     /**
